@@ -31,13 +31,13 @@
     <AppXManifest Include="C:\Users\Owner\Documents\GitHub\Mobile-CIS3806\App1\App1.UWP\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2017-12-20T17:13:43.381</Modified>
+      <Modified>2017-12-20T17:15:13.456</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\Owner\Documents\GitHub\Mobile-CIS3806\App1\App1.UWP\bin\x86\Debug\App1.UWP.exe">
       <PackagePath>entrypoint\App1.UWP.exe</PackagePath>
-      <Modified>2017-12-20T17:13:40.378</Modified>
+      <Modified>2017-12-20T17:15:10.207</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Owner\.nuget\packages\microsoft.csharp\4.0.1\lib\netcore50\Microsoft.CSharp.dll">
       <PackagePath>Microsoft.CSharp.dll</PackagePath>
@@ -513,7 +513,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Owner\Documents\GitHub\Mobile-CIS3806\App1\App1\bin\Debug\App1.dll">
       <PackagePath>App1.dll</PackagePath>
-      <Modified>2017-12-20T17:13:30.446</Modified>
+      <Modified>2017-12-20T17:15:01.439</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Owner\Documents\GitHub\Mobile-CIS3806\App1\App1.UWP\Assets\elderly.png">
       <PackagePath>Assets\elderly.png</PackagePath>
@@ -792,7 +792,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Owner\Documents\GitHub\Mobile-CIS3806\App1\App1.UWP\bin\x86\Debug\Core\App1.UWP.exe">
       <PackagePath>App1.UWP.exe</PackagePath>
-      <Modified>2017-12-20T17:13:43.366</Modified>
+      <Modified>2017-12-20T17:15:13.444</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

@@ -28,7 +28,7 @@
         <!--App Title and Logo-->
         <StackLayout Grid.Column="0" Orientation="Horizontal">
             <Image x:Name="imgLogo" WidthRequest="100" HeightRequest="75" VerticalOptions="Center"/>
-            <Label TextColor="{StaticResource Key=textColor}" FontSize = "45" Text="St. Vincent De Paul App" FontFamily="Assets/Fonts/Raleway-ExtraBoldItalic.ttf#Raleway" VerticalOptions="Center"/>
+            <Label TextColor="#FF8000" FontSize = "45" Text="St. Vincent De Paul App" FontFamily="Assets/Fonts/Raleway-ExtraBoldItalic.ttf#Raleway" VerticalOptions="Center"/>
         </StackLayout>
         
         <!--Grid Buttons-->
