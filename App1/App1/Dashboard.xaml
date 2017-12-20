@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:App1"
+             x:Class="App1.MainPage">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Color x:Key="colorAppBackground">#66d9ff</Color>
+            <Color x:Key="textColor">#FFFFFF</Color>
+
+            <Style x:Key="stylePadButton" TargetType="Button">
+                <Setter Property="TextColor" Value="{StaticResource Key=textColor}"/>
+                <Setter Property="BackgroundColor" Value="#808080"/>
+                <Setter Property="FontSize" Value="Medium" />
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <Grid Padding="14" BackgroundColor="{StaticResource Key=colorAppBackground}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        
+        <!--App Title and Logo-->
+        <StackLayout Grid.Column="0" Orientation="Horizontal">
+            <Image x:Name="imgLogo" WidthRequest="100" HeightRequest="75" VerticalOptions="Center"/>
+            <Label TextColor="{StaticResource Key=textColor}" FontSize = "45" Text="Application Title" FontFamily="Assets/Fonts/Raleway-ExtraBoldItalic.ttf#Raleway" VerticalOptions="Center"/>
+        </StackLayout>
+        
+        <!--Grid Buttons-->
+        <Grid BackgroundColor="{StaticResource Key=textColor}" Grid.Row="1" Grid.ColumnSpan="2" Padding="7">
+            <Button Grid.Row="0" Grid.Column="0" x:Name="searchButton" Text="Search" Image="Assets/searchIcon.png" Style="{StaticResource Key=stylePadButton}" Clicked="SearchButton_OnClicked"/>
+            <Button Grid.Row="0" Grid.Column="1" x:Name="button2" Text="Search" Style="{StaticResource Key=stylePadButton}"/>
+            <Button Grid.Row="1" Grid.Column="0" x:Name="button3" Text="Search" Style="{StaticResource Key=stylePadButton}"/>
+            <Button Grid.Row="1" Grid.Column="1" x:Name="button4" Text="Search" Style="{StaticResource Key=stylePadButton}"/>
+        </Grid>
+    </Grid>
+</ContentPage>
