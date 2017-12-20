@@ -22296,19 +22296,19 @@
     "UAP,Version=v10.0.10586": []
   },
   "packageFolders": {
-    "C:\\Users\\danza\\.nuget\\packages\\": {}
+    "C:\\Users\\Owner\\.nuget\\packages\\": {}
   },
   "project": {
     "restore": {
-      "projectUniqueName": "E:\\School\\University\\Year3Semester1\\Mobile\\Dashboard\\App1\\App1\\App1.UWP\\App1.UWP.csproj",
+      "projectUniqueName": "C:\\Users\\Owner\\Documents\\GitHub\\Mobile-CIS3806\\App1\\App1.UWP\\App1.UWP.csproj",
       "projectName": "App1.UWP",
-      "projectPath": "E:\\School\\University\\Year3Semester1\\Mobile\\Dashboard\\App1\\App1\\App1.UWP\\App1.UWP.csproj",
-      "projectJsonPath": "E:\\School\\University\\Year3Semester1\\Mobile\\Dashboard\\App1\\App1\\App1.UWP\\project.json",
-      "packagesPath": "C:\\Users\\danza\\.nuget\\packages\\",
-      "outputPath": "E:\\School\\University\\Year3Semester1\\Mobile\\Dashboard\\App1\\App1\\App1.UWP\\obj\\",
+      "projectPath": "C:\\Users\\Owner\\Documents\\GitHub\\Mobile-CIS3806\\App1\\App1.UWP\\App1.UWP.csproj",
+      "projectJsonPath": "C:\\Users\\Owner\\Documents\\GitHub\\Mobile-CIS3806\\App1\\App1.UWP\\project.json",
+      "packagesPath": "C:\\Users\\Owner\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Owner\\Documents\\GitHub\\Mobile-CIS3806\\App1\\App1.UWP\\obj\\",
       "projectStyle": "ProjectJson",
       "configFilePaths": [
-        "C:\\Users\\danza\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Owner\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "sources": {
@@ -22318,8 +22318,8 @@
       "frameworks": {
         "uap10.0.10586": {
           "projectReferences": {
-            "E:\\School\\University\\Year3Semester1\\Mobile\\Dashboard\\App1\\App1\\App1\\App1.csproj": {
-              "projectPath": "E:\\School\\University\\Year3Semester1\\Mobile\\Dashboard\\App1\\App1\\App1\\App1.csproj"
+            "C:\\Users\\Owner\\Documents\\GitHub\\Mobile-CIS3806\\App1\\App1\\App1.csproj": {
+              "projectPath": "C:\\Users\\Owner\\Documents\\GitHub\\Mobile-CIS3806\\App1\\App1\\App1.csproj"
             }
           }
         }

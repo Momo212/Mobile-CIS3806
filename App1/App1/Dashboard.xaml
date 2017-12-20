@@ -5,7 +5,7 @@
              x:Class="App1.MainPage">
     <ContentPage.Resources>
         <ResourceDictionary>
-            <Color x:Key="colorAppBackground">#66d9ff</Color>
+            <Color x:Key="colorAppBackground">#00000</Color>
             <Color x:Key="textColor">#FFFFFF</Color>
 
             <Style x:Key="stylePadButton" TargetType="Button">
@@ -28,7 +28,7 @@
         <!--App Title and Logo-->
         <StackLayout Grid.Column="0" Orientation="Horizontal">
             <Image x:Name="imgLogo" WidthRequest="100" HeightRequest="75" VerticalOptions="Center"/>
-            <Label TextColor="{StaticResource Key=textColor}" FontSize = "45" Text="Application Title" FontFamily="Assets/Fonts/Raleway-ExtraBoldItalic.ttf#Raleway" VerticalOptions="Center"/>
+            <Label TextColor="{StaticResource Key=textColor}" FontSize = "45" Text="St. Vincent De Paul App" FontFamily="Assets/Fonts/Raleway-ExtraBoldItalic.ttf#Raleway" VerticalOptions="Center"/>
         </StackLayout>
         
         <!--Grid Buttons-->
