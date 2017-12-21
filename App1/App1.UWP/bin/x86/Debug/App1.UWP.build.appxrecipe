@@ -28,6 +28,9 @@
     <AppxPackagedFile Include="E:\School\University\Year3Semester1\Mobile\Dashboard [Github]\Mobile-CIS3806\App1\App1.UWP\bin\x86\Debug\App1.UWP.exe">
       <PackagePath>entrypoint\App1.UWP.exe</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\danza\.nuget\packages\microsoft.azure.mobile.client\4.0.2\lib\uap10.0\Microsoft.Azure.Mobile.Client.dll">
+      <PackagePath>Microsoft.Azure.Mobile.Client.dll</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\danza\.nuget\packages\microsoft.csharp\4.0.1\lib\netcore50\Microsoft.CSharp.dll">
       <PackagePath>Microsoft.CSharp.dll</PackagePath>
     </AppxPackagedFile>
@@ -69,6 +72,9 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\danza\.nuget\packages\microsoft.visualbasic\10.0.1\lib\netcore50\Microsoft.VisualBasic.dll">
       <PackagePath>Microsoft.VisualBasic.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\danza\.nuget\packages\newtonsoft.json\9.0.1\lib\portable-net45+wp80+win8+wpa81\Newtonsoft.Json.dll">
+      <PackagePath>Newtonsoft.Json.dll</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\danza\.nuget\packages\runtime.any.system.collections\4.0.11\lib\netcore50\System.Collections.dll">
       <PackagePath>System.Collections.dll</PackagePath>
@@ -393,6 +399,9 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\School\University\Year3Semester1\Mobile\Dashboard [Github]\Mobile-CIS3806\App1\App1\bin\Debug\App1.dll">
       <PackagePath>App1.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\School\University\Year3Semester1\Mobile\Dashboard [Github]\Mobile-CIS3806\App1\App1\bin\Debug\App1.dll.config">
+      <PackagePath>App1.dll.config</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\School\University\Year3Semester1\Mobile\Dashboard [Github]\Mobile-CIS3806\App1\App1.UWP\Assets\addPatientIcon.png">
       <PackagePath>Assets\addPatientIcon.png</PackagePath>

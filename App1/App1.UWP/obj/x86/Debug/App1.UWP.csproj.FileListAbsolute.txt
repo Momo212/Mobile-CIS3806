@@ -665,3 +665,8 @@ E:\School\University\Year3Semester1\Mobile\Dashboard [Github]\Mobile-CIS3806\App
 E:\School\University\Year3Semester1\Mobile\Dashboard [Github]\Mobile-CIS3806\App1\App1.UWP\bin\x86\Debug\Xamarin.Forms.CarouselView.UWP.dll
 E:\School\University\Year3Semester1\Mobile\Dashboard [Github]\Mobile-CIS3806\App1\App1.UWP\bin\x86\Debug\Xamarin.Forms.CarouselView.dll
 E:\School\University\Year3Semester1\Mobile\Dashboard [Github]\Mobile-CIS3806\App1\App1.UWP\obj\x86\Debug\Xamarin.Forms.CarouselView.UWP.pri.xml
+E:\School\University\Year3Semester1\Mobile\Dashboard [Github]\Mobile-CIS3806\App1\App1.UWP\bin\x86\Debug\Microsoft.Azure.Mobile.Client.dll
+E:\School\University\Year3Semester1\Mobile\Dashboard [Github]\Mobile-CIS3806\App1\App1.UWP\bin\x86\Debug\Newtonsoft.Json.dll
+E:\School\University\Year3Semester1\Mobile\Dashboard [Github]\Mobile-CIS3806\App1\App1.UWP\bin\x86\Debug\App1.dll.config
+E:\School\University\Year3Semester1\Mobile\Dashboard [Github]\Mobile-CIS3806\App1\App1.UWP\obj\x86\Debug\Microsoft.Azure.Mobile.Client\en-US\Microsoft.WindowsAzure.MobileServices.Resources.resw
+E:\School\University\Year3Semester1\Mobile\Dashboard [Github]\Mobile-CIS3806\App1\App1.UWP\obj\x86\Debug\Microsoft.Azure.Mobile.Client.pri.xml

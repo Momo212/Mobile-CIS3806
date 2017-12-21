@@ -31,8 +31,8 @@
                     <Image x:Name="imgEditProfile" Grid.Row="0" Grid.Column="1" HorizontalOptions="EndAndExpand" VerticalOptions="EndAndExpand"/>
 
                 </Grid>
+                <ContentView Grid.Row="1" BackgroundColor="White"/>
 
-                
             </Grid>
 
             <StackLayout Grid.Column="1">
@@ -87,9 +87,9 @@
                         </Picker.ItemsSource>
                     </Picker>
                 </StackLayout>
-                <StackLayout Orientation="Horizontal">
-                    <Button Text="Submit" HorizontalOptions="FillAndExpand"/>
-                    <Button Text="Cancel" HorizontalOptions="FillAndExpand"/>
+                <StackLayout Orientation="Horizontal" VerticalOptions="EndAndExpand">
+                    <Button Text="Submit"  HorizontalOptions="FillAndExpand" Clicked="onAddPatient_OnClick"/>
+                    <Button Text="Cancel"  HorizontalOptions="FillAndExpand"/>
                 </StackLayout>
                 
             </StackLayout>
