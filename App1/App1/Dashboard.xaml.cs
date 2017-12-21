@@ -19,5 +19,10 @@ namespace App1
         {
             await Navigation.PushAsync(new Search());
         }
+
+        private async void AddPatientButton_OnClicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new AddPatient());
+        }
     }
 }

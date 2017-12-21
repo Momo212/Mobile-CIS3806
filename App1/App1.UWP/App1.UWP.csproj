@@ -90,6 +90,10 @@
   </PropertyGroup>
   <ItemGroup>
     <!-- A reference to the entire .Net Framework and Windows SDK are automatically included -->
+    <Content Include="Assets\addPatientIcon.png" />
+    <Content Include="Assets\addPatientToolbarIcon.png" />
+    <Content Include="Assets\editImage.png" />
+    <Content Include="Assets\editImageSmall.png" />
     <Content Include="Assets\elderly.png" />
     <Content Include="Assets\elderly2.png" />
     <Content Include="Assets\elderly3.png" />
@@ -133,6 +137,7 @@
     <Content Include="Assets\hamburgerMenu.png" />
     <Content Include="Assets\home.png" />
     <Content Include="Assets\menu.png" />
+    <Content Include="Assets\profile.png" />
     <Content Include="Assets\searchIcon.png" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-100.png" />

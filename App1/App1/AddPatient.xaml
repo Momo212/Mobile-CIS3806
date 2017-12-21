@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:sys="clr-namespace:System;assembly=mscorlib"
+             xmlns:control="clr-namespace:Xamarin.Forms;assembly=Xamarin.Forms.CarouselView"
+             x:Class="App1.AddPatient">
+    <ContentPage.Content>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="2*" />
+            </Grid.ColumnDefinitions>
+
+            <Grid Grid.Column="0" BackgroundColor="Gray">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+
+                <Grid Grid.Row="0" BackgroundColor="Gray">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="4*" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="6*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Image x:Name="imgProfile" Grid.Row="1" Grid.ColumnSpan="2" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
+                    <Image x:Name="imgEditProfile" Grid.Row="0" Grid.Column="1" HorizontalOptions="EndAndExpand" VerticalOptions="EndAndExpand"/>
+
+                </Grid>
+
+                
+            </Grid>
+
+            <StackLayout Grid.Column="1">
+                <Entry x:Name="NameEntry" HorizontalOptions="FillAndExpand" Placeholder="Enter Name..."/>
+                <Entry x:Name="SurnameEntry" HorizontalOptions="FillAndExpand" Placeholder="Enter Surname..."/>
+                <Entry x:Name="IdNumberEntry" HorizontalOptions="FillAndExpand" Placeholder="Enter ID Number..."/>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="DOB:" Margin="0,5,100,0"/>
+                    <DatePicker x:Name="DatePickerT" HorizontalOptions="FillAndExpand">
+                        <DatePicker.Format>yyyy-MM-dd</DatePicker.Format>
+                        <DatePicker.MinimumDate>
+                            <sys:DateTime x:FactoryMethod="Parse">
+                                <x:Arguments>
+                                    <x:String>Jan 1 1900</x:String>
+                                </x:Arguments>
+                            </sys:DateTime>
+                        </DatePicker.MinimumDate>
+                        <DatePicker.MaximumDate>
+                            <sys:DateTime x:FactoryMethod="Parse">
+                                <x:Arguments>
+                                    <x:String>Jan 1 2014</x:String>
+                                </x:Arguments>
+                            </sys:DateTime>
+                        </DatePicker.MaximumDate>
+                    </DatePicker>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Gender:" Margin="0,5,120,0"/>
+                    <Picker x:Name="genderPicker" HorizontalOptions="FillAndExpand" SelectedIndexChanged="GenderPicker_IndexChanged">
+                        <Picker.ItemsSource>
+                            <x:Array Type="{x:Type x:String}">
+                                <x:String>Male</x:String>
+                                <x:String>Female</x:String>
+                            </x:Array>
+                        </Picker.ItemsSource>
+                    </Picker>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Entry x:Name="RoomNo" HorizontalOptions="FillAndExpand" Placeholder="Enter Room Number..."/>
+                    <Entry x:Name="BedNo" HorizontalOptions="FillAndExpand" Placeholder="Enter Bed Number..."/>
+                    <Entry x:Name="WardNo" HorizontalOptions="FillAndExpand" Placeholder="Enter Ward Number..."/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Ward Colour:" Margin="0,5,85,0"/>
+                    <Picker x:Name="wardColourPicker" HorizontalOptions="FillAndExpand" SelectedIndexChanged="WardColPicker_IndexChanged">
+                        <Picker.ItemsSource>
+                            <x:Array Type="{x:Type x:String}">
+                                <x:String>Red</x:String>
+                                <x:String>Blue</x:String>
+                                <x:String>Green</x:String>
+                            </x:Array>
+                        </Picker.ItemsSource>
+                    </Picker>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Button Text="Submit" HorizontalOptions="FillAndExpand"/>
+                    <Button Text="Cancel" HorizontalOptions="FillAndExpand"/>
+                </StackLayout>
+                
+            </StackLayout>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

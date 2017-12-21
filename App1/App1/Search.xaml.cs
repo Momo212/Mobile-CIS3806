@@ -16,20 +16,33 @@ namespace App1
         {
             InitializeComponent();
 
-            var settings = new ToolbarItem
+            var dashboard = new ToolbarItem
             {
                 Icon = "Assets/home.png",
                 Text = "Dashboard",
                 Order = ToolbarItemOrder.Secondary,
                 Command = new Command(this.ShowDashboard),
             };
-            
-            this.ToolbarItems.Add(settings);
+            var addPatient = new ToolbarItem
+            {
+                Icon = "Assets/addPatientToolbarIcon.png",
+                Text = "Add Patient",
+                Order = ToolbarItemOrder.Secondary,
+                Command = new Command(this.ShowAddPatientPage),
+            };
+
+            this.ToolbarItems.Add(dashboard);
+            this.ToolbarItems.Add(addPatient);
         }
 
         private void ShowDashboard()
         {
             this.Navigation.PushAsync(new MainPage());
+        }
+
+        private void ShowAddPatientPage()
+        {
+            this.Navigation.PushAsync(new AddPatient());
         }
     }
 }
