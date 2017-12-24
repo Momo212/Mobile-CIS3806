@@ -82,25 +82,32 @@ namespace App1
         }
         public async void onAddPatient_OnClick(object sender, EventArgs e)
         {
-            var todo = new Patient_Table { Patient_ID = IdNumberEntry.Text, Name = NameEntry.Text, Surname = SurnameEntry.Text, Dob = GetDateTime(), Gender = selectedGender, Ward_No = Int32.Parse(WardNo.Text), Room_No = Int32.Parse(RoomNo.Text), Bed_No = Int32.Parse(BedNo.Text), Ward_Col = selectedColor };
-            await AddItem(todo);
+            if (IdNumberEntry.Text == null || NameEntry.Text == null || SurnameEntry.Text == null || selectedGender == null || WardNo.Text == null || RoomNo.Text == null || BedNo.Text == null || selectedColor == null)
+            {
+                DisplayAlert("Alert", "All the fields must be filled in.", "OK");
+            }
+            else
+            {
+                var todo = new Patient_Table { Patient_ID = IdNumberEntry.Text, Name = NameEntry.Text, Surname = SurnameEntry.Text, Dob = GetDateTime(), Gender = selectedGender, Ward_No = Int32.Parse(WardNo.Text), Room_No = Int32.Parse(RoomNo.Text), Bed_No = Int32.Parse(BedNo.Text), Ward_Col = selectedColor };
+                await AddItem(todo);
 
-            IdNumberEntry.Text = String.Empty;
-            NameEntry.Text = String.Empty;
-            SurnameEntry.Text = String.Empty;
-            DatePickerT.Date = DatePickerT.MaximumDate;
-            genderPicker.SelectedIndex = -1;
-            wardColourPicker.SelectedIndex = -1;
-            WardNo.Text = String.Empty;
-            RoomNo.Text = String.Empty;
-            BedNo.Text = String.Empty;
+                IdNumberEntry.Text = String.Empty;
+                NameEntry.Text = String.Empty;
+                SurnameEntry.Text = String.Empty;
+                DatePickerT.Date = DatePickerT.MaximumDate;
+                genderPicker.SelectedIndex = -1;
+                wardColourPicker.SelectedIndex = -1;
+                WardNo.Text = String.Empty;
+                RoomNo.Text = String.Empty;
+                BedNo.Text = String.Empty;
+            }
         }
         async Task AddItem(Patient_Table item)
         {
             await manager.SaveTaskAsync(item);
         }
 
-        public async void onCancel_OnClick(Object sender, EventArgs e)
+        public void onCancel_OnClick(Object sender, EventArgs e)
         {
             this.Navigation.PushAsync(new MainPage());
         }
