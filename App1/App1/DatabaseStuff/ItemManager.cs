@@ -65,10 +65,6 @@ namespace App1.DatabaseStuff
                 await todoTable.UpdateAsync(item);
             }
         }
-        public string IDReturn()
-        {
-            string id = client.GetTable<Patient_Table>(id);
-        }
 
     }
 }
