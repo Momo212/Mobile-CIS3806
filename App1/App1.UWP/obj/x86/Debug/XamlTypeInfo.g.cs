@@ -156,19 +156,23 @@ namespace App1.UWP.App1_UWP_XamlTypeInfo
 
         private void InitTypeTables()
         {
-            _typeNameTable = new string[5];
-            _typeNameTable[0] = "Xamarin.Forms.Platform.UWP.WindowsPage";
-            _typeNameTable[1] = "Xamarin.Forms.Platform.UWP.WindowsBasePage";
-            _typeNameTable[2] = "Windows.UI.Xaml.Controls.Page";
-            _typeNameTable[3] = "Windows.UI.Xaml.Controls.UserControl";
-            _typeNameTable[4] = "App1.UWP.MainPage";
+            _typeNameTable = new string[7];
+            _typeNameTable[0] = "Xamarin.Forms.Platform.ItemControl";
+            _typeNameTable[1] = "Windows.UI.Xaml.Controls.ContentControl";
+            _typeNameTable[2] = "Xamarin.Forms.Platform.UWP.WindowsPage";
+            _typeNameTable[3] = "Xamarin.Forms.Platform.UWP.WindowsBasePage";
+            _typeNameTable[4] = "Windows.UI.Xaml.Controls.Page";
+            _typeNameTable[5] = "Windows.UI.Xaml.Controls.UserControl";
+            _typeNameTable[6] = "App1.UWP.MainPage";
 
-            _typeTable = new global::System.Type[5];
-            _typeTable[0] = typeof(global::Xamarin.Forms.Platform.UWP.WindowsPage);
-            _typeTable[1] = typeof(global::Xamarin.Forms.Platform.UWP.WindowsBasePage);
-            _typeTable[2] = typeof(global::Windows.UI.Xaml.Controls.Page);
-            _typeTable[3] = typeof(global::Windows.UI.Xaml.Controls.UserControl);
-            _typeTable[4] = typeof(global::App1.UWP.MainPage);
+            _typeTable = new global::System.Type[7];
+            _typeTable[0] = typeof(global::Xamarin.Forms.Platform.ItemControl);
+            _typeTable[1] = typeof(global::Windows.UI.Xaml.Controls.ContentControl);
+            _typeTable[2] = typeof(global::Xamarin.Forms.Platform.UWP.WindowsPage);
+            _typeTable[3] = typeof(global::Xamarin.Forms.Platform.UWP.WindowsBasePage);
+            _typeTable[4] = typeof(global::Windows.UI.Xaml.Controls.Page);
+            _typeTable[5] = typeof(global::Windows.UI.Xaml.Controls.UserControl);
+            _typeTable[6] = typeof(global::App1.UWP.MainPage);
         }
 
         private int LookupTypeIndexByName(string typeName)
@@ -203,8 +207,9 @@ namespace App1.UWP.App1_UWP_XamlTypeInfo
             return -1;
         }
 
-        private object Activate_0_WindowsPage() { return new global::Xamarin.Forms.Platform.UWP.WindowsPage(); }
-        private object Activate_4_MainPage() { return new global::App1.UWP.MainPage(); }
+        private object Activate_0_ItemControl() { return new global::Xamarin.Forms.Platform.ItemControl(); }
+        private object Activate_2_WindowsPage() { return new global::Xamarin.Forms.Platform.UWP.WindowsPage(); }
+        private object Activate_6_MainPage() { return new global::App1.UWP.MainPage(); }
 
         private global::Windows.UI.Xaml.Markup.IXamlType CreateXamlType(int typeIndex)
         {
@@ -216,28 +221,38 @@ namespace App1.UWP.App1_UWP_XamlTypeInfo
             switch (typeIndex)
             {
 
-            case 0:   //  Xamarin.Forms.Platform.UWP.WindowsPage
-                userType = new global::App1.UWP.App1_UWP_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Xamarin.Forms.Platform.UWP.WindowsBasePage"));
-                userType.Activator = Activate_0_WindowsPage;
+            case 0:   //  Xamarin.Forms.Platform.ItemControl
+                userType = new global::App1.UWP.App1_UWP_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.ContentControl"));
+                userType.Activator = Activate_0_ItemControl;
                 xamlType = userType;
                 break;
 
-            case 1:   //  Xamarin.Forms.Platform.UWP.WindowsBasePage
+            case 1:   //  Windows.UI.Xaml.Controls.ContentControl
+                xamlType = new global::App1.UWP.App1_UWP_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                break;
+
+            case 2:   //  Xamarin.Forms.Platform.UWP.WindowsPage
+                userType = new global::App1.UWP.App1_UWP_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Xamarin.Forms.Platform.UWP.WindowsBasePage"));
+                userType.Activator = Activate_2_WindowsPage;
+                xamlType = userType;
+                break;
+
+            case 3:   //  Xamarin.Forms.Platform.UWP.WindowsBasePage
                 userType = new global::App1.UWP.App1_UWP_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
                 xamlType = userType;
                 break;
 
-            case 2:   //  Windows.UI.Xaml.Controls.Page
+            case 4:   //  Windows.UI.Xaml.Controls.Page
                 xamlType = new global::App1.UWP.App1_UWP_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 3:   //  Windows.UI.Xaml.Controls.UserControl
+            case 5:   //  Windows.UI.Xaml.Controls.UserControl
                 xamlType = new global::App1.UWP.App1_UWP_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 4:   //  App1.UWP.MainPage
+            case 6:   //  App1.UWP.MainPage
                 userType = new global::App1.UWP.App1_UWP_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Xamarin.Forms.Platform.UWP.WindowsPage"));
-                userType.Activator = Activate_4_MainPage;
+                userType.Activator = Activate_6_MainPage;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;

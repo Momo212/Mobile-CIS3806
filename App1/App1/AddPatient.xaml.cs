@@ -99,5 +99,10 @@ namespace App1
         {
             await manager.SaveTaskAsync(item);
         }
+
+        public async void onCancel_OnClick(Object sender, EventArgs e)
+        {
+            this.Navigation.PushAsync(new MainPage());
+        }
     }
 }

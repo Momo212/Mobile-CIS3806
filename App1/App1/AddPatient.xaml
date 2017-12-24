@@ -31,8 +31,18 @@
                     <Image x:Name="imgEditProfile" Grid.Row="0" Grid.Column="1" HorizontalOptions="EndAndExpand" VerticalOptions="EndAndExpand"/>
 
                 </Grid>
-                <ContentView Grid.Row="1" BackgroundColor="White"/>
+                <ContentView Grid.Row="1" BackgroundColor="White">
+                    <ContentView HorizontalOptions="Fill"  VerticalOptions="Fill" BackgroundColor="LightPink">
+                        <control:CarouselView ItemsSource="{Binding MyDataSource}">
+                            <control:CarouselView.ItemTemplate>
+                                <DataTemplate>
+                                    <Label Text="{Binding LabelText}" />
+                                </DataTemplate>
+                            </control:CarouselView.ItemTemplate>
+                        </control:CarouselView>
+                    </ContentView>
 
+                </ContentView>
             </Grid>
 
             <StackLayout Grid.Column="1">
@@ -89,7 +99,7 @@
                 </StackLayout>
                 <StackLayout Orientation="Horizontal" VerticalOptions="EndAndExpand">
                     <Button Text="Submit"  HorizontalOptions="FillAndExpand" Clicked="onAddPatient_OnClick"/>
-                    <Button Text="Cancel"  HorizontalOptions="FillAndExpand"/>
+                    <Button Text="Cancel"  HorizontalOptions="FillAndExpand" Clicked="onCancel_OnClick"/>
                 </StackLayout>
                 
             </StackLayout>
