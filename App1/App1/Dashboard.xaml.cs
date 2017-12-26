@@ -1,4 +1,5 @@
-﻿using System;
+﻿using App1.NotificationList;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,11 @@ namespace App1
         private async void AddPatientButton_OnClicked(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new AddPatient());
+        }
+
+        private async void NotifsPageButton_OnClicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new NotifParentTabbedView());
         }
     }
 }
