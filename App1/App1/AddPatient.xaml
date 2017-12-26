@@ -2,7 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:sys="clr-namespace:System;assembly=mscorlib"
-             xmlns:control="clr-namespace:Xamarin.Forms;assembly=Xamarin.Forms.CarouselView"
+             xmlns:cv="clr-namespace:Xamarin.Forms;assembly=Xamarin.Forms.CarouselView"
              x:Class="App1.AddPatient">
     <ContentPage.Content>
         <Grid>
@@ -31,18 +31,17 @@
                     <Image x:Name="imgEditProfile" Grid.Row="0" Grid.Column="1" HorizontalOptions="EndAndExpand" VerticalOptions="EndAndExpand"/>
 
                 </Grid>
-                <ContentView Grid.Row="1" BackgroundColor="White">
-                    <ContentView HorizontalOptions="Fill"  VerticalOptions="Fill" BackgroundColor="LightPink">
-                        <control:CarouselView ItemsSource="{Binding MyDataSource}">
-                            <control:CarouselView.ItemTemplate>
-                                <DataTemplate>
-                                    <Label Text="{Binding LabelText}" />
-                                </DataTemplate>
-                            </control:CarouselView.ItemTemplate>
-                        </control:CarouselView>
-                    </ContentView>
-
-                </ContentView>
+                <!-- row 1-->
+                <cv:CarouselView ItemsSource="{Binding left}" x:Name="LeftCarousel" Grid.Row="1" >
+                    <cv:CarouselView.ItemTemplate>
+                        <DataTemplate>
+                            <StackLayout>
+                                <Label Text="{Binding Title}" FontSize="16" TextColor="White" HorizontalOptions="Center" VerticalOptions="CenterAndExpand"/>
+                                <Label Text="{Binding Text}" FontSize="11" TextColor="White" />
+                            </StackLayout>
+                        </DataTemplate>
+                    </cv:CarouselView.ItemTemplate>
+                </cv:CarouselView>
             </Grid>
 
             <StackLayout Grid.Column="1">

@@ -7,6 +7,8 @@ using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using App1.Views;
+using System.Collections.ObjectModel;
 
 namespace App1
 {
@@ -45,6 +47,8 @@ namespace App1
             this.ToolbarItems.Add(dashboard);
             this.ToolbarItems.Add(addPatient);
             GetDateTime();
+
+            loadDataForCarouselView();
         }
 
         private void ShowDashboard()
@@ -110,6 +114,28 @@ namespace App1
         public void onCancel_OnClick(Object sender, EventArgs e)
         {
             this.Navigation.PushAsync(new MainPage());
+        }
+
+        private void loadDataForCarouselView()
+        {
+            ObservableCollection<LeftDetail> left = new ObservableCollection<LeftDetail>{
+            new LeftDetail
+            {
+                Title = "Relatives",
+                Text = "Woodland Park Zoo1"
+            },
+            new LeftDetail
+            {
+                Title = "Hobbies",
+                Text = "Woodland Park Zoo2"
+            },
+            new LeftDetail
+            {
+                Title = "Fears",
+                Text = "Woodland Park Zoo3"
+            }
+        };
+            LeftCarousel.ItemsSource = left;
         }
     }
 }

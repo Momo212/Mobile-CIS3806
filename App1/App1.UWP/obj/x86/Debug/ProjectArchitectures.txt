@@ -1,2 +1,2 @@
-C:\Users\J\Desktop\Xamarin clone\Mobile-CIS3806\App1\App1.UWP\App1.UWP.csproj;x86
-C:\Users\J\Desktop\Xamarin clone\Mobile-CIS3806\App1\App1\App1.csproj;neutral
+C:\Users\Owner\Source\Repos\Mobile-CIS38068\App1\App1.UWP\App1.UWP.csproj;x86
+C:\Users\Owner\Source\Repos\Mobile-CIS38068\App1\App1\App1.csproj;neutral

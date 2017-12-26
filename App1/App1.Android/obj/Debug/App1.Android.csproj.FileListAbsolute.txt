@@ -60,7 +60,6 @@ C:\Users\J\Desktop\Xamarin clone\Mobile-CIS3806\App1\App1.Android\obj\Debug\res\
 C:\Users\J\Desktop\Xamarin clone\Mobile-CIS3806\App1\App1.Android\obj\Debug\R.cs.flag
 C:\Users\J\Desktop\Xamarin clone\Mobile-CIS3806\App1\App1.Android\obj\Debug\uploadflags.txt
 C:\Users\J\Desktop\Xamarin clone\Mobile-CIS3806\App1\App1.Android\bin\Debug\App1.dll.mdb
-C:\Users\J\Desktop\Xamarin clone\Mobile-CIS3806\App1\App1.Android\bin\Debug\App1.Android.dll
 C:\Users\J\Desktop\Xamarin clone\Mobile-CIS3806\App1\App1\bin\Debug\App1.dll
 bin\Debug\App1.dll.mdb
 bin\Debug\Mono.Android.pdb
@@ -93,3 +92,5 @@ obj\Debug\linksrc\Microsoft.CSharp.pdb
 obj\Debug\linksrc\System.Net.Http.pdb
 obj\Debug\linksrc\Mono.Security.pdb
 obj\Debug\linksrc\System.ComponentModel.Composition.pdb
+C:\Users\Owner\Source\Repos\Mobile-CIS38068\App1\App1.Android\obj\Debug\App1.Android.dll
+C:\Users\Owner\Source\Repos\Mobile-CIS38068\App1\App1.Android\obj\Debug\App1.Android.pdb
