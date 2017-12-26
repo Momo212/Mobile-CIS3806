@@ -31,7 +31,6 @@
                     <Image x:Name="imgEditProfile" Grid.Row="0" Grid.Column="1" HorizontalOptions="EndAndExpand" VerticalOptions="EndAndExpand"/>
 
                 </Grid>
-
                 <Grid Grid.Row="1" BackgroundColor="AliceBlue">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="4*"/>
@@ -54,7 +53,6 @@
                         <Button x:Name="createNewButton" Text="Create New"  HorizontalOptions="EndAndExpand" Clicked="createNew_OnClick"/>
                     </ContentView>
                 </Grid>
-                
             </Grid>
 
             <StackLayout Grid.Column="1">

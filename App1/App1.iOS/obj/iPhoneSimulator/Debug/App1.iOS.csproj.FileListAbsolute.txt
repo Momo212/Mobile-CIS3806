@@ -1,0 +1,6 @@
+C:\Users\Owner\Source\Repos\Mobile-CIS38068\App1\App1.iOS\obj\iPhoneSimulator\Debug\ibtool\_BundleResourceWithLogicalName.items
+C:\Users\Owner\Source\Repos\Mobile-CIS38068\App1\App1.iOS\obj\iPhoneSimulator\Debug\actool\_PartialAppManifest.items
+C:\Users\Owner\Source\Repos\Mobile-CIS38068\App1\App1.iOS\obj\iPhoneSimulator\Debug\actool\_BundleResourceWithLogicalName.items
+C:\Users\Owner\Source\Repos\Mobile-CIS38068\App1\App1.iOS\obj\iPhoneSimulator\Debug\optimized\
+C:\Users\Owner\Source\Repos\Mobile-CIS38068\App1\App1.iOS\obj\iPhoneSimulator\Debug\App1.iOS.csprojResolveAssemblyReference.cache
+C:\Users\Owner\Source\Repos\Mobile-CIS38068\App1\App1.iOS\obj\iPhoneSimulator\Debug\App1.iOS.csproj.CoreCompileInputs.cache

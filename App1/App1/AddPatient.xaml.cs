@@ -7,6 +7,8 @@ using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using App1.Views;
+using System.Collections.ObjectModel;
 
 namespace App1
 {
@@ -245,10 +247,8 @@ namespace App1
         {
             this.Navigation.PushAsync(new MainPage());
         }
-
         public async void createNew_OnClick(Object sender, EventArgs e)
         {
-            //Acquire currently selected CarouselView Index
             var index = MainCarouselView.Position;
             
             if(index == 0)

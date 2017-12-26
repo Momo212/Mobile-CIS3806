@@ -35,7 +35,7 @@
         <Grid BackgroundColor="{StaticResource Key=textColor}" Grid.Row="1" Grid.ColumnSpan="2" Padding="7">
             <Button Grid.Row="0" Grid.Column="1" x:Name="searchButton" Text="Search" Image="Assets/searchIcon.png" Style="{StaticResource Key=stylePadButton}" Clicked="SearchButton_OnClicked"/>
             <Button Grid.Row="0" Grid.Column="0" x:Name="addPatientButton" Text="Add Patient" Image="Assets/addPatientIcon.png" Style="{StaticResource Key=stylePadButton}" Clicked="AddPatientButton_OnClicked"/>
-            <Button Grid.Row="1" Grid.Column="0" x:Name="button3" Text="Search" Style="{StaticResource Key=stylePadButton}"/>
+            <Button Grid.Row="1" Grid.Column="0" x:Name="button3" Text="NotifsPage" Style="{StaticResource Key=stylePadButton}" Clicked="NotifsPageButton_OnClicked"/>
             <Button Grid.Row="1" Grid.Column="1" x:Name="button4" Text="Search" Style="{StaticResource Key=stylePadButton}"/>
         </Grid>
     </Grid>
