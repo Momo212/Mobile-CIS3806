@@ -31,13 +31,13 @@
     <AppXManifest Include="E:\School\University\Year3Semester1\Mobile\Dashboard [Github]\Version2\Mobile-CIS3806\App1\App1.UWP\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2017-12-24T16:07:35.943</Modified>
+      <Modified>2017-12-26T15:14:15.343</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="E:\School\University\Year3Semester1\Mobile\Dashboard [Github]\Version2\Mobile-CIS3806\App1\App1.UWP\bin\x86\Debug\App1.UWP.exe">
       <PackagePath>entrypoint\App1.UWP.exe</PackagePath>
-      <Modified>2017-12-24T16:07:33.393</Modified>
+      <Modified>2017-12-26T15:14:14.166</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\danza\.nuget\packages\microsoft.azure.mobile.client\4.0.2\lib\uap10.0\Microsoft.Azure.Mobile.Client.dll">
       <PackagePath>Microsoft.Azure.Mobile.Client.dll</PackagePath>
@@ -533,11 +533,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\School\University\Year3Semester1\Mobile\Dashboard [Github]\Version2\Mobile-CIS3806\App1\App1\bin\Debug\App1.dll">
       <PackagePath>App1.dll</PackagePath>
-      <Modified>2017-12-24T16:07:29.823</Modified>
+      <Modified>2017-12-26T15:14:11.598</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\School\University\Year3Semester1\Mobile\Dashboard [Github]\Version2\Mobile-CIS3806\App1\App1\bin\Debug\App1.dll.config">
       <PackagePath>App1.dll.config</PackagePath>
-      <Modified>2017-12-24T13:27:06.481</Modified>
+      <Modified>2017-12-26T14:35:55.897</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\School\University\Year3Semester1\Mobile\Dashboard [Github]\Version2\Mobile-CIS3806\App1\App1.UWP\Assets\addPatientIcon.png">
       <PackagePath>Assets\addPatientIcon.png</PackagePath>
@@ -836,7 +836,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\School\University\Year3Semester1\Mobile\Dashboard [Github]\Version2\Mobile-CIS3806\App1\App1.UWP\bin\x86\Debug\Core\App1.UWP.exe">
       <PackagePath>App1.UWP.exe</PackagePath>
-      <Modified>2017-12-24T16:07:35.939</Modified>
+      <Modified>2017-12-26T15:14:15.339</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

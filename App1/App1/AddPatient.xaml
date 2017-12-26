@@ -31,26 +31,39 @@
                     <Image x:Name="imgEditProfile" Grid.Row="0" Grid.Column="1" HorizontalOptions="EndAndExpand" VerticalOptions="EndAndExpand"/>
 
                 </Grid>
-                <ContentView Grid.Row="1" BackgroundColor="White">
-                    <ContentView HorizontalOptions="Fill"  VerticalOptions="Fill" BackgroundColor="LightPink">
-                        <control:CarouselView ItemsSource="{Binding MyDataSource}">
-                            <control:CarouselView.ItemTemplate>
-                                <DataTemplate>
-                                    <Label Text="{Binding LabelText}" />
-                                </DataTemplate>
-                            </control:CarouselView.ItemTemplate>
-                        </control:CarouselView>
+
+                <Grid Grid.Row="1" BackgroundColor="AliceBlue">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="4*"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+
+                    <ContentView Grid.Row="0" BackgroundColor="White">
+                        <ContentView HorizontalOptions="Fill"  VerticalOptions="Fill" BackgroundColor="LightPink">
+                            <control:CarouselView x:Name="MainCarouselView">
+                                <control:CarouselView.ItemTemplate>
+                                    <DataTemplate>
+                                        <Label Text="{Binding .}" />
+                                    </DataTemplate>
+                                </control:CarouselView.ItemTemplate>
+                            </control:CarouselView>
+                        </ContentView>
                     </ContentView>
 
-                </ContentView>
+                    <ContentView Grid.Row="1" BackgroundColor="AliceBlue">
+                        <Button x:Name="createNewButton" Text="Create New"  HorizontalOptions="EndAndExpand" Clicked="createNew_OnClick"/>
+                    </ContentView>
+                </Grid>
+                
             </Grid>
 
             <StackLayout Grid.Column="1">
                 <Entry x:Name="NameEntry" HorizontalOptions="FillAndExpand" Placeholder="Enter Name..."/>
                 <Entry x:Name="SurnameEntry" HorizontalOptions="FillAndExpand" Placeholder="Enter Surname..."/>
                 <Entry x:Name="IdNumberEntry" HorizontalOptions="FillAndExpand" Placeholder="Enter ID Number..."/>
+                <Entry x:Name="AdditionalEntry" HorizontalOptions="FillAndExpand" Placeholder="Relative Phone No..." IsVisible="False"/>
                 <StackLayout Orientation="Horizontal">
-                    <Label Text="DOB:" Margin="0,5,100,0"/>
+                    <Label x:Name="DOB" Text="DOB:" Margin="0,5,100,0"/>
                     <DatePicker x:Name="DatePickerT" HorizontalOptions="FillAndExpand">
                         <DatePicker.Format>yyyy-MM-dd</DatePicker.Format>
                         <DatePicker.MinimumDate>
@@ -70,7 +83,7 @@
                     </DatePicker>
                 </StackLayout>
                 <StackLayout Orientation="Horizontal">
-                    <Label Text="Gender:" Margin="0,5,120,0"/>
+                    <Label x:Name="Gender" Text="Gender:" Margin="0,5,120,0"/>
                     <Picker x:Name="genderPicker" HorizontalOptions="FillAndExpand" SelectedIndexChanged="GenderPicker_IndexChanged">
                         <Picker.ItemsSource>
                             <x:Array Type="{x:Type x:String}">
@@ -86,7 +99,7 @@
                     <Entry x:Name="WardNo" HorizontalOptions="FillAndExpand" Placeholder="Enter Ward Number..."/>
                 </StackLayout>
                 <StackLayout Orientation="Horizontal">
-                    <Label Text="Ward Colour:" Margin="0,5,85,0"/>
+                    <Label x:Name="WardCol" Text="Ward Colour:" Margin="0,5,85,0"/>
                     <Picker x:Name="wardColourPicker" HorizontalOptions="FillAndExpand" SelectedIndexChanged="WardColPicker_IndexChanged">
                         <Picker.ItemsSource>
                             <x:Array Type="{x:Type x:String}">
@@ -101,7 +114,7 @@
                     <Button Text="Submit"  HorizontalOptions="FillAndExpand" Clicked="onAddPatient_OnClick"/>
                     <Button Text="Cancel"  HorizontalOptions="FillAndExpand" Clicked="onCancel_OnClick"/>
                 </StackLayout>
-                
+
             </StackLayout>
         </Grid>
     </ContentPage.Content>

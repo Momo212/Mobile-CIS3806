@@ -15,7 +15,10 @@ namespace App1.DatabaseStuff
 #if OFFLINE_SYNC_ENABLED
         IMobileServiceSyncTable<TodoItem> todoTable;
 #else
-        IMobileServiceTable<Patient_Table> todoTable;
+        IMobileServiceTable<Patient_Table> patient_Table;
+        IMobileServiceTable<Relative_Table> relative_Table;
+        IMobileServiceTable<Hobby_Table> hobby_Table;
+        IMobileServiceTable<Fear_Table> fear_Table;
 #endif
 
         const string offlineDbPath = @"localstore.db";
@@ -31,9 +34,12 @@ namespace App1.DatabaseStuff
             //Initializes the SyncContext using the default IMobileServiceSyncHandler.
             this.client.SyncContext.InitializeAsync(store);
 
-            this.todoTable = client.GetSyncTable<TodoItem>();
+            this.patient_Table = client.GetSyncTable<TodoItem>();
 #else
-            this.todoTable = client.GetTable<Patient_Table>();
+            this.patient_Table = client.GetTable<Patient_Table>();
+            this.relative_Table = client.GetTable<Relative_Table>();
+            this.hobby_Table = client.GetTable<Hobby_Table>();
+            this.fear_Table = client.GetTable<Fear_Table>();
 #endif
         }
 
@@ -54,15 +60,51 @@ namespace App1.DatabaseStuff
             get { return client; }
         }
 
-        public async Task SaveTaskAsync(Patient_Table item)
+        public async Task SaveTaskAsyncPatient(Patient_Table item)
         {
             if (item.Id == null)
             {
-                await todoTable.InsertAsync(item);
+                await patient_Table.InsertAsync(item);
             }
             else
             {
-                await todoTable.UpdateAsync(item);
+                await patient_Table.UpdateAsync(item);
+            }
+        }
+
+        public async Task SaveTaskAsyncRelative(Relative_Table item)
+        {
+            if (item.Id == null)
+            {
+                await relative_Table.InsertAsync(item);
+            }
+            else
+            {
+                await relative_Table.UpdateAsync(item);
+            }
+        }
+
+        public async Task SaveTaskAsyncHobby(Hobby_Table item)
+        {
+            if (item.Id == null)
+            {
+                await hobby_Table.InsertAsync(item);
+            }
+            else
+            {
+                await hobby_Table.UpdateAsync(item);
+            }
+        }
+
+        public async Task SaveTaskAsyncFear(Fear_Table item)
+        {
+            if (item.Id == null)
+            {
+                await fear_Table.InsertAsync(item);
+            }
+            else
+            {
+                await fear_Table.UpdateAsync(item);
             }
         }
 
