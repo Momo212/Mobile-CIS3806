@@ -11,7 +11,8 @@
 namespace App1 {
     
     
-    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("C:\\Users\\Owner\\Source\\Repos\\Mobile-CIS38068\\App1\\App1\\Dashboard.xaml")]
+    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("E:\\School\\University\\Year3Semester1\\Mobile\\Dashboard [Github]\\Version2\\Mobile-CIS" +
+        "3806\\App1\\App1\\Dashboard.xaml")]
     public partial class MainPage : global::Xamarin.Forms.ContentPage {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]

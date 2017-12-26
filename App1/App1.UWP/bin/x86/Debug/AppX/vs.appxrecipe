@@ -31,13 +31,13 @@
     <AppXManifest Include="E:\School\University\Year3Semester1\Mobile\Dashboard [Github]\Version2\Mobile-CIS3806\App1\App1.UWP\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2017-12-26T19:48:22.191</Modified>
+      <Modified>2017-12-26T19:57:37.216</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="E:\School\University\Year3Semester1\Mobile\Dashboard [Github]\Version2\Mobile-CIS3806\App1\App1.UWP\bin\x86\Debug\App1.UWP.exe">
       <PackagePath>entrypoint\App1.UWP.exe</PackagePath>
-      <Modified>2017-12-26T19:48:18.735</Modified>
+      <Modified>2017-12-26T19:57:36.163</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\danza\.nuget\packages\microsoft.azure.mobile.client\4.0.2\lib\uap10.0\Microsoft.Azure.Mobile.Client.dll">
       <PackagePath>Microsoft.Azure.Mobile.Client.dll</PackagePath>
@@ -525,11 +525,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\School\University\Year3Semester1\Mobile\Dashboard [Github]\Version2\Mobile-CIS3806\App1\App1\bin\Debug\App1.dll">
       <PackagePath>App1.dll</PackagePath>
-      <Modified>2017-12-26T19:48:15.149</Modified>
+      <Modified>2017-12-26T19:57:15.436</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\School\University\Year3Semester1\Mobile\Dashboard [Github]\Version2\Mobile-CIS3806\App1\App1\bin\Debug\App1.dll.config">
       <PackagePath>App1.dll.config</PackagePath>
-      <Modified>2017-12-26T19:40:19.895</Modified>
+      <Modified>2017-12-26T19:56:33.364</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\School\University\Year3Semester1\Mobile\Dashboard [Github]\Version2\Mobile-CIS3806\App1\App1.UWP\Assets\addPatientIcon.png">
       <PackagePath>Assets\addPatientIcon.png</PackagePath>
@@ -907,7 +907,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\School\University\Year3Semester1\Mobile\Dashboard [Github]\Version2\Mobile-CIS3806\App1\App1.UWP\bin\x86\Debug\App1.UWP.xr.xml">
       <PackagePath>App1.UWP.xr.xml</PackagePath>
-      <Modified>2017-12-24T13:25:38.068</Modified>
+      <Modified>2017-12-26T19:57:19.147</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.16299.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -920,11 +920,11 @@
     <AppxPackagedFile Include="E:\School\University\Year3Semester1\Mobile\Dashboard [Github]\Version2\Mobile-CIS3806\App1\App1.UWP\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2017-12-26T19:48:21.290</Modified>
+      <Modified>2017-12-26T19:57:21.288</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\School\University\Year3Semester1\Mobile\Dashboard [Github]\Version2\Mobile-CIS3806\App1\App1.UWP\bin\x86\Debug\Core\App1.UWP.exe">
       <PackagePath>App1.UWP.exe</PackagePath>
-      <Modified>2017-12-26T19:48:22.180</Modified>
+      <Modified>2017-12-26T19:57:37.207</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>
