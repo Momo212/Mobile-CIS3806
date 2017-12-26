@@ -10,7 +10,7 @@ namespace App1.NotificationList
         public NotifChildTabPatient()
         {
             InitializeComponent();
-            DisplayList();
+            DisplayList(); //to discuss if we should make addiional calls on tab change
         }
 
         public List<Notification> fetchPatientNotifs()

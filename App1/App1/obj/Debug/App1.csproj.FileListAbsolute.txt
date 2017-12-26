@@ -1,211 +1,8 @@
-E:\School\University\Year3Semester1\Mobile\Dashboard\App1\App1\App1\bin\Debug\App1.dll
-E:\School\University\Year3Semester1\Mobile\Dashboard\App1\App1\App1\bin\Debug\App1.pdb
-E:\School\University\Year3Semester1\Mobile\Dashboard\App1\App1\App1\bin\Debug\Xamarin.Forms.Core.dll
-E:\School\University\Year3Semester1\Mobile\Dashboard\App1\App1\App1\bin\Debug\Xamarin.Forms.Platform.dll
-E:\School\University\Year3Semester1\Mobile\Dashboard\App1\App1\App1\bin\Debug\Xamarin.Forms.Xaml.dll
-E:\School\University\Year3Semester1\Mobile\Dashboard\App1\App1\App1\bin\Debug\Xamarin.Forms.Core.pdb
-E:\School\University\Year3Semester1\Mobile\Dashboard\App1\App1\App1\bin\Debug\Xamarin.Forms.Core.xml
-E:\School\University\Year3Semester1\Mobile\Dashboard\App1\App1\App1\bin\Debug\Xamarin.Forms.Platform.pdb
-E:\School\University\Year3Semester1\Mobile\Dashboard\App1\App1\App1\bin\Debug\Xamarin.Forms.Xaml.pdb
-E:\School\University\Year3Semester1\Mobile\Dashboard\App1\App1\App1\bin\Debug\Xamarin.Forms.Xaml.xml
-E:\School\University\Year3Semester1\Mobile\Dashboard\App1\App1\App1\obj\Debug\App1.csproj.CoreCompileInputs.cache
-E:\School\University\Year3Semester1\Mobile\Dashboard\App1\App1\App1\obj\Debug\App1.App.xaml.g.cs
-E:\School\University\Year3Semester1\Mobile\Dashboard\App1\App1\App1\obj\Debug\App1.dll
-E:\School\University\Year3Semester1\Mobile\Dashboard\App1\App1\App1\obj\Debug\App1.pdb
-E:\School\University\Year3Semester1\Mobile\Dashboard\App1\App1\App1\obj\Debug\App1.Dashboard.xaml.g.cs
-E:\School\University\Year3Semester1\Mobile\Dashboard\App1\App1\App1\obj\Debug\App1.csprojResolveAssemblyReference.cache
-E:\School\University\Year3Semester1\Mobile\Dashboard\App1\App1\App1\obj\Debug\App1.Search.xaml.g.cs
-C:\Users\Owner\Documents\GitHub\Mobile-CIS3806\App1\App1\bin\Debug\App1.dll
-C:\Users\Owner\Documents\GitHub\Mobile-CIS3806\App1\App1\bin\Debug\App1.pdb
-C:\Users\Owner\Documents\GitHub\Mobile-CIS3806\App1\App1\bin\Debug\Xamarin.Forms.Core.dll
-C:\Users\Owner\Documents\GitHub\Mobile-CIS3806\App1\App1\bin\Debug\Xamarin.Forms.Platform.dll
-C:\Users\Owner\Documents\GitHub\Mobile-CIS3806\App1\App1\bin\Debug\Xamarin.Forms.Xaml.dll
-C:\Users\Owner\Documents\GitHub\Mobile-CIS3806\App1\App1\bin\Debug\Xamarin.Forms.Core.pdb
-C:\Users\Owner\Documents\GitHub\Mobile-CIS3806\App1\App1\bin\Debug\Xamarin.Forms.Core.xml
-C:\Users\Owner\Documents\GitHub\Mobile-CIS3806\App1\App1\bin\Debug\Xamarin.Forms.Platform.pdb
-C:\Users\Owner\Documents\GitHub\Mobile-CIS3806\App1\App1\bin\Debug\Xamarin.Forms.Xaml.pdb
-C:\Users\Owner\Documents\GitHub\Mobile-CIS3806\App1\App1\bin\Debug\Xamarin.Forms.Xaml.xml
-C:\Users\Owner\Documents\GitHub\Mobile-CIS3806\App1\App1\obj\Debug\App1.csprojResolveAssemblyReference.cache
-C:\Users\Owner\Documents\GitHub\Mobile-CIS3806\App1\App1\obj\Debug\App1.csproj.CoreCompileInputs.cache
-C:\Users\Owner\Documents\GitHub\Mobile-CIS3806\App1\App1\obj\Debug\App1.Dashboard.xaml.g.cs
-C:\Users\Owner\Documents\GitHub\Mobile-CIS3806\App1\App1\obj\Debug\App1.App.xaml.g.cs
-C:\Users\Owner\Documents\GitHub\Mobile-CIS3806\App1\App1\obj\Debug\App1.Search.xaml.g.cs
-C:\Users\Owner\Documents\GitHub\Mobile-CIS3806\App1\App1\obj\Debug\App1.dll
-C:\Users\Owner\Documents\GitHub\Mobile-CIS3806\App1\App1\obj\Debug\App1.pdb
-E:\School\University\Year3Semester1\Mobile\Dashboard [Github]\Mobile-CIS3806\App1\App1\bin\Debug\App1.dll
-E:\School\University\Year3Semester1\Mobile\Dashboard [Github]\Mobile-CIS3806\App1\App1\bin\Debug\App1.pdb
-E:\School\University\Year3Semester1\Mobile\Dashboard [Github]\Mobile-CIS3806\App1\App1\bin\Debug\Xamarin.Forms.Core.dll
-E:\School\University\Year3Semester1\Mobile\Dashboard [Github]\Mobile-CIS3806\App1\App1\bin\Debug\Xamarin.Forms.Platform.dll
-E:\School\University\Year3Semester1\Mobile\Dashboard [Github]\Mobile-CIS3806\App1\App1\bin\Debug\Xamarin.Forms.Xaml.dll
-E:\School\University\Year3Semester1\Mobile\Dashboard [Github]\Mobile-CIS3806\App1\App1\bin\Debug\Xamarin.Forms.Core.pdb
-E:\School\University\Year3Semester1\Mobile\Dashboard [Github]\Mobile-CIS3806\App1\App1\bin\Debug\Xamarin.Forms.Core.xml
-E:\School\University\Year3Semester1\Mobile\Dashboard [Github]\Mobile-CIS3806\App1\App1\bin\Debug\Xamarin.Forms.Platform.pdb
-E:\School\University\Year3Semester1\Mobile\Dashboard [Github]\Mobile-CIS3806\App1\App1\bin\Debug\Xamarin.Forms.Xaml.pdb
-E:\School\University\Year3Semester1\Mobile\Dashboard [Github]\Mobile-CIS3806\App1\App1\bin\Debug\Xamarin.Forms.Xaml.xml
-E:\School\University\Year3Semester1\Mobile\Dashboard [Github]\Mobile-CIS3806\App1\App1\obj\Debug\App1.csprojResolveAssemblyReference.cache
-E:\School\University\Year3Semester1\Mobile\Dashboard [Github]\Mobile-CIS3806\App1\App1\obj\Debug\App1.csproj.CoreCompileInputs.cache
-E:\School\University\Year3Semester1\Mobile\Dashboard [Github]\Mobile-CIS3806\App1\App1\obj\Debug\App1.Dashboard.xaml.g.cs
-E:\School\University\Year3Semester1\Mobile\Dashboard [Github]\Mobile-CIS3806\App1\App1\obj\Debug\App1.App.xaml.g.cs
-E:\School\University\Year3Semester1\Mobile\Dashboard [Github]\Mobile-CIS3806\App1\App1\obj\Debug\App1.Search.xaml.g.cs
-E:\School\University\Year3Semester1\Mobile\Dashboard [Github]\Mobile-CIS3806\App1\App1\obj\Debug\App1.dll
-E:\School\University\Year3Semester1\Mobile\Dashboard [Github]\Mobile-CIS3806\App1\App1\obj\Debug\App1.pdb
-E:\School\University\Year3Semester1\Mobile\Dashboard [Github]\Mobile-CIS3806\App1\App1\obj\Debug\App1.AddPatient.xaml.g.cs
-E:\School\University\Year3Semester1\Mobile\Dashboard [Github]\Mobile-CIS3806\App1\App1\bin\Debug\Xamarin.Forms.CarouselView.dll
-E:\School\University\Year3Semester1\Mobile\Dashboard [Github]\Mobile-CIS3806\App1\App1\bin\Debug\Xamarin.Forms.CarouselView.Platform.dll
-E:\School\University\Year3Semester1\Mobile\Dashboard [Github]\Mobile-CIS3806\App1\App1\bin\Debug\App1.dll.config
-E:\School\University\Year3Semester1\Mobile\Dashboard [Github]\Mobile-CIS3806\App1\App1\bin\Debug\Microsoft.Azure.Mobile.Client.dll
-E:\School\University\Year3Semester1\Mobile\Dashboard [Github]\Mobile-CIS3806\App1\App1\bin\Debug\Newtonsoft.Json.dll
-E:\School\University\Year3Semester1\Mobile\Dashboard [Github]\Mobile-CIS3806\App1\App1\bin\Debug\PCLCrypto.dll
-E:\School\University\Year3Semester1\Mobile\Dashboard [Github]\Mobile-CIS3806\App1\App1\bin\Debug\PInvoke.BCrypt.dll
-E:\School\University\Year3Semester1\Mobile\Dashboard [Github]\Mobile-CIS3806\App1\App1\bin\Debug\PInvoke.Kernel32.dll
-E:\School\University\Year3Semester1\Mobile\Dashboard [Github]\Mobile-CIS3806\App1\App1\bin\Debug\PInvoke.NCrypt.dll
-E:\School\University\Year3Semester1\Mobile\Dashboard [Github]\Mobile-CIS3806\App1\App1\bin\Debug\PInvoke.Windows.Core.dll
-E:\School\University\Year3Semester1\Mobile\Dashboard [Github]\Mobile-CIS3806\App1\App1\bin\Debug\System.Net.Http.Extensions.dll
-E:\School\University\Year3Semester1\Mobile\Dashboard [Github]\Mobile-CIS3806\App1\App1\bin\Debug\System.Net.Http.Primitives.dll
-E:\School\University\Year3Semester1\Mobile\Dashboard [Github]\Mobile-CIS3806\App1\App1\bin\Debug\Validation.dll
-E:\School\University\Year3Semester1\Mobile\Dashboard [Github]\Mobile-CIS3806\App1\App1\bin\Debug\Microsoft.Azure.Mobile.Client.xml
-E:\School\University\Year3Semester1\Mobile\Dashboard [Github]\Mobile-CIS3806\App1\App1\bin\Debug\Newtonsoft.Json.xml
-E:\School\University\Year3Semester1\Mobile\Dashboard [Github]\Mobile-CIS3806\App1\App1\bin\Debug\PCLCrypto.xml
-E:\School\University\Year3Semester1\Mobile\Dashboard [Github]\Mobile-CIS3806\App1\App1\bin\Debug\PInvoke.BCrypt.xml
-E:\School\University\Year3Semester1\Mobile\Dashboard [Github]\Mobile-CIS3806\App1\App1\bin\Debug\PInvoke.Kernel32.xml
-E:\School\University\Year3Semester1\Mobile\Dashboard [Github]\Mobile-CIS3806\App1\App1\bin\Debug\PInvoke.NCrypt.xml
-E:\School\University\Year3Semester1\Mobile\Dashboard [Github]\Mobile-CIS3806\App1\App1\bin\Debug\PInvoke.Windows.Core.xml
-E:\School\University\Year3Semester1\Mobile\Dashboard [Github]\Mobile-CIS3806\App1\App1\bin\Debug\System.Net.Http.Extensions.xml
-E:\School\University\Year3Semester1\Mobile\Dashboard [Github]\Mobile-CIS3806\App1\App1\bin\Debug\System.Net.Http.Primitives.xml
-E:\School\University\Year3Semester1\Mobile\Dashboard [Github]\Mobile-CIS3806\App1\App1\bin\Debug\Validation.xml
-E:\School\University\Year3Semester1\Mobile\Dashboard [Github]\Mobile-CIS3806\App1\App1\obj\Debug\App1.csproj.App.config
-C:\Users\Matthew\.p2\Desktop\Application\Mobile-CIS3806\App1\App1\bin\Debug\App1.dll.config
-C:\Users\Matthew\.p2\Desktop\Application\Mobile-CIS3806\App1\App1\bin\Debug\App1.dll
-C:\Users\Matthew\.p2\Desktop\Application\Mobile-CIS3806\App1\App1\bin\Debug\App1.pdb
-C:\Users\Matthew\.p2\Desktop\Application\Mobile-CIS3806\App1\App1\bin\Debug\Microsoft.Azure.Mobile.Client.dll
-C:\Users\Matthew\.p2\Desktop\Application\Mobile-CIS3806\App1\App1\bin\Debug\Newtonsoft.Json.dll
-C:\Users\Matthew\.p2\Desktop\Application\Mobile-CIS3806\App1\App1\bin\Debug\PCLCrypto.dll
-C:\Users\Matthew\.p2\Desktop\Application\Mobile-CIS3806\App1\App1\bin\Debug\PInvoke.BCrypt.dll
-C:\Users\Matthew\.p2\Desktop\Application\Mobile-CIS3806\App1\App1\bin\Debug\PInvoke.Kernel32.dll
-C:\Users\Matthew\.p2\Desktop\Application\Mobile-CIS3806\App1\App1\bin\Debug\PInvoke.NCrypt.dll
-C:\Users\Matthew\.p2\Desktop\Application\Mobile-CIS3806\App1\App1\bin\Debug\PInvoke.Windows.Core.dll
-C:\Users\Matthew\.p2\Desktop\Application\Mobile-CIS3806\App1\App1\bin\Debug\System.Net.Http.Extensions.dll
-C:\Users\Matthew\.p2\Desktop\Application\Mobile-CIS3806\App1\App1\bin\Debug\System.Net.Http.Primitives.dll
-C:\Users\Matthew\.p2\Desktop\Application\Mobile-CIS3806\App1\App1\bin\Debug\Validation.dll
-C:\Users\Matthew\.p2\Desktop\Application\Mobile-CIS3806\App1\App1\bin\Debug\Xamarin.Forms.CarouselView.dll
-C:\Users\Matthew\.p2\Desktop\Application\Mobile-CIS3806\App1\App1\bin\Debug\Xamarin.Forms.CarouselView.Platform.dll
-C:\Users\Matthew\.p2\Desktop\Application\Mobile-CIS3806\App1\App1\bin\Debug\Xamarin.Forms.Core.dll
-C:\Users\Matthew\.p2\Desktop\Application\Mobile-CIS3806\App1\App1\bin\Debug\Xamarin.Forms.Platform.dll
-C:\Users\Matthew\.p2\Desktop\Application\Mobile-CIS3806\App1\App1\bin\Debug\Xamarin.Forms.Xaml.dll
-C:\Users\Matthew\.p2\Desktop\Application\Mobile-CIS3806\App1\App1\bin\Debug\Microsoft.Azure.Mobile.Client.xml
-C:\Users\Matthew\.p2\Desktop\Application\Mobile-CIS3806\App1\App1\bin\Debug\Newtonsoft.Json.xml
-C:\Users\Matthew\.p2\Desktop\Application\Mobile-CIS3806\App1\App1\bin\Debug\PCLCrypto.xml
-C:\Users\Matthew\.p2\Desktop\Application\Mobile-CIS3806\App1\App1\bin\Debug\PInvoke.BCrypt.xml
-C:\Users\Matthew\.p2\Desktop\Application\Mobile-CIS3806\App1\App1\bin\Debug\PInvoke.Kernel32.xml
-C:\Users\Matthew\.p2\Desktop\Application\Mobile-CIS3806\App1\App1\bin\Debug\PInvoke.NCrypt.xml
-C:\Users\Matthew\.p2\Desktop\Application\Mobile-CIS3806\App1\App1\bin\Debug\PInvoke.Windows.Core.xml
-C:\Users\Matthew\.p2\Desktop\Application\Mobile-CIS3806\App1\App1\bin\Debug\System.Net.Http.Extensions.xml
-C:\Users\Matthew\.p2\Desktop\Application\Mobile-CIS3806\App1\App1\bin\Debug\System.Net.Http.Primitives.xml
-C:\Users\Matthew\.p2\Desktop\Application\Mobile-CIS3806\App1\App1\bin\Debug\Validation.xml
-C:\Users\Matthew\.p2\Desktop\Application\Mobile-CIS3806\App1\App1\bin\Debug\Xamarin.Forms.Core.pdb
-C:\Users\Matthew\.p2\Desktop\Application\Mobile-CIS3806\App1\App1\bin\Debug\Xamarin.Forms.Core.xml
-C:\Users\Matthew\.p2\Desktop\Application\Mobile-CIS3806\App1\App1\bin\Debug\Xamarin.Forms.Platform.pdb
-C:\Users\Matthew\.p2\Desktop\Application\Mobile-CIS3806\App1\App1\bin\Debug\Xamarin.Forms.Xaml.pdb
-C:\Users\Matthew\.p2\Desktop\Application\Mobile-CIS3806\App1\App1\bin\Debug\Xamarin.Forms.Xaml.xml
-C:\Users\Matthew\.p2\Desktop\Application\Mobile-CIS3806\App1\App1\obj\Debug\App1.csproj.App.config
-C:\Users\Matthew\.p2\Desktop\Application\Mobile-CIS3806\App1\App1\obj\Debug\App1.csprojResolveAssemblyReference.cache
-C:\Users\Matthew\.p2\Desktop\Application\Mobile-CIS3806\App1\App1\obj\Debug\App1.csproj.CoreCompileInputs.cache
-C:\Users\Matthew\.p2\Desktop\Application\Mobile-CIS3806\App1\App1\obj\Debug\App1.Dashboard.xaml.g.cs
-C:\Users\Matthew\.p2\Desktop\Application\Mobile-CIS3806\App1\App1\obj\Debug\App1.App.xaml.g.cs
-C:\Users\Matthew\.p2\Desktop\Application\Mobile-CIS3806\App1\App1\obj\Debug\App1.Search.xaml.g.cs
-C:\Users\Matthew\.p2\Desktop\Application\Mobile-CIS3806\App1\App1\obj\Debug\App1.AddPatient.xaml.g.cs
-C:\Users\Matthew\.p2\Desktop\Application\Mobile-CIS3806\App1\App1\obj\Debug\App1.dll
-C:\Users\Matthew\.p2\Desktop\Application\Mobile-CIS3806\App1\App1\obj\Debug\App1.pdb
-C:\Users\Owner\Source\Repos\Mobile-CIS38063\App1\App1\bin\Debug\App1.dll.config
-C:\Users\Owner\Source\Repos\Mobile-CIS38063\App1\App1\bin\Debug\App1.dll
-C:\Users\Owner\Source\Repos\Mobile-CIS38063\App1\App1\bin\Debug\App1.pdb
-C:\Users\Owner\Source\Repos\Mobile-CIS38063\App1\App1\bin\Debug\Microsoft.Azure.Mobile.Client.dll
-C:\Users\Owner\Source\Repos\Mobile-CIS38063\App1\App1\bin\Debug\Newtonsoft.Json.dll
-C:\Users\Owner\Source\Repos\Mobile-CIS38063\App1\App1\bin\Debug\PCLCrypto.dll
-C:\Users\Owner\Source\Repos\Mobile-CIS38063\App1\App1\bin\Debug\PInvoke.BCrypt.dll
-C:\Users\Owner\Source\Repos\Mobile-CIS38063\App1\App1\bin\Debug\PInvoke.Kernel32.dll
-C:\Users\Owner\Source\Repos\Mobile-CIS38063\App1\App1\bin\Debug\PInvoke.NCrypt.dll
-C:\Users\Owner\Source\Repos\Mobile-CIS38063\App1\App1\bin\Debug\PInvoke.Windows.Core.dll
-C:\Users\Owner\Source\Repos\Mobile-CIS38063\App1\App1\bin\Debug\System.Net.Http.Extensions.dll
-C:\Users\Owner\Source\Repos\Mobile-CIS38063\App1\App1\bin\Debug\System.Net.Http.Primitives.dll
-C:\Users\Owner\Source\Repos\Mobile-CIS38063\App1\App1\bin\Debug\Validation.dll
-C:\Users\Owner\Source\Repos\Mobile-CIS38063\App1\App1\bin\Debug\Xamarin.Forms.CarouselView.dll
-C:\Users\Owner\Source\Repos\Mobile-CIS38063\App1\App1\bin\Debug\Xamarin.Forms.CarouselView.Platform.dll
-C:\Users\Owner\Source\Repos\Mobile-CIS38063\App1\App1\bin\Debug\Xamarin.Forms.Core.dll
-C:\Users\Owner\Source\Repos\Mobile-CIS38063\App1\App1\bin\Debug\Xamarin.Forms.Platform.dll
-C:\Users\Owner\Source\Repos\Mobile-CIS38063\App1\App1\bin\Debug\Xamarin.Forms.Xaml.dll
-C:\Users\Owner\Source\Repos\Mobile-CIS38063\App1\App1\bin\Debug\Microsoft.Azure.Mobile.Client.xml
-C:\Users\Owner\Source\Repos\Mobile-CIS38063\App1\App1\bin\Debug\Newtonsoft.Json.xml
-C:\Users\Owner\Source\Repos\Mobile-CIS38063\App1\App1\bin\Debug\PCLCrypto.xml
-C:\Users\Owner\Source\Repos\Mobile-CIS38063\App1\App1\bin\Debug\PInvoke.BCrypt.xml
-C:\Users\Owner\Source\Repos\Mobile-CIS38063\App1\App1\bin\Debug\PInvoke.Kernel32.xml
-C:\Users\Owner\Source\Repos\Mobile-CIS38063\App1\App1\bin\Debug\PInvoke.NCrypt.xml
-C:\Users\Owner\Source\Repos\Mobile-CIS38063\App1\App1\bin\Debug\PInvoke.Windows.Core.xml
-C:\Users\Owner\Source\Repos\Mobile-CIS38063\App1\App1\bin\Debug\System.Net.Http.Extensions.xml
-C:\Users\Owner\Source\Repos\Mobile-CIS38063\App1\App1\bin\Debug\System.Net.Http.Primitives.xml
-C:\Users\Owner\Source\Repos\Mobile-CIS38063\App1\App1\bin\Debug\Validation.xml
-C:\Users\Owner\Source\Repos\Mobile-CIS38063\App1\App1\bin\Debug\Xamarin.Forms.Core.pdb
-C:\Users\Owner\Source\Repos\Mobile-CIS38063\App1\App1\bin\Debug\Xamarin.Forms.Core.xml
-C:\Users\Owner\Source\Repos\Mobile-CIS38063\App1\App1\bin\Debug\Xamarin.Forms.Platform.pdb
-C:\Users\Owner\Source\Repos\Mobile-CIS38063\App1\App1\bin\Debug\Xamarin.Forms.Xaml.pdb
-C:\Users\Owner\Source\Repos\Mobile-CIS38063\App1\App1\bin\Debug\Xamarin.Forms.Xaml.xml
-C:\Users\Owner\Source\Repos\Mobile-CIS38063\App1\App1\obj\Debug\App1.csproj.App.config
-C:\Users\Owner\Source\Repos\Mobile-CIS38063\App1\App1\obj\Debug\App1.csprojResolveAssemblyReference.cache
-C:\Users\Owner\Source\Repos\Mobile-CIS38063\App1\App1\obj\Debug\App1.csproj.CoreCompileInputs.cache
-C:\Users\Owner\Source\Repos\Mobile-CIS38063\App1\App1\obj\Debug\App1.Dashboard.xaml.g.cs
-C:\Users\Owner\Source\Repos\Mobile-CIS38063\App1\App1\obj\Debug\App1.App.xaml.g.cs
-C:\Users\Owner\Source\Repos\Mobile-CIS38063\App1\App1\obj\Debug\App1.Search.xaml.g.cs
-C:\Users\Owner\Source\Repos\Mobile-CIS38063\App1\App1\obj\Debug\App1.AddPatient.xaml.g.cs
-C:\Users\Owner\Source\Repos\Mobile-CIS38063\App1\App1\obj\Debug\App1.dll
-C:\Users\Owner\Source\Repos\Mobile-CIS38063\App1\App1\obj\Debug\App1.pdb
-C:\Users\Jerome\Desktop\Xamarin clone\Mobile-CIS3806\App1\App1\bin\Debug\App1.dll.config
-C:\Users\Jerome\Desktop\Xamarin clone\Mobile-CIS3806\App1\App1\bin\Debug\App1.dll
-C:\Users\Jerome\Desktop\Xamarin clone\Mobile-CIS3806\App1\App1\bin\Debug\App1.pdb
-C:\Users\Jerome\Desktop\Xamarin clone\Mobile-CIS3806\App1\App1\bin\Debug\Microsoft.Azure.Mobile.Client.dll
-C:\Users\Jerome\Desktop\Xamarin clone\Mobile-CIS3806\App1\App1\bin\Debug\Newtonsoft.Json.dll
-C:\Users\Jerome\Desktop\Xamarin clone\Mobile-CIS3806\App1\App1\bin\Debug\PCLCrypto.dll
-C:\Users\Jerome\Desktop\Xamarin clone\Mobile-CIS3806\App1\App1\bin\Debug\PInvoke.BCrypt.dll
-C:\Users\Jerome\Desktop\Xamarin clone\Mobile-CIS3806\App1\App1\bin\Debug\PInvoke.Kernel32.dll
-C:\Users\Jerome\Desktop\Xamarin clone\Mobile-CIS3806\App1\App1\bin\Debug\PInvoke.NCrypt.dll
-C:\Users\Jerome\Desktop\Xamarin clone\Mobile-CIS3806\App1\App1\bin\Debug\PInvoke.Windows.Core.dll
-C:\Users\Jerome\Desktop\Xamarin clone\Mobile-CIS3806\App1\App1\bin\Debug\System.Net.Http.Extensions.dll
-C:\Users\Jerome\Desktop\Xamarin clone\Mobile-CIS3806\App1\App1\bin\Debug\System.Net.Http.Primitives.dll
-C:\Users\Jerome\Desktop\Xamarin clone\Mobile-CIS3806\App1\App1\bin\Debug\Validation.dll
-C:\Users\Jerome\Desktop\Xamarin clone\Mobile-CIS3806\App1\App1\bin\Debug\Xamarin.Forms.CarouselView.dll
-C:\Users\Jerome\Desktop\Xamarin clone\Mobile-CIS3806\App1\App1\bin\Debug\Xamarin.Forms.CarouselView.Platform.dll
-C:\Users\Jerome\Desktop\Xamarin clone\Mobile-CIS3806\App1\App1\bin\Debug\Xamarin.Forms.Core.dll
-C:\Users\Jerome\Desktop\Xamarin clone\Mobile-CIS3806\App1\App1\bin\Debug\Xamarin.Forms.Platform.dll
-C:\Users\Jerome\Desktop\Xamarin clone\Mobile-CIS3806\App1\App1\bin\Debug\Xamarin.Forms.Xaml.dll
-C:\Users\Jerome\Desktop\Xamarin clone\Mobile-CIS3806\App1\App1\bin\Debug\Microsoft.Azure.Mobile.Client.xml
-C:\Users\Jerome\Desktop\Xamarin clone\Mobile-CIS3806\App1\App1\bin\Debug\Newtonsoft.Json.xml
-C:\Users\Jerome\Desktop\Xamarin clone\Mobile-CIS3806\App1\App1\bin\Debug\PCLCrypto.xml
-C:\Users\Jerome\Desktop\Xamarin clone\Mobile-CIS3806\App1\App1\bin\Debug\PInvoke.BCrypt.xml
-C:\Users\Jerome\Desktop\Xamarin clone\Mobile-CIS3806\App1\App1\bin\Debug\PInvoke.Kernel32.xml
-C:\Users\Jerome\Desktop\Xamarin clone\Mobile-CIS3806\App1\App1\bin\Debug\PInvoke.NCrypt.xml
-C:\Users\Jerome\Desktop\Xamarin clone\Mobile-CIS3806\App1\App1\bin\Debug\PInvoke.Windows.Core.xml
-C:\Users\Jerome\Desktop\Xamarin clone\Mobile-CIS3806\App1\App1\bin\Debug\System.Net.Http.Extensions.xml
-C:\Users\Jerome\Desktop\Xamarin clone\Mobile-CIS3806\App1\App1\bin\Debug\System.Net.Http.Primitives.xml
-C:\Users\Jerome\Desktop\Xamarin clone\Mobile-CIS3806\App1\App1\bin\Debug\Validation.xml
-C:\Users\Jerome\Desktop\Xamarin clone\Mobile-CIS3806\App1\App1\bin\Debug\Xamarin.Forms.Core.pdb
-C:\Users\Jerome\Desktop\Xamarin clone\Mobile-CIS3806\App1\App1\bin\Debug\Xamarin.Forms.Core.xml
-C:\Users\Jerome\Desktop\Xamarin clone\Mobile-CIS3806\App1\App1\bin\Debug\Xamarin.Forms.Platform.pdb
-C:\Users\Jerome\Desktop\Xamarin clone\Mobile-CIS3806\App1\App1\bin\Debug\Xamarin.Forms.Xaml.pdb
-C:\Users\Jerome\Desktop\Xamarin clone\Mobile-CIS3806\App1\App1\bin\Debug\Xamarin.Forms.Xaml.xml
-C:\Users\Jerome\Desktop\Xamarin clone\Mobile-CIS3806\App1\App1\obj\Debug\App1.csproj.App.config
-C:\Users\Jerome\Desktop\Xamarin clone\Mobile-CIS3806\App1\App1\obj\Debug\App1.csprojResolveAssemblyReference.cache
-C:\Users\Jerome\Desktop\Xamarin clone\Mobile-CIS3806\App1\App1\obj\Debug\App1.csproj.CoreCompileInputs.cache
-C:\Users\Jerome\Desktop\Xamarin clone\Mobile-CIS3806\App1\App1\obj\Debug\App1.Dashboard.xaml.g.cs
-C:\Users\Jerome\Desktop\Xamarin clone\Mobile-CIS3806\App1\App1\obj\Debug\App1.App.xaml.g.cs
-C:\Users\Jerome\Desktop\Xamarin clone\Mobile-CIS3806\App1\App1\obj\Debug\App1.Search.xaml.g.cs
-C:\Users\Jerome\Desktop\Xamarin clone\Mobile-CIS3806\App1\App1\obj\Debug\App1.AddPatient.xaml.g.cs
-C:\Users\Jerome\Desktop\Xamarin clone\Mobile-CIS3806\App1\App1\obj\Debug\App1.dll
-C:\Users\Jerome\Desktop\Xamarin clone\Mobile-CIS3806\App1\App1\obj\Debug\App1.pdb
-C:\Users\Jerome\Desktop\Xamarin clone\Mobile-CIS3806\App1\App1\obj\Debug\App1.NotificationList.NotifParentTabbedView.xaml.g.cs
-C:\Users\Jerome\Desktop\Xamarin clone\Mobile-CIS3806\App1\App1\obj\Debug\App1.NotificationList.NotifChildTab.xaml.g.cs
 C:\Users\J\Desktop\Xamarin clone\Mobile-CIS3806\App1\App1\bin\Debug\App1.dll.config
 C:\Users\J\Desktop\Xamarin clone\Mobile-CIS3806\App1\App1\bin\Debug\App1.dll
 C:\Users\J\Desktop\Xamarin clone\Mobile-CIS3806\App1\App1\bin\Debug\App1.pdb
 C:\Users\J\Desktop\Xamarin clone\Mobile-CIS3806\App1\App1\bin\Debug\Microsoft.Azure.Mobile.Client.dll
+C:\Users\J\Desktop\Xamarin clone\Mobile-CIS3806\App1\App1\bin\Debug\Mono.Android.dll
 C:\Users\J\Desktop\Xamarin clone\Mobile-CIS3806\App1\App1\bin\Debug\Newtonsoft.Json.dll
 C:\Users\J\Desktop\Xamarin clone\Mobile-CIS3806\App1\App1\bin\Debug\PCLCrypto.dll
 C:\Users\J\Desktop\Xamarin clone\Mobile-CIS3806\App1\App1\bin\Debug\PInvoke.BCrypt.dll
@@ -220,7 +17,14 @@ C:\Users\J\Desktop\Xamarin clone\Mobile-CIS3806\App1\App1\bin\Debug\Xamarin.Form
 C:\Users\J\Desktop\Xamarin clone\Mobile-CIS3806\App1\App1\bin\Debug\Xamarin.Forms.Core.dll
 C:\Users\J\Desktop\Xamarin clone\Mobile-CIS3806\App1\App1\bin\Debug\Xamarin.Forms.Platform.dll
 C:\Users\J\Desktop\Xamarin clone\Mobile-CIS3806\App1\App1\bin\Debug\Xamarin.Forms.Xaml.dll
+C:\Users\J\Desktop\Xamarin clone\Mobile-CIS3806\App1\App1\bin\Debug\Xamarin.iOS.dll
+C:\Users\J\Desktop\Xamarin clone\Mobile-CIS3806\App1\App1\bin\Debug\System.Core.dll
+C:\Users\J\Desktop\Xamarin clone\Mobile-CIS3806\App1\App1\bin\Debug\System.dll
+C:\Users\J\Desktop\Xamarin clone\Mobile-CIS3806\App1\App1\bin\Debug\System.Xml.dll
+C:\Users\J\Desktop\Xamarin clone\Mobile-CIS3806\App1\App1\bin\Debug\Mono.Security.dll
 C:\Users\J\Desktop\Xamarin clone\Mobile-CIS3806\App1\App1\bin\Debug\Microsoft.Azure.Mobile.Client.xml
+C:\Users\J\Desktop\Xamarin clone\Mobile-CIS3806\App1\App1\bin\Debug\Mono.Android.pdb
+C:\Users\J\Desktop\Xamarin clone\Mobile-CIS3806\App1\App1\bin\Debug\Mono.Android.xml
 C:\Users\J\Desktop\Xamarin clone\Mobile-CIS3806\App1\App1\bin\Debug\Newtonsoft.Json.xml
 C:\Users\J\Desktop\Xamarin clone\Mobile-CIS3806\App1\App1\bin\Debug\PCLCrypto.xml
 C:\Users\J\Desktop\Xamarin clone\Mobile-CIS3806\App1\App1\bin\Debug\PInvoke.BCrypt.xml
@@ -235,28 +39,19 @@ C:\Users\J\Desktop\Xamarin clone\Mobile-CIS3806\App1\App1\bin\Debug\Xamarin.Form
 C:\Users\J\Desktop\Xamarin clone\Mobile-CIS3806\App1\App1\bin\Debug\Xamarin.Forms.Platform.pdb
 C:\Users\J\Desktop\Xamarin clone\Mobile-CIS3806\App1\App1\bin\Debug\Xamarin.Forms.Xaml.pdb
 C:\Users\J\Desktop\Xamarin clone\Mobile-CIS3806\App1\App1\bin\Debug\Xamarin.Forms.Xaml.xml
+C:\Users\J\Desktop\Xamarin clone\Mobile-CIS3806\App1\App1\bin\Debug\Xamarin.iOS.xml
+C:\Users\J\Desktop\Xamarin clone\Mobile-CIS3806\App1\App1\bin\Debug\System.Core.pdb
+C:\Users\J\Desktop\Xamarin clone\Mobile-CIS3806\App1\App1\bin\Debug\System.pdb
+C:\Users\J\Desktop\Xamarin clone\Mobile-CIS3806\App1\App1\bin\Debug\System.Xml.pdb
+C:\Users\J\Desktop\Xamarin clone\Mobile-CIS3806\App1\App1\bin\Debug\Mono.Security.pdb
 C:\Users\J\Desktop\Xamarin clone\Mobile-CIS3806\App1\App1\obj\Debug\App1.csproj.App.config
-C:\Users\J\Desktop\Xamarin clone\Mobile-CIS3806\App1\App1\obj\Debug\App1.csprojResolveAssemblyReference.cache
 C:\Users\J\Desktop\Xamarin clone\Mobile-CIS3806\App1\App1\obj\Debug\App1.csproj.CoreCompileInputs.cache
 C:\Users\J\Desktop\Xamarin clone\Mobile-CIS3806\App1\App1\obj\Debug\App1.Dashboard.xaml.g.cs
 C:\Users\J\Desktop\Xamarin clone\Mobile-CIS3806\App1\App1\obj\Debug\App1.App.xaml.g.cs
 C:\Users\J\Desktop\Xamarin clone\Mobile-CIS3806\App1\App1\obj\Debug\App1.Search.xaml.g.cs
 C:\Users\J\Desktop\Xamarin clone\Mobile-CIS3806\App1\App1\obj\Debug\App1.AddPatient.xaml.g.cs
 C:\Users\J\Desktop\Xamarin clone\Mobile-CIS3806\App1\App1\obj\Debug\App1.NotificationList.NotifParentTabbedView.xaml.g.cs
+C:\Users\J\Desktop\Xamarin clone\Mobile-CIS3806\App1\App1\obj\Debug\App1.NotificationList.NotifChildTabPatient.xaml.g.cs
+C:\Users\J\Desktop\Xamarin clone\Mobile-CIS3806\App1\App1\obj\Debug\App1.NotificationList.NotifChildTabEnvironment.xaml.g.cs
 C:\Users\J\Desktop\Xamarin clone\Mobile-CIS3806\App1\App1\obj\Debug\App1.dll
 C:\Users\J\Desktop\Xamarin clone\Mobile-CIS3806\App1\App1\obj\Debug\App1.pdb
-C:\Users\J\Desktop\Xamarin clone\Mobile-CIS3806\App1\App1\obj\Debug\App1.NotificationList.NotifChildTabPatient.xaml.g.cs
-C:\Users\J\Desktop\Xamarin clone\Mobile-CIS3806\App1\App1\bin\Debug\Mono.Android.dll
-C:\Users\J\Desktop\Xamarin clone\Mobile-CIS3806\App1\App1\bin\Debug\Mono.Android.pdb
-C:\Users\J\Desktop\Xamarin clone\Mobile-CIS3806\App1\App1\bin\Debug\Mono.Android.xml
-C:\Users\J\Desktop\Xamarin clone\Mobile-CIS3806\App1\App1\obj\Debug\App1.NotificationList.NotifChildTabEnvironment.xaml.g.cs
-C:\Users\J\Desktop\Xamarin clone\Mobile-CIS3806\App1\App1\bin\Debug\Xamarin.iOS.dll
-C:\Users\J\Desktop\Xamarin clone\Mobile-CIS3806\App1\App1\bin\Debug\System.Core.dll
-C:\Users\J\Desktop\Xamarin clone\Mobile-CIS3806\App1\App1\bin\Debug\System.dll
-C:\Users\J\Desktop\Xamarin clone\Mobile-CIS3806\App1\App1\bin\Debug\System.Xml.dll
-C:\Users\J\Desktop\Xamarin clone\Mobile-CIS3806\App1\App1\bin\Debug\Mono.Security.dll
-C:\Users\J\Desktop\Xamarin clone\Mobile-CIS3806\App1\App1\bin\Debug\Xamarin.iOS.xml
-C:\Users\J\Desktop\Xamarin clone\Mobile-CIS3806\App1\App1\bin\Debug\System.Core.pdb
-C:\Users\J\Desktop\Xamarin clone\Mobile-CIS3806\App1\App1\bin\Debug\System.pdb
-C:\Users\J\Desktop\Xamarin clone\Mobile-CIS3806\App1\App1\bin\Debug\System.Xml.pdb
-C:\Users\J\Desktop\Xamarin clone\Mobile-CIS3806\App1\App1\bin\Debug\Mono.Security.pdb
