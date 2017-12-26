@@ -2,7 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:sys="clr-namespace:System;assembly=mscorlib"
-             xmlns:control="clr-namespace:Xamarin.Forms;assembly=Xamarin.Forms.CarouselView"
+             xmlns:cv="clr-namespace:Xamarin.Forms;assembly=Xamarin.Forms.CarouselView"
              x:Class="App1.AddPatient">
     <ContentPage.Content>
         <Grid>
@@ -32,26 +32,35 @@
 
                 </Grid>
                 <Grid Grid.Row="1" BackgroundColor="AliceBlue">
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="4*"/>
-                        <RowDefinition Height="*"/>
-                    </Grid.RowDefinitions>
+                        <cv:CarouselView ItemsSource="{Binding left}" x:Name="LeftCarousel"  >
+                        <cv:CarouselView.ItemTemplate>
+                            <DataTemplate>
+                                <Grid BackgroundColor="White">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="5*" />
+                                        <RowDefinition Height="5*" />
+                                        <RowDefinition Height="10*" />
+                                        <RowDefinition Height="70*" />
+                                        <RowDefinition Height="10*" />
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="2*"/>
+                                        <ColumnDefinition Width="6*"/>
+                                        <ColumnDefinition Width="2*"/>
+                                    </Grid.ColumnDefinitions>
 
-                    <ContentView Grid.Row="0" BackgroundColor="White">
-                        <ContentView HorizontalOptions="Fill"  VerticalOptions="Fill" BackgroundColor="LightPink">
-                            <control:CarouselView x:Name="MainCarouselView">
-                                <control:CarouselView.ItemTemplate>
-                                    <DataTemplate>
-                                        <Label Text="{Binding .}" />
-                                    </DataTemplate>
-                                </control:CarouselView.ItemTemplate>
-                            </control:CarouselView>
-                        </ContentView>
-                    </ContentView>
+                                    <Button Grid.Column="2" Grid.Row="4" Text="Edit" FontSize="11" x:Name="EditButton"/>
+                                    <Label Text="{Binding Title}" FontSize="16" TextColor="DarkGray" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="3"/>
+                                    <Label Text="{Binding Text}" FontSize="11" TextColor="DarkGray" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="3"/>
+                                    <Label Grid.Row="0" Grid.Column="0" Text="{Binding LeftTitle}" TextColor="DarkGray" FontSize="11" HorizontalOptions="Center"/>
+                                    <Label Grid.Row="0" Grid.Column="2" Text="{Binding RightTitle}" TextColor="DarkGray" FontSize="11" HorizontalOptions="Center"/>
+                                    <Image Grid.Row="1" Grid.Column="0" Source="{Binding LeftArrow}" VerticalOptions="Fill" HorizontalOptions="Fill" />
+                                    <Image Grid.Row="1" Grid.Column="2" Source="{Binding RightArrow}" VerticalOptions="Fill" HorizontalOptions="Fill" Rotation="180"/>
 
-                    <ContentView Grid.Row="1" BackgroundColor="AliceBlue">
-                        <Button x:Name="createNewButton" Text="Create New"  HorizontalOptions="EndAndExpand" Clicked="createNew_OnClick"/>
-                    </ContentView>
+                                </Grid>
+                            </DataTemplate>
+                        </cv:CarouselView.ItemTemplate>
+                    </cv:CarouselView>
                 </Grid>
             </Grid>
 
