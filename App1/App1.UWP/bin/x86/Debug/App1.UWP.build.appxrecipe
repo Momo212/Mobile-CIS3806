@@ -418,11 +418,17 @@
     <AppxPackagedFile Include="E:\School\University\Year3Semester1\Mobile\Dashboard [Github]\Version2-3\Mobile-CIS3806\App1\App1.UWP\Assets\elderly3.png">
       <PackagePath>Assets\elderly3.png</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\School\University\Year3Semester1\Mobile\Dashboard [Github]\Version2-3\Mobile-CIS3806\App1\App1.UWP\Assets\female.png">
+      <PackagePath>Assets\female.png</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="E:\School\University\Year3Semester1\Mobile\Dashboard [Github]\Version2-3\Mobile-CIS3806\App1\App1.UWP\Assets\hamburgerMenu.png">
       <PackagePath>Assets\hamburgerMenu.png</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\School\University\Year3Semester1\Mobile\Dashboard [Github]\Version2-3\Mobile-CIS3806\App1\App1.UWP\Assets\home.png">
       <PackagePath>Assets\home.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\School\University\Year3Semester1\Mobile\Dashboard [Github]\Version2-3\Mobile-CIS3806\App1\App1.UWP\Assets\male.png">
+      <PackagePath>Assets\male.png</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\School\University\Year3Semester1\Mobile\Dashboard [Github]\Version2-3\Mobile-CIS3806\App1\App1.UWP\Assets\menu.png">
       <PackagePath>Assets\menu.png</PackagePath>

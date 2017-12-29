@@ -21,6 +21,9 @@
                     <Grid.RowDefinitions>
                         <RowDefinition Height="*" />
                         <RowDefinition Height="4*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*"/>
                     </Grid.RowDefinitions>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="6*"/>
@@ -29,7 +32,19 @@
 
                     <Image x:Name="imgProfile" Grid.Row="1" Grid.ColumnSpan="2" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
                     <Image x:Name="imgEditProfile" Grid.Row="0" Grid.Column="1" HorizontalOptions="EndAndExpand" VerticalOptions="EndAndExpand"/>
-
+                    <StackLayout Grid.Row="2" Grid.ColumnSpan="2">
+                        <Label x:Name="NameSurnameProfileLabel" TextColor="White" HorizontalOptions="CenterAndExpand"/>
+                    </StackLayout>
+                    <StackLayout Grid.Row="3" Grid.ColumnSpan="2" HorizontalOptions="CenterAndExpand" Orientation="Horizontal">
+                        <Label x:Name="GenderProfileLabel" TextColor="White" />
+                        <Label x:Name="AgeProfileLabel" TextColor="White" />
+                    </StackLayout>
+                    <StackLayout Grid.Row="4" Grid.ColumnSpan="2" HorizontalOptions="CenterAndExpand" Orientation="Horizontal">
+                        <Label x:Name="WardNoProfileLabel" TextColor="White" HorizontalOptions="CenterAndExpand"/>
+                        <Label x:Name="WardColProfileLabel" TextColor="White" HorizontalOptions="CenterAndExpand"/>
+                        <Label x:Name="RoomNoProfileLabel" TextColor="White" HorizontalOptions="CenterAndExpand"/>
+                        <Label x:Name="BedNoProfileLabel" TextColor="White" HorizontalOptions="CenterAndExpand"/>
+                    </StackLayout>
                 </Grid>
                 <Grid Grid.Row="1" BackgroundColor="AliceBlue">
                     <Grid>

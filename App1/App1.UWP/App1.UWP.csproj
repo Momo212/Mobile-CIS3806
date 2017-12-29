@@ -97,6 +97,7 @@
     <Content Include="Assets\elderly.png" />
     <Content Include="Assets\elderly2.png" />
     <Content Include="Assets\elderly3.png" />
+    <Content Include="Assets\female.png" />
     <Content Include="Assets\Fonts\bebas.ttf" />
     <Content Include="Assets\Fonts\baloo.ttf" />
     <Content Include="Assets\Fonts\Raleway-BlackItalic.ttf" />
@@ -136,6 +137,7 @@
   <ItemGroup>
     <Content Include="Assets\hamburgerMenu.png" />
     <Content Include="Assets\home.png" />
+    <Content Include="Assets\male.png" />
     <Content Include="Assets\menu.png" />
     <Content Include="Assets\NotifIcons\clock-inverted.png" />
     <Content Include="Assets\NotifIcons\clock.png" />

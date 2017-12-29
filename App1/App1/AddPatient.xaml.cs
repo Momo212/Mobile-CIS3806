@@ -206,6 +206,30 @@ namespace App1
                     await AddPatientItem(todo);
 
                     currentUserId = IdNumberEntry.Text;
+                    
+                    //Set Image and Respective Entries
+                    NameSurnameProfileLabel.Text = NameEntry.Text + " " + SurnameEntry.Text;
+                    GenderProfileLabel.Text = selectedGender + " | ";
+                    String dateTime = GetDateTime().ToString();
+                    String year = "";
+                    for (int i = 6; i <= 9; i++)
+                    {
+                        year += dateTime[i];
+                    }
+                    int ageDiff = 2018 - Convert.ToInt32(year);
+                    AgeProfileLabel.Text = ageDiff.ToString() + " Years";
+                    WardNoProfileLabel.Text = "Ward No: " + WardNo.Text + " | ";
+                    WardColProfileLabel.Text = selectedColor + " | ";
+                    RoomNoProfileLabel.Text = "Room No: " + RoomNo.Text + " | ";
+                    BedNoProfileLabel.Text = "Bed No: " + BedNo.Text;
+                    if (selectedGender.Equals("Male"))
+                    {
+                        imgProfile.Source = ImageSource.FromFile("Assets/male.png");
+                    }
+                    else if (selectedGender.Equals("Female"))
+                    {
+                        imgProfile.Source = ImageSource.FromFile("Assets/female.png");
+                    }
 
                     IdNumberEntry.Text = String.Empty;
                     NameEntry.Text = String.Empty;
