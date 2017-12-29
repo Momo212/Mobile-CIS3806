@@ -32,35 +32,41 @@
 
                 </Grid>
                 <Grid Grid.Row="1" BackgroundColor="AliceBlue">
-                        <cv:CarouselView ItemsSource="{Binding left}" x:Name="LeftCarousel"  >
-                        <cv:CarouselView.ItemTemplate>
-                            <DataTemplate>
-                                <Grid BackgroundColor="White">
-                                    <Grid.RowDefinitions>
-                                        <RowDefinition Height="5*" />
-                                        <RowDefinition Height="5*" />
-                                        <RowDefinition Height="10*" />
-                                        <RowDefinition Height="70*" />
-                                        <RowDefinition Height="10*" />
-                                    </Grid.RowDefinitions>
-                                    <Grid.ColumnDefinitions>
-                                        <ColumnDefinition Width="2*"/>
-                                        <ColumnDefinition Width="6*"/>
-                                        <ColumnDefinition Width="2*"/>
-                                    </Grid.ColumnDefinitions>
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="4*"></RowDefinition>
+                            <RowDefinition Height="*"></RowDefinition>
+                        </Grid.RowDefinitions>
+                        <cv:CarouselView ItemsSource="{Binding left}" x:Name="LeftCarousel" Grid.Row="0">
+                            <cv:CarouselView.ItemTemplate>
+                                <DataTemplate>
+                                    <Grid BackgroundColor="White">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="5*" />
+                                            <RowDefinition Height="5*" />
+                                            <RowDefinition Height="10*" />
+                                            <RowDefinition Height="70*" />
+                                            <RowDefinition Height="10*" />
+                                        </Grid.RowDefinitions>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="2*"/>
+                                            <ColumnDefinition Width="6*"/>
+                                            <ColumnDefinition Width="2*"/>
+                                        </Grid.ColumnDefinitions>
 
-                                    <Button Grid.Column="2" Grid.Row="4" Text="Edit" FontSize="11" x:Name="EditButton"/>
-                                    <Label Text="{Binding Title}" FontSize="16" TextColor="DarkGray" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="3"/>
-                                    <Label Text="{Binding Text}" FontSize="11" TextColor="DarkGray" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="3"/>
-                                    <Label Grid.Row="0" Grid.Column="0" Text="{Binding LeftTitle}" TextColor="DarkGray" FontSize="11" HorizontalOptions="Center"/>
-                                    <Label Grid.Row="0" Grid.Column="2" Text="{Binding RightTitle}" TextColor="DarkGray" FontSize="11" HorizontalOptions="Center"/>
-                                    <Image Grid.Row="1" Grid.Column="0" Source="{Binding LeftArrow}" VerticalOptions="Fill" HorizontalOptions="Fill" />
-                                    <Image Grid.Row="1" Grid.Column="2" Source="{Binding RightArrow}" VerticalOptions="Fill" HorizontalOptions="Fill" Rotation="180"/>
+                                        <Label Text="{Binding Title}" FontSize="16" TextColor="DarkGray" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="3"/>
+                                        <Label Text="{Binding Text}" FontSize="11" TextColor="DarkGray" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="3"/>
+                                        <Label Grid.Row="0" Grid.Column="0" Text="{Binding LeftTitle}" TextColor="DarkGray" FontSize="11" HorizontalOptions="Center"/>
+                                        <Label Grid.Row="0" Grid.Column="2" Text="{Binding RightTitle}" TextColor="DarkGray" FontSize="11" HorizontalOptions="Center"/>
+                                        <Image Grid.Row="1" Grid.Column="0" Source="{Binding LeftArrow}" VerticalOptions="Fill" HorizontalOptions="Fill" />
+                                        <Image Grid.Row="1" Grid.Column="2" Source="{Binding RightArrow}" VerticalOptions="Fill" HorizontalOptions="Fill" Rotation="180"/>
 
-                                </Grid>
-                            </DataTemplate>
-                        </cv:CarouselView.ItemTemplate>
-                    </cv:CarouselView>
+                                    </Grid>
+                                </DataTemplate>
+                            </cv:CarouselView.ItemTemplate>
+                        </cv:CarouselView>
+                        <Button x:Name="EditButton" Text="Edit" FontSize="11" Grid.Row="1" Clicked="createNew_OnClick"/>
+                    </Grid>
                 </Grid>
             </Grid>
 

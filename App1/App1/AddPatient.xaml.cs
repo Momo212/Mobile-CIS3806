@@ -37,7 +37,7 @@ namespace App1
             
             if (currentUserId == null)
             {
-                //EditButton.IsEnabled = false;
+                EditButton.IsEnabled = false;
             }
 
             var dashboard = new ToolbarItem
@@ -58,10 +58,6 @@ namespace App1
             this.ToolbarItems.Add(dashboard);
             this.ToolbarItems.Add(addPatient);
             GetDateTime();
-            
-            //var pages = new List < string >{ "Relatives","Hobbies","Fears"};
-
-            //MainCarouselView.ItemsSource = pages;
         }
 
         private void ShowDashboard()
@@ -221,7 +217,7 @@ namespace App1
                     RoomNo.Text = String.Empty;
                     BedNo.Text = String.Empty;
 
-                    //EditButton.IsEnabled = true;
+                    EditButton.IsEnabled = true;
                 }
             }
         }

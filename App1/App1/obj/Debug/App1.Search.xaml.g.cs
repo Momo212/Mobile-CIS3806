@@ -11,8 +11,8 @@
 namespace App1 {
     
     
-    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("E:\\School\\University\\Year3Semester1\\Mobile\\Dashboard [Github]\\Version2\\Mobile-CIS" +
-        "3806\\App1\\App1\\Search.xaml")]
+    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("E:\\School\\University\\Year3Semester1\\Mobile\\Dashboard [Github]\\Version2-3\\Mobile-C" +
+        "IS3806\\App1\\App1\\Search.xaml")]
     public partial class Search : global::Xamarin.Forms.ContentPage {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
