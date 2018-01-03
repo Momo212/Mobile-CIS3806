@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Microsoft.WindowsAzure.MobileServices;
+using System.Collections.ObjectModel;
 
 namespace App1.DatabaseStuff
 {
@@ -107,6 +108,50 @@ namespace App1.DatabaseStuff
                 await fear_Table.UpdateAsync(item);
             }
         }
+        
+        public async Task<ObservableCollection<Relative_Table>> GetRelativeItemsAsync(String currentUserId)
+        {
+#if OFFLINE_SYNC_ENABLED
+                if (syncItems)
+                {
+                    await this.SyncAsync();
+                }
+#endif
+                IEnumerable<Relative_Table> items = await relative_Table
+                    .Where(relativeItem => relativeItem.PatientID_FK == currentUserId)
+                    .ToEnumerableAsync();
 
+                return new ObservableCollection<Relative_Table>(items);
+        }
+
+        public async Task<ObservableCollection<Hobby_Table>> GetHobbyItemsAsync(String currentUserId)
+        {
+#if OFFLINE_SYNC_ENABLED
+                if (syncItems)
+                {
+                    await this.SyncAsync();
+                }
+#endif
+            IEnumerable<Hobby_Table> items = await hobby_Table
+                .Where(hobbyItem => hobbyItem.PatientID_FK == currentUserId)
+                .ToEnumerableAsync();
+
+            return new ObservableCollection<Hobby_Table>(items);
+        }
+
+        public async Task<ObservableCollection<Fear_Table>> GetFearItemsAsync(String currentUserId)
+        {
+#if OFFLINE_SYNC_ENABLED
+                if (syncItems)
+                {
+                    await this.SyncAsync();
+                }
+#endif
+            IEnumerable<Fear_Table> items = await fear_Table
+                .Where(fearItem => fearItem.PatientID_FK == currentUserId)
+                .ToEnumerableAsync();
+
+            return new ObservableCollection<Fear_Table>(items);
+        }
     }
 }

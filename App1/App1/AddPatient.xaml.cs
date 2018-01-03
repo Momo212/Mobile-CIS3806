@@ -125,6 +125,8 @@ namespace App1
                 WardNo.IsVisible = true;
                 WardCol.IsVisible = true;
                 wardColourPicker.IsVisible = true;
+
+                var relative_items = await manager.GetRelativeItemsAsync(currentUserId);
             }
             else if (ButtonFlag == true && LeftCarousel.Position == 1)
             {
@@ -159,6 +161,8 @@ namespace App1
                 WardNo.IsVisible = true;
                 WardCol.IsVisible = true;
                 wardColourPicker.IsVisible = true;
+
+                var hobby_items = await manager.GetHobbyItemsAsync(currentUserId);
             }
             else if (ButtonFlag == true && LeftCarousel.Position == 2)
             {
@@ -193,6 +197,8 @@ namespace App1
                 WardNo.IsVisible = true;
                 WardCol.IsVisible = true;
                 wardColourPicker.IsVisible = true;
+
+                var fear_items = await manager.GetFearItemsAsync(currentUserId);
             }
             else
             {

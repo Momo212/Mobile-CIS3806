@@ -31,13 +31,13 @@
     <AppXManifest Include="E:\School\University\Year3Semester1\Mobile\Dashboard [Github]\Version2-3\Mobile-CIS3806\App1\App1.UWP\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2017-12-29T22:33:07.362</Modified>
+      <Modified>2018-01-03T20:32:40.764</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="E:\School\University\Year3Semester1\Mobile\Dashboard [Github]\Version2-3\Mobile-CIS3806\App1\App1.UWP\bin\x86\Debug\App1.UWP.exe">
       <PackagePath>entrypoint\App1.UWP.exe</PackagePath>
-      <Modified>2017-12-29T22:33:06.031</Modified>
+      <Modified>2018-01-03T20:32:39.635</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\danza\.nuget\packages\microsoft.azure.mobile.client\4.0.2\lib\uap10.0\Microsoft.Azure.Mobile.Client.dll">
       <PackagePath>Microsoft.Azure.Mobile.Client.dll</PackagePath>
@@ -525,7 +525,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\School\University\Year3Semester1\Mobile\Dashboard [Github]\Version2-3\Mobile-CIS3806\App1\App1\bin\Debug\App1.dll">
       <PackagePath>App1.dll</PackagePath>
-      <Modified>2017-12-29T22:32:27.384</Modified>
+      <Modified>2018-01-03T20:32:37.211</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\School\University\Year3Semester1\Mobile\Dashboard [Github]\Version2-3\Mobile-CIS3806\App1\App1\bin\Debug\App1.dll.config">
       <PackagePath>App1.dll.config</PackagePath>
@@ -932,7 +932,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\School\University\Year3Semester1\Mobile\Dashboard [Github]\Version2-3\Mobile-CIS3806\App1\App1.UWP\bin\x86\Debug\Core\App1.UWP.exe">
       <PackagePath>App1.UWP.exe</PackagePath>
-      <Modified>2017-12-29T22:33:07.359</Modified>
+      <Modified>2018-01-03T20:32:40.759</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>
