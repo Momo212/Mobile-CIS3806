@@ -40,10 +40,10 @@
                         <Label x:Name="AgeProfileLabel" TextColor="White" />
                     </StackLayout>
                     <StackLayout Grid.Row="4" Grid.ColumnSpan="2" HorizontalOptions="CenterAndExpand" Orientation="Horizontal">
-                        <Label x:Name="WardNoProfileLabel" TextColor="White" HorizontalOptions="CenterAndExpand"/>
-                        <Label x:Name="WardColProfileLabel" TextColor="White" HorizontalOptions="CenterAndExpand"/>
-                        <Label x:Name="RoomNoProfileLabel" TextColor="White" HorizontalOptions="CenterAndExpand"/>
-                        <Label x:Name="BedNoProfileLabel" TextColor="White" HorizontalOptions="CenterAndExpand"/>
+                        <Label x:Name="WardNoProfileLabel" TextColor="White" HorizontalOptions="CenterAndExpand" FontSize="11"/>
+                        <Label x:Name="WardColProfileLabel" TextColor="White" HorizontalOptions="CenterAndExpand" FontSize="11"/>
+                        <Label x:Name="RoomNoProfileLabel" TextColor="White" HorizontalOptions="CenterAndExpand" FontSize="11"/>
+                        <Label x:Name="BedNoProfileLabel" TextColor="White" HorizontalOptions="CenterAndExpand" FontSize="11"/>
                     </StackLayout>
                 </Grid>
                 <Grid Grid.Row="1" BackgroundColor="AliceBlue">
@@ -57,11 +57,11 @@
                                 <DataTemplate>
                                     <Grid BackgroundColor="White">
                                         <Grid.RowDefinitions>
-                                            <RowDefinition Height="5*" />
+                                            <RowDefinition Height="10*" />
                                             <RowDefinition Height="5*" />
                                             <RowDefinition Height="10*" />
-                                            <RowDefinition Height="70*" />
-                                            <RowDefinition Height="10*" />
+                                            <RowDefinition Height="75*" />
+                                            
                                         </Grid.RowDefinitions>
                                         <Grid.ColumnDefinitions>
                                             <ColumnDefinition Width="2*"/>
@@ -70,12 +70,14 @@
                                         </Grid.ColumnDefinitions>
 
                                         <Label Text="{Binding Title}" FontSize="16" TextColor="DarkGray" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="3"/>
-                                        <Label Text="{Binding Text}" FontSize="11" TextColor="DarkGray" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="3"/>
+                                        <!--<Label Text="{Binding Text}" FontSize="11" TextColor="DarkGray" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="3"/>-->
                                         <Label Grid.Row="0" Grid.Column="0" Text="{Binding LeftTitle}" TextColor="DarkGray" FontSize="11" HorizontalOptions="Center"/>
                                         <Label Grid.Row="0" Grid.Column="2" Text="{Binding RightTitle}" TextColor="DarkGray" FontSize="11" HorizontalOptions="Center"/>
                                         <Image Grid.Row="1" Grid.Column="0" Source="{Binding LeftArrow}" VerticalOptions="Fill" HorizontalOptions="Fill" />
                                         <Image Grid.Row="1" Grid.Column="2" Source="{Binding RightArrow}" VerticalOptions="Fill" HorizontalOptions="Fill" Rotation="180"/>
+                                        <ListView Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="3" ItemsSource="{Binding obscollection}">
 
+                                        </ListView>
                                     </Grid>
                                 </DataTemplate>
                             </cv:CarouselView.ItemTemplate>
