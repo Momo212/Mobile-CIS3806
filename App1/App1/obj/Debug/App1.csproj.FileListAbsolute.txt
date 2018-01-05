@@ -170,3 +170,4 @@ C:\Users\Owner\Source\Repos\Mobile-CIS380612\App1\App1\obj\Debug\App1.Notificati
 C:\Users\Owner\Source\Repos\Mobile-CIS380612\App1\App1\obj\Debug\App1.NotificationList.NotifChildTabEnvironment.xaml.g.cs
 C:\Users\Owner\Source\Repos\Mobile-CIS380612\App1\App1\obj\Debug\App1.dll
 C:\Users\Owner\Source\Repos\Mobile-CIS380612\App1\App1\obj\Debug\App1.pdb
+C:\Users\Owner\Source\Repos\Mobile-CIS380612\App1\App1\obj\Debug\App1.PatientProfile.xaml.g.cs

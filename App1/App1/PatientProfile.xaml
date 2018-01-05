@@ -1,9 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:sys="clr-namespace:System;assembly=mscorlib"
-             xmlns:cv="clr-namespace:Xamarin.Forms;assembly=Xamarin.Forms.CarouselView"
-             x:Class="App1.AddPatient">
+             x:Class="App1.PatientProfile">
     <ContentPage.Content>
         <Grid>
             <Grid.ColumnDefinitions>
@@ -52,7 +50,7 @@
                             <RowDefinition Height="4*"></RowDefinition>
                             <RowDefinition Height="*"></RowDefinition>
                         </Grid.RowDefinitions>
-                        <cv:CarouselView ItemsSource="{Binding left}" x:Name="LeftCarousel" Grid.Row="0">
+                        <!--<cv:CarouselView ItemsSource="{Binding left}" x:Name="LeftCarousel" Grid.Row="0">
                             <cv:CarouselView.ItemTemplate>
                                 <DataTemplate>
                                     <Grid BackgroundColor="White">
@@ -61,7 +59,7 @@
                                             <RowDefinition Height="5*" />
                                             <RowDefinition Height="10*" />
                                             <RowDefinition Height="75*" />
-                                            
+
                                         </Grid.RowDefinitions>
                                         <Grid.ColumnDefinitions>
                                             <ColumnDefinition Width="2*"/>
@@ -70,7 +68,9 @@
                                         </Grid.ColumnDefinitions>
 
                                         <Label Text="{Binding Title}" FontSize="16" TextColor="DarkGray" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="3"/>
-                                        <!--<Label Text="{Binding Text}" FontSize="11" TextColor="DarkGray" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="3"/>-->
+                                        -->
+                        <!--<Label Text="{Binding Text}" FontSize="11" TextColor="DarkGray" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="3"/>-->
+                        <!--
                                         <Label Grid.Row="0" Grid.Column="0" Text="{Binding LeftTitle}" TextColor="DarkGray" FontSize="11" HorizontalOptions="Center"/>
                                         <Label Grid.Row="0" Grid.Column="2" Text="{Binding RightTitle}" TextColor="DarkGray" FontSize="11" HorizontalOptions="Center"/>
                                         <Image Grid.Row="1" Grid.Column="0" Source="{Binding LeftArrow}" VerticalOptions="Fill" HorizontalOptions="Fill" />
@@ -82,70 +82,42 @@
                                 </DataTemplate>
                             </cv:CarouselView.ItemTemplate>
                         </cv:CarouselView>
-                        <Button x:Name="EditButton" Text="Edit" FontSize="11" Grid.Row="1" Clicked="createNew_OnClick"/>
+                        <Button x:Name="EditButton" Text="Edit" FontSize="11" Grid.Row="1" Clicked="createNew_OnClick"/>-->
                     </Grid>
                 </Grid>
             </Grid>
 
-            <StackLayout Grid.Column="1">
-                <Entry x:Name="NameEntry" HorizontalOptions="FillAndExpand" Placeholder="Enter Name..."/>
-                <Entry x:Name="SurnameEntry" HorizontalOptions="FillAndExpand" Placeholder="Enter Surname..."/>
-                <Entry x:Name="IdNumberEntry" HorizontalOptions="FillAndExpand" Placeholder="Enter ID Number..."/>
-                <Entry x:Name="AdditionalEntry" HorizontalOptions="FillAndExpand" Placeholder="Relative Phone No..." IsVisible="False"/>
-                <StackLayout Orientation="Horizontal">
-                    <Label x:Name="DOB" Text="DOB:" Margin="0,5,100,0"/>
-                    <DatePicker x:Name="DatePickerT" HorizontalOptions="FillAndExpand">
-                        <DatePicker.Format>yyyy-MM-dd</DatePicker.Format>
-                        <DatePicker.MinimumDate>
-                            <sys:DateTime x:FactoryMethod="Parse">
-                                <x:Arguments>
-                                    <x:String>Jan 1 1900</x:String>
-                                </x:Arguments>
-                            </sys:DateTime>
-                        </DatePicker.MinimumDate>
-                        <DatePicker.MaximumDate>
-                            <sys:DateTime x:FactoryMethod="Parse">
-                                <x:Arguments>
-                                    <x:String>Jan 1 2014</x:String>
-                                </x:Arguments>
-                            </sys:DateTime>
-                        </DatePicker.MaximumDate>
-                    </DatePicker>
-                </StackLayout>
-                <StackLayout Orientation="Horizontal">
-                    <Label x:Name="Gender" Text="Gender:" Margin="0,5,120,0"/>
-                    <Picker x:Name="genderPicker" HorizontalOptions="FillAndExpand" SelectedIndexChanged="GenderPicker_IndexChanged">
-                        <Picker.ItemsSource>
-                            <x:Array Type="{x:Type x:String}">
-                                <x:String>Male</x:String>
-                                <x:String>Female</x:String>
-                            </x:Array>
-                        </Picker.ItemsSource>
-                    </Picker>
-                </StackLayout>
-                <StackLayout Orientation="Horizontal">
-                    <Entry x:Name="RoomNo" HorizontalOptions="FillAndExpand" Placeholder="Enter Room Number..."/>
-                    <Entry x:Name="BedNo" HorizontalOptions="FillAndExpand" Placeholder="Enter Bed Number..."/>
-                    <Entry x:Name="WardNo" HorizontalOptions="FillAndExpand" Placeholder="Enter Ward Number..."/>
-                </StackLayout>
-                <StackLayout Orientation="Horizontal">
-                    <Label x:Name="WardCol" Text="Ward Colour:" Margin="0,5,85,0"/>
-                    <Picker x:Name="wardColourPicker" HorizontalOptions="FillAndExpand" SelectedIndexChanged="WardColPicker_IndexChanged">
-                        <Picker.ItemsSource>
-                            <x:Array Type="{x:Type x:String}">
-                                <x:String>Red</x:String>
-                                <x:String>Blue</x:String>
-                                <x:String>Green</x:String>
-                            </x:Array>
-                        </Picker.ItemsSource>
-                    </Picker>
-                </StackLayout>
-                <StackLayout Orientation="Horizontal" VerticalOptions="EndAndExpand">
-                    <Button Text="Submit"  HorizontalOptions="FillAndExpand" Clicked="onAddPatient_OnClick"/>
-                    <Button Text="Cancel"  HorizontalOptions="FillAndExpand" Clicked="onCancel_OnClick"/>
-                </StackLayout>
+            <!--<cv:CarouselView ItemsSource="{Binding left}" x:Name="MainCarousel" Grid.Row="1">
+                            <cv:CarouselView.ItemTemplate>
+                                <DataTemplate>
+                                    <Grid BackgroundColor="White">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="10*" />
+                                            <RowDefinition Height="5*" />
+                                            <RowDefinition Height="10*" />
+                                            <RowDefinition Height="75*" />
 
-            </StackLayout>
+                                        </Grid.RowDefinitions>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="2*"/>
+                                            <ColumnDefinition Width="6*"/>
+                                            <ColumnDefinition Width="2*"/>
+                                        </Grid.ColumnDefinitions>
+
+                                        <Label Text="{Binding Title}" FontSize="16" TextColor="DarkGray" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="3"/>
+                                        
+                                        <Label Grid.Row="0" Grid.Column="0" Text="{Binding LeftTitle}" TextColor="DarkGray" FontSize="11" HorizontalOptions="Center"/>
+                                        <Label Grid.Row="0" Grid.Column="2" Text="{Binding RightTitle}" TextColor="DarkGray" FontSize="11" HorizontalOptions="Center"/>
+                                        <Image Grid.Row="1" Grid.Column="0" Source="{Binding LeftArrow}" VerticalOptions="Fill" HorizontalOptions="Fill" />
+                                        <Image Grid.Row="1" Grid.Column="2" Source="{Binding RightArrow}" VerticalOptions="Fill" HorizontalOptions="Fill" Rotation="180"/>
+                                        <ListView Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="3" ItemsSource="{Binding obscollection}" x:Name="listV">
+
+                                        </ListView>
+                                    </Grid>
+                                </DataTemplate>
+                            </cv:CarouselView.ItemTemplate>
+                        </cv:CarouselView>-->
+
         </Grid>
     </ContentPage.Content>
 </ContentPage>

@@ -405,7 +405,6 @@ namespace App1
             };
             LeftCarousel.ItemsSource = left;
             
-
         }
 
         public void ListViewDemoPage()

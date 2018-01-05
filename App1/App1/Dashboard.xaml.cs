@@ -30,5 +30,10 @@ namespace App1
         {
             await Navigation.PushAsync(new NotifParentTabbedView());
         }
+
+        private async void PatientProfile_OnClicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new PatientProfile());
+        }
     }
 }
