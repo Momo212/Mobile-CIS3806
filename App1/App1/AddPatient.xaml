@@ -92,6 +92,7 @@
                 <Entry x:Name="SurnameEntry" HorizontalOptions="FillAndExpand" Placeholder="Enter Surname..."/>
                 <Entry x:Name="IdNumberEntry" HorizontalOptions="FillAndExpand" Placeholder="Enter ID Number..."/>
                 <Entry x:Name="AdditionalEntry" HorizontalOptions="FillAndExpand" Placeholder="Relative Phone No..." IsVisible="False"/>
+                <Entry x:Name="AdditionalEntry2" HorizontalOptions="FillAndExpand" Placeholder="Relation Type..." IsVisible="False"/>
                 <StackLayout Orientation="Horizontal">
                     <Label x:Name="DOB" Text="DOB:" Margin="0,5,100,0"/>
                     <DatePicker x:Name="DatePickerT" HorizontalOptions="FillAndExpand">

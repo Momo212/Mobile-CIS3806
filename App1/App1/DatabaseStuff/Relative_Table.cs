@@ -11,6 +11,7 @@ namespace App1.DatabaseStuff
     {
         string id;
         string rel_id;
+        string rel_type;
         string name;
         string surname;
         string phone_no;
@@ -35,6 +36,12 @@ namespace App1.DatabaseStuff
         {
             get { return name; }
             set { name = value; }
+        }
+        [JsonProperty(PropertyName = "Relative_Type")]
+        public string Rel_type
+        {
+            get { return rel_type; }
+            set { rel_type = value; }
         }
 
         [JsonProperty(PropertyName = "Relative_Surname")]

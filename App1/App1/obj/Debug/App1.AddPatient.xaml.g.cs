@@ -11,7 +11,8 @@
 namespace App1 {
     
     
-    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("C:\\Users\\Owner\\Source\\Repos\\Mobile-CIS380612\\App1\\App1\\AddPatient.xaml")]
+    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("E:\\School\\University\\Year3Semester1\\Mobile\\Dashboard [Github]\\Version2-4\\Mobile-C" +
+        "IS3806\\App1\\App1\\AddPatient.xaml")]
     public partial class AddPatient : global::Xamarin.Forms.ContentPage {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
@@ -60,6 +61,9 @@ namespace App1 {
         private global::Xamarin.Forms.Entry AdditionalEntry;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
+        private global::Xamarin.Forms.Entry AdditionalEntry2;
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
         private global::Xamarin.Forms.Label DOB;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
@@ -104,6 +108,7 @@ namespace App1 {
             SurnameEntry = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Entry>(this, "SurnameEntry");
             IdNumberEntry = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Entry>(this, "IdNumberEntry");
             AdditionalEntry = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Entry>(this, "AdditionalEntry");
+            AdditionalEntry2 = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Entry>(this, "AdditionalEntry2");
             DOB = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Label>(this, "DOB");
             DatePickerT = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.DatePicker>(this, "DatePickerT");
             Gender = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Label>(this, "Gender");

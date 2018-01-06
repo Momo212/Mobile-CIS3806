@@ -103,7 +103,7 @@ namespace App1
                 }
                 else
                 {
-                    var todo = new Relative_Table { Rel_id = IdNumberEntry.Text, Name = NameEntry.Text, Surname = SurnameEntry.Text, Phone_no = AdditionalEntry.Text, PatientID_FK = currentUserId };
+                    var todo = new Relative_Table { Rel_id = IdNumberEntry.Text, Name = NameEntry.Text, Surname = SurnameEntry.Text, Phone_no = AdditionalEntry.Text,Rel_type = AdditionalEntry2.Text , PatientID_FK = currentUserId };
                     await AddRelativeItem(todo);
                 }
                 ButtonFlag = false;
@@ -114,6 +114,7 @@ namespace App1
                 SurnameEntry.Text = null;
                 IdNumberEntry.Text = null;
                 AdditionalEntry.IsVisible = false;
+                AdditionalEntry2.IsVisible = false;
                 SurnameEntry.Placeholder = "Enter Surname...";
                 IdNumberEntry.Placeholder = "Enter ID Number...";
                 DOB.IsVisible = true;
@@ -149,6 +150,7 @@ namespace App1
                 SurnameEntry.Text = null;
                 IdNumberEntry.Text = null;
                 AdditionalEntry.IsVisible = false;
+                AdditionalEntry2.IsVisible = false;
                 SurnameEntry.IsVisible = true;
                 IdNumberEntry.IsVisible = true;
                 IdNumberEntry.Placeholder = "Enter ID Number...";
@@ -185,6 +187,7 @@ namespace App1
                 SurnameEntry.Text = null;
                 IdNumberEntry.Text = null;
                 AdditionalEntry.IsVisible = false;
+                AdditionalEntry2.IsVisible = false;
                 SurnameEntry.IsVisible = true;
                 IdNumberEntry.IsVisible = true;
                 IdNumberEntry.Placeholder = "Enter ID Number...";
@@ -283,6 +286,7 @@ namespace App1
             if(index == 0)
             {
                 AdditionalEntry.IsVisible = true;
+                AdditionalEntry2.IsVisible = true;
                 NameEntry.Placeholder = "Relative Name...";
                 SurnameEntry.Placeholder = "Relative Surname...";
                 IdNumberEntry.Placeholder = "Relative ID...";
