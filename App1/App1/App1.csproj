@@ -44,10 +44,15 @@
     <Compile Include="Dashboard.xaml.cs">
       <DependentUpon>Dashboard.xaml</DependentUpon>
     </Compile>
+    <Compile Include="DatabaseStuff\Alarm_Table.cs" />
     <Compile Include="DatabaseStuff\Constants.cs" />
+    <Compile Include="DatabaseStuff\Danger_Table.cs" />
     <Compile Include="DatabaseStuff\Fear_Table.cs" />
     <Compile Include="DatabaseStuff\Hobby_Table.cs" />
     <Compile Include="DatabaseStuff\ItemManager.cs" />
+    <Compile Include="DatabaseStuff\LUT_Alarm_Danger_Category.cs" />
+    <Compile Include="DatabaseStuff\Patient_Alarm_Table.cs" />
+    <Compile Include="DatabaseStuff\Patient_History.cs" />
     <Compile Include="DatabaseStuff\Patient_Table.cs" />
     <Compile Include="DatabaseStuff\Relative_Table.cs" />
     <Compile Include="NotificationList\NotifChildTabEnvironment.xaml.cs">

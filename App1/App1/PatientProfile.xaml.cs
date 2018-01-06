@@ -29,6 +29,48 @@ namespace App1
             loadMainCarousel(currentUserId);
         }
 
+        public async void GetPatientAlarmsRealtime(string currentUserID) //ALARM/REALTIME - NOT PREDICTION/OBSERVATIONS
+        {
+            ObservableCollection<Patient_Alarm_Table> patientAlarmTable = await manager.GetPatientAlarmTableItemsAsync(currentUserID);
+            ObservableCollection<Alarm_Table> alarmTable = await manager.GetAlarmTableItemsAsync();
+            ObservableCollection<Danger_Table> dangerTable = await manager.GetDangerTableItemsAsync();
+            ObservableCollection<LUT_Alarm_Danger_Category> lutAlarmDangerCategory = await manager.GetLUT_Alarm_Danger_CategoryTableItemsAsync();
+
+            //for predictions
+            var query = from patientAlarm in patientAlarmTable
+                        join alarm in alarmTable on patientAlarm.Alarm_id equals alarm.Alarm_id
+                        join danger in dangerTable on alarm.DangerID equals danger.Danger_id
+                        join lut_alarm_danger in lutAlarmDangerCategory on danger.AlarmDanger_CategoryID equals lut_alarm_danger.Lut_alarm_Danger_Category_ID
+                        where (danger.Alarmtypeid == 3)
+                        select new { lut_alarm_danger.Name};
+
+            uint i = 1;
+        }
+
+        public async void GetPatientAlarmsPrediction(string currentUserID) //PREDICTION/OBSERVATIONS - NOT ALARM/REALTIME
+        {
+            ObservableCollection<Patient_Alarm_Table> patientAlarmTable = await manager.GetPatientAlarmTableItemsAsync(currentUserID);
+            ObservableCollection<Alarm_Table> alarmTable = await manager.GetAlarmTableItemsAsync();
+            ObservableCollection<Danger_Table> dangerTable = await manager.GetDangerTableItemsAsync();
+            ObservableCollection<LUT_Alarm_Danger_Category> lutAlarmDangerCategory = await manager.GetLUT_Alarm_Danger_CategoryTableItemsAsync();
+
+            //for predictions
+            var query = from patientAlarm in patientAlarmTable
+                        join alarm in alarmTable on patientAlarm.Alarm_id equals alarm.Alarm_id
+                        join danger in dangerTable on alarm.DangerID equals danger.Danger_id
+                        join lut_alarm_danger in lutAlarmDangerCategory on danger.AlarmDanger_CategoryID equals lut_alarm_danger.Lut_alarm_Danger_Category_ID
+                        where (danger.Alarmtypeid == 4)
+                        select new { lut_alarm_danger.Name };
+
+            uint i = 1;
+        }
+
+        public async Task<List<Patient_History>> getHistory()
+        {
+            var history_items = await manager.GetHistoryItemsAsync("301997m");
+            return new List<Patient_History>(history_items);
+        }
+
         private async Task loadMainCarousel(string currentUserId)
         {
             //var relative_items = await manager.GetRelativeItemsAsync(currentUserId);

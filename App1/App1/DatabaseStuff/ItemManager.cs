@@ -20,6 +20,11 @@ namespace App1.DatabaseStuff
         IMobileServiceTable<Relative_Table> relative_Table;
         IMobileServiceTable<Hobby_Table> hobby_Table;
         IMobileServiceTable<Fear_Table> fear_Table;
+        IMobileServiceTable<Patient_History> patient_History;
+        IMobileServiceTable<Patient_Alarm_Table> patient_Alarm_Table;
+        IMobileServiceTable<Danger_Table> danger_Table;
+        IMobileServiceTable<LUT_Alarm_Danger_Category> lut_alarm_danger_table;
+        IMobileServiceTable<Alarm_Table> alarm_Table;
 #endif
 
         const string offlineDbPath = @"localstore.db";
@@ -41,6 +46,11 @@ namespace App1.DatabaseStuff
             this.relative_Table = client.GetTable<Relative_Table>();
             this.hobby_Table = client.GetTable<Hobby_Table>();
             this.fear_Table = client.GetTable<Fear_Table>();
+            this.patient_History = client.GetTable<Patient_History>();
+            this.patient_Alarm_Table = client.GetTable<Patient_Alarm_Table>();
+            this.danger_Table = client.GetTable<Danger_Table>();
+            this.alarm_Table = client.GetTable<Alarm_Table>();
+            this.lut_alarm_danger_table = client.GetTable<LUT_Alarm_Danger_Category>();
 #endif
         }
 
@@ -152,6 +162,77 @@ namespace App1.DatabaseStuff
                 .ToEnumerableAsync();
 
             return new ObservableCollection<Fear_Table>(items);
+        }
+
+        public async Task<ObservableCollection<Patient_History>> GetHistoryItemsAsync(String currentUserId)
+        {
+#if OFFLINE_SYNC_ENABLED
+                if (syncItems)
+                {
+                    await this.SyncAsync();
+                }
+#endif
+            IEnumerable<Patient_History> items = await patient_History
+                .Where(historyItem => historyItem.PatientID_FK == currentUserId)
+                .ToEnumerableAsync();
+
+            return new ObservableCollection<Patient_History>(items);
+        }
+
+        public async Task<ObservableCollection<Patient_Alarm_Table>> GetPatientAlarmTableItemsAsync(String currentUserId)
+        {
+#if OFFLINE_SYNC_ENABLED
+                if (syncItems)
+                {
+                    await this.SyncAsync();
+                }
+#endif
+            IEnumerable<Patient_Alarm_Table> items = await patient_Alarm_Table
+                .ToEnumerableAsync();
+
+            return new ObservableCollection<Patient_Alarm_Table>(items);
+        }
+
+        public async Task<ObservableCollection<Danger_Table>> GetDangerTableItemsAsync()
+        {
+#if OFFLINE_SYNC_ENABLED
+                if (syncItems)
+                {
+                    await this.SyncAsync();
+                }
+#endif
+            IEnumerable<Danger_Table> items = await danger_Table
+                .ToEnumerableAsync();
+
+            return new ObservableCollection<Danger_Table>(items);
+        }
+
+        public async Task<ObservableCollection<Alarm_Table>> GetAlarmTableItemsAsync()
+        {
+#if OFFLINE_SYNC_ENABLED
+                if (syncItems)
+                {
+                    await this.SyncAsync();
+                }
+#endif
+            IEnumerable<Alarm_Table> items = await alarm_Table
+                .ToEnumerableAsync();
+
+            return new ObservableCollection<Alarm_Table>(items);
+        }
+
+        public async Task<ObservableCollection<LUT_Alarm_Danger_Category>> GetLUT_Alarm_Danger_CategoryTableItemsAsync()
+        {
+#if OFFLINE_SYNC_ENABLED
+                if (syncItems)
+                {
+                    await this.SyncAsync();
+                }
+#endif
+            IEnumerable<LUT_Alarm_Danger_Category> items = await lut_alarm_danger_table
+                .ToEnumerableAsync();
+
+            return new ObservableCollection<LUT_Alarm_Danger_Category>(items);
         }
     }
 }
