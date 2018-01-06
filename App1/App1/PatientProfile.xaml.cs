@@ -27,6 +27,9 @@ namespace App1
 
             loadLeftCarousel(currentUserId);
             loadMainCarousel(currentUserId);
+
+            GetPatientAlarmsRealtime("301997m");
+            GetPatientAlarmsPrediction("301997m");
         }
 
         public async void GetPatientAlarmsRealtime(string currentUserID) //ALARM/REALTIME - NOT PREDICTION/OBSERVATIONS
@@ -41,10 +44,8 @@ namespace App1
                         join alarm in alarmTable on patientAlarm.Alarm_id equals alarm.Alarm_id
                         join danger in dangerTable on alarm.DangerID equals danger.Danger_id
                         join lut_alarm_danger in lutAlarmDangerCategory on danger.AlarmDanger_CategoryID equals lut_alarm_danger.Lut_alarm_Danger_Category_ID
-                        where (danger.Alarmtypeid == 3)
+                        where (danger.Alarmtypeid == 1)
                         select new { lut_alarm_danger.Name};
-
-            uint i = 1;
         }
 
         public async void GetPatientAlarmsPrediction(string currentUserID) //PREDICTION/OBSERVATIONS - NOT ALARM/REALTIME
@@ -59,10 +60,8 @@ namespace App1
                         join alarm in alarmTable on patientAlarm.Alarm_id equals alarm.Alarm_id
                         join danger in dangerTable on alarm.DangerID equals danger.Danger_id
                         join lut_alarm_danger in lutAlarmDangerCategory on danger.AlarmDanger_CategoryID equals lut_alarm_danger.Lut_alarm_Danger_Category_ID
-                        where (danger.Alarmtypeid == 4)
+                        where (danger.Alarmtypeid == 2)
                         select new { lut_alarm_danger.Name };
-
-            uint i = 1;
         }
 
         public async Task<List<Patient_History>> getHistory()
