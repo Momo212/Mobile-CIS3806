@@ -23,5 +23,10 @@ namespace App1.Views
         public string relation { get; set; }
         public string patientid { get; set; }
         public string phoneno { get; set; }
+
+        public override string ToString()
+        {
+            return this.name + "\t \t " + this.relation ;
+        }
     }
 }

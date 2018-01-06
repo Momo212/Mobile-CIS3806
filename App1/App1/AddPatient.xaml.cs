@@ -404,6 +404,7 @@ namespace App1
                 }
             };
             LeftCarousel.ItemsSource = left;
+            ListView l = this.FindByName<ListView>("listV");
             
         }
 

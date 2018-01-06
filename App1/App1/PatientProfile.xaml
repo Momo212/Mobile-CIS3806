@@ -1,6 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:sys="clr-namespace:System;assembly=mscorlib"
+             xmlns:cv="clr-namespace:Xamarin.Forms;assembly=Xamarin.Forms.CarouselView"
              x:Class="App1.PatientProfile">
     <ContentPage.Content>
         <Grid>
@@ -50,7 +52,7 @@
                             <RowDefinition Height="4*"></RowDefinition>
                             <RowDefinition Height="*"></RowDefinition>
                         </Grid.RowDefinitions>
-                        <!--<cv:CarouselView ItemsSource="{Binding left}" x:Name="LeftCarousel" Grid.Row="0">
+                        <cv:CarouselView ItemsSource="{Binding left}" x:Name="LeftCarouselMain" Grid.Row="0">
                             <cv:CarouselView.ItemTemplate>
                                 <DataTemplate>
                                     <Grid BackgroundColor="White">
@@ -68,21 +70,16 @@
                                         </Grid.ColumnDefinitions>
 
                                         <Label Text="{Binding Title}" FontSize="16" TextColor="DarkGray" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="3"/>
-                                        -->
-                        <!--<Label Text="{Binding Text}" FontSize="11" TextColor="DarkGray" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="3"/>-->
-                        <!--
                                         <Label Grid.Row="0" Grid.Column="0" Text="{Binding LeftTitle}" TextColor="DarkGray" FontSize="11" HorizontalOptions="Center"/>
                                         <Label Grid.Row="0" Grid.Column="2" Text="{Binding RightTitle}" TextColor="DarkGray" FontSize="11" HorizontalOptions="Center"/>
                                         <Image Grid.Row="1" Grid.Column="0" Source="{Binding LeftArrow}" VerticalOptions="Fill" HorizontalOptions="Fill" />
                                         <Image Grid.Row="1" Grid.Column="2" Source="{Binding RightArrow}" VerticalOptions="Fill" HorizontalOptions="Fill" Rotation="180"/>
-                                        <ListView Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="3" ItemsSource="{Binding obscollection}" x:Name="listV">
-
-                                        </ListView>
+                                        <ListView Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="3" ItemsSource="{Binding obscollection}" x:Name="listV"/>
                                     </Grid>
                                 </DataTemplate>
                             </cv:CarouselView.ItemTemplate>
                         </cv:CarouselView>
-                        <Button x:Name="EditButton" Text="Edit" FontSize="11" Grid.Row="1" Clicked="createNew_OnClick"/>-->
+                        <!--<Button x:Name="EditButton" Text="Edit" FontSize="11" Grid.Row="1" Clicked="createNew_OnClick"/>-->
                     </Grid>
                 </Grid>
             </Grid>
