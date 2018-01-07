@@ -270,7 +270,7 @@ namespace App1
 
         private async void Alarms_Clicked(object sender, EventArgs e)
         {
-            ObservableCollection<Patient_Alarm_Table> patientAlarmTable = await manager.GetPatientAlarmTableItemsAsync("301997m");
+            ObservableCollection<Patient_Alarm_Table> patientAlarmTable = await manager.GetPatientAlarmTableItemsAsync();
             ObservableCollection<Alarm_Table> alarmTable = await manager.GetAlarmTableItemsAsync();
             ObservableCollection<Danger_Table> dangerTable = await manager.GetDangerTableItemsAsync();
             ObservableCollection<LUT_Alarm_Danger_Category> lutAlarmDangerCategory = await manager.GetLUT_Alarm_Danger_CategoryTableItemsAsync();
@@ -311,7 +311,7 @@ namespace App1
 
         private async void Observations_Clicked(object sender, EventArgs e)
         {
-            ObservableCollection<Patient_Alarm_Table> patientAlarmTable = await manager.GetPatientAlarmTableItemsAsync("301997m");
+            ObservableCollection<Patient_Alarm_Table> patientAlarmTable = await manager.GetPatientAlarmTableItemsAsync();
             ObservableCollection<Alarm_Table> alarmTable = await manager.GetAlarmTableItemsAsync();
             ObservableCollection<Danger_Table> dangerTable = await manager.GetDangerTableItemsAsync();
             ObservableCollection<LUT_Alarm_Danger_Category> lutAlarmDangerCategory = await manager.GetLUT_Alarm_Danger_CategoryTableItemsAsync();
