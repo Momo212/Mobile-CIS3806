@@ -232,7 +232,7 @@ namespace App1
             }
             MainContentView.Content = new ContentView
             {
-                Content = new ListView { ItemsSource = med },
+                Content = new ListView { ItemsSource = med, RowHeight = 40, Margin = 20 },
             };
 
             MedHistButton.BackgroundColor =Color.FromHex("#0080F0");
@@ -293,7 +293,7 @@ namespace App1
             }
             MainContentView.Content = new ContentView
             {
-                Content = new ListView { ItemsSource = alarmslist },
+                Content = new ListView { ItemsSource = alarmslist, RowHeight = 40, Margin = 20 },
             };
 
             AlarmsButton.BackgroundColor = Color.FromHex("#0080F0");
@@ -334,7 +334,7 @@ namespace App1
             }
             MainContentView.Content = new ContentView
             {
-                Content = new ListView { ItemsSource = alarmslist },
+                Content = new ListView { ItemsSource = alarmslist, RowHeight = 40, Margin = 20 },
             };
 
             ObservationsButton.BackgroundColor = Color.FromHex("#0080F0");
@@ -373,7 +373,7 @@ namespace App1
 
             MainContentView.Content = new ContentView
             {
-                Content = new ListView { ItemsSource = dangers },
+                Content = new ListView { ItemsSource = dangers , RowHeight = 40, Margin = 20 },
             };
 
             DangersButton.BackgroundColor = Color.FromHex("#0080F0");
