@@ -15,7 +15,7 @@ namespace App1
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class PatientProfile : ContentPage
     {
-        public string currentUserId="12345";
+        public string currentUserId = "12345";
         ItemManager manager;
 
         public PatientProfile()
@@ -45,7 +45,7 @@ namespace App1
                         join danger in dangerTable on alarm.DangerID equals danger.Danger_id
                         join lut_alarm_danger in lutAlarmDangerCategory on danger.AlarmDanger_CategoryID equals lut_alarm_danger.Lut_alarm_Danger_Category_ID
                         where (danger.Alarmtypeid == 1)
-                        select new { lut_alarm_danger.Name};
+                        select new { lut_alarm_danger.Name };
         }
 
         public async void GetPatientAlarmsPrediction(string currentUserID) //PREDICTION/OBSERVATIONS - NOT ALARM/REALTIME
@@ -217,23 +217,155 @@ namespace App1
 
         private async void MedHist_Clicked(object sender, EventArgs e)
         {
-            
+
             var history_items = await manager.GetHistoryItemsAsync("301997m");
-            ObservableCollection <MedicalHistoryContent> med = new ObservableCollection<MedicalHistoryContent>();
+            ObservableCollection<MedicalHistoryContent> med = new ObservableCollection<MedicalHistoryContent>();
             foreach (Patient_History h in history_items)
             {
                 med.Add(new MedicalHistoryContent
                 {
                     description = h.Text,
                     type = h.Type,
-                    year  = h.Year,
+                    year = h.Year,
                     patientid = h.PatientID_FK
                 });
             }
             MainContentView.Content = new ContentView
             {
-                Content = new ListView { ItemsSource = med},
+                Content = new ListView { ItemsSource = med },
             };
+
+            MedHistButton.BackgroundColor =Color.FromHex("#0080F0");
+            MedHistButton.TextColor = Color.White;
+
+            MapButton.BackgroundColor = Color.White;
+            MapButton.TextColor = Color.Black;
+            AlarmsButton.BackgroundColor = Color.White;
+            AlarmsButton.TextColor = Color.Black;
+            ObservationsButton.BackgroundColor = Color.White;
+            ObservationsButton.TextColor = Color.Black;
+            DangersButton.BackgroundColor = Color.White;
+            DangersButton.TextColor = Color.Black;
         }
+
+        private void Map_Clicked(object sender, EventArgs e)
+        {
+            MainContentView.Content = new ContentView
+            {
+                Content = new Image { Source = "https://www.mcmaster.ca/uts/maps/images/bsb1.gif" },
+            };
+
+            MapButton.BackgroundColor = Color.FromHex("#0080F0");
+            MapButton.TextColor = Color.White;
+
+            MedHistButton.BackgroundColor = Color.White;
+            MedHistButton.TextColor = Color.Black;
+            AlarmsButton.BackgroundColor = Color.White;
+            AlarmsButton.TextColor = Color.Black;
+            ObservationsButton.BackgroundColor = Color.White;
+            ObservationsButton.TextColor = Color.Black;
+            DangersButton.BackgroundColor = Color.White;
+            DangersButton.TextColor = Color.Black;
+        }
+
+        private async void Alarms_Clicked(object sender, EventArgs e)
+        {
+            ObservableCollection<Patient_Alarm_Table> patientAlarmTable = await manager.GetPatientAlarmTableItemsAsync("301997m");
+            ObservableCollection<Alarm_Table> alarmTable = await manager.GetAlarmTableItemsAsync();
+            ObservableCollection<Danger_Table> dangerTable = await manager.GetDangerTableItemsAsync();
+            ObservableCollection<LUT_Alarm_Danger_Category> lutAlarmDangerCategory = await manager.GetLUT_Alarm_Danger_CategoryTableItemsAsync();
+
+            //for predictions
+            var alarms = from patientAlarm in patientAlarmTable
+                         join alarm in alarmTable on patientAlarm.Alarm_id equals alarm.Alarm_id
+                         join danger in dangerTable on alarm.DangerID equals danger.Danger_id
+                         join lut_alarm_danger in lutAlarmDangerCategory on danger.AlarmDanger_CategoryID equals lut_alarm_danger.Lut_alarm_Danger_Category_ID
+                         where (danger.Alarmtypeid == 1)
+                         select new { lut_alarm_danger.Name };
+            ObservableCollection<AlarmsContent> alarmslist = new ObservableCollection<AlarmsContent>();
+            foreach (object a in alarms)
+            {
+                alarmslist.Add(new AlarmsContent
+                {
+                    description = a.ToString(),
+                    time = "8 hours ago"
+                });
+            }
+            MainContentView.Content = new ContentView
+            {
+                Content = new ListView { ItemsSource = alarmslist },
+            };
+
+            AlarmsButton.BackgroundColor = Color.FromHex("#0080F0");
+            AlarmsButton.TextColor = Color.White;
+
+            MapButton.BackgroundColor = Color.White;
+            MapButton.TextColor = Color.Black;
+            MedHistButton.BackgroundColor = Color.White;
+            MedHistButton.TextColor = Color.Black;
+            ObservationsButton.BackgroundColor = Color.White;
+            ObservationsButton.TextColor = Color.Black;
+            DangersButton.BackgroundColor = Color.White;
+            DangersButton.TextColor = Color.Black;
+        }
+
+        private async void Observations_Clicked(object sender, EventArgs e)
+        {
+            ObservableCollection<Patient_Alarm_Table> patientAlarmTable = await manager.GetPatientAlarmTableItemsAsync("301997m");
+            ObservableCollection<Alarm_Table> alarmTable = await manager.GetAlarmTableItemsAsync();
+            ObservableCollection<Danger_Table> dangerTable = await manager.GetDangerTableItemsAsync();
+            ObservableCollection<LUT_Alarm_Danger_Category> lutAlarmDangerCategory = await manager.GetLUT_Alarm_Danger_CategoryTableItemsAsync();
+
+            //for predictions
+            var obs = from patientAlarm in patientAlarmTable
+                        join alarm in alarmTable on patientAlarm.Alarm_id equals alarm.Alarm_id
+                        join danger in dangerTable on alarm.DangerID equals danger.Danger_id
+                        join lut_alarm_danger in lutAlarmDangerCategory on danger.AlarmDanger_CategoryID equals lut_alarm_danger.Lut_alarm_Danger_Category_ID
+                        where (danger.Alarmtypeid == 2)
+                        select new { lut_alarm_danger.Name };
+            ObservableCollection<AlarmsContent> alarmslist = new ObservableCollection<AlarmsContent>();
+            foreach (object a in obs)
+            {
+                alarmslist.Add(new AlarmsContent
+                {
+                    description = a.ToString(),
+                    time = "8 hours ago"
+                });
+            }
+            MainContentView.Content = new ContentView
+            {
+                Content = new ListView { ItemsSource = alarmslist },
+            };
+
+            ObservationsButton.BackgroundColor = Color.FromHex("#0080F0");
+            ObservationsButton.TextColor = Color.White;
+
+            MapButton.BackgroundColor = Color.White;
+            MapButton.TextColor = Color.Black;
+            AlarmsButton.BackgroundColor = Color.White;
+            AlarmsButton.TextColor = Color.Black;
+            MedHistButton.BackgroundColor = Color.White;
+            MedHistButton.TextColor = Color.Black;
+            DangersButton.BackgroundColor = Color.White;
+            DangersButton.TextColor = Color.Black;
+        }
+
+        private void Dangers_Clicked(object sender, EventArgs e)
+        {
+
+
+            DangersButton.BackgroundColor = Color.FromHex("#0080F0");
+            DangersButton.TextColor = Color.White;
+
+            MapButton.BackgroundColor = Color.White;
+            MapButton.TextColor = Color.Black;
+            AlarmsButton.BackgroundColor = Color.White;
+            AlarmsButton.TextColor = Color.Black;
+            ObservationsButton.BackgroundColor = Color.White;
+            ObservationsButton.TextColor = Color.Black;
+            MedHistButton.BackgroundColor = Color.White;
+            MedHistButton.TextColor = Color.Black;
+        }
+
     }
 }

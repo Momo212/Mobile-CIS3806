@@ -42,4 +42,15 @@ namespace App1.Views
             return this.description + " - " + this.year + " \t \t \t " + this.type;
         }
     }
+
+    public class AlarmsContent
+    {
+        public string description { get; set; }
+        public string time { get; set; }
+
+        public override string ToString()
+        {
+            return this.description + "\t \t \t \t" + this.time;
+        }
+    }
 }
