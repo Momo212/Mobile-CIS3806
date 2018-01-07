@@ -114,7 +114,30 @@
                                 </DataTemplate>
                             </cv:CarouselView.ItemTemplate>
                         </cv:CarouselView>-->
+            <Grid Grid.Row="0" Grid.Column="1"> <!-- For Main Space -->
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="7*" /> <!-- Tabs-->
+                    <RowDefinition Height="88*" /> <!-- Content -->
+                    <RowDefinition Height="5*" /> <!-- Edit Button -->
 
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/> <!-- Medical History -->
+                    <ColumnDefinition Width="*"/> <!-- Map -->
+                    <ColumnDefinition Width="*"/> <!-- Alarms -->
+                    <ColumnDefinition Width="*"/> <!-- Observations -->
+                    <ColumnDefinition Width="*"/> <!-- Dangers -->
+                </Grid.ColumnDefinitions>
+                <Button Grid.Column="0" Grid.Row="0" Text="Medical History" BorderRadius="10" FontSize="12" BackgroundColor="White" BorderColor="#0080F0" Clicked="MedHist_Clicked" x:Name="MedHistButton"/>
+                <Button Grid.Column="1" Grid.Row="0" Text="Map" BorderRadius="10" FontSize="12" BackgroundColor="White" BorderColor="#0080F0" Clicked="Map_Clicked" x:Name="MapButton"/>
+                <Button Grid.Column="2" Grid.Row="0" Text="Alarms" BorderRadius="10" FontSize="12" BackgroundColor="White" BorderColor="#0080F0" Clicked="Alarms_Clicked" x:Name="AlarmsButton"/>
+                <Button Grid.Column="3" Grid.Row="0" Text="Observations" BorderRadius="10" FontSize="12" BackgroundColor="White" BorderColor="#0080F0" Clicked="Observations_Clicked" x:Name="ObservationsButton"/>
+                <Button Grid.Column="4" Grid.Row="0" Text="Dangers" BorderRadius="10" FontSize="12" BackgroundColor="White" BorderColor="#0080F0" Clicked="Dangers_Clicked" x:Name="DangersButton"/>
+
+                <Button Grid.Column="4" Grid.Row="2" Text="Edit" />
+
+                <ContentView x:Name="MainContentView" Grid.Row="1" Grid.ColumnSpan="5" />
+            </Grid>
         </Grid>
     </ContentPage.Content>
 </ContentPage>
