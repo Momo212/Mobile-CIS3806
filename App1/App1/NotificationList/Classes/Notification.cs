@@ -8,10 +8,11 @@ namespace App1.NotificationList
 {
     public class Notification
     {
-        public string notifName { get; set; }
-        public string location { get; set; }
-        public string timestamp { get; set; }
-        public int notifType { get; set; }
-        public int dangerCategoryId { get; set; }
+        public int AlarmId { get; set; }
+        public string Name { get; set; }
+        public string Room { get; set; }
+        public string TimeStamp { get; set; }
+        public int Alarmtypeid { get; set; }
+        public int DangerCategoryID { get; set; }
     }
 }

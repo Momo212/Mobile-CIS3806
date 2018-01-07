@@ -34,7 +34,7 @@ namespace App1
 
         public async void GetPatientAlarmsRealtime(string currentUserID) //ALARM/REALTIME - NOT PREDICTION/OBSERVATIONS
         {
-            ObservableCollection<Patient_Alarm_Table> patientAlarmTable = await manager.GetPatientAlarmTableItemsAsync(currentUserID);
+            ObservableCollection<Patient_Alarm_Table> patientAlarmTable = await manager.GetPatientAlarmTableItemsAsync();
             ObservableCollection<Alarm_Table> alarmTable = await manager.GetAlarmTableItemsAsync();
             ObservableCollection<Danger_Table> dangerTable = await manager.GetDangerTableItemsAsync();
             ObservableCollection<LUT_Alarm_Danger_Category> lutAlarmDangerCategory = await manager.GetLUT_Alarm_Danger_CategoryTableItemsAsync();
@@ -50,7 +50,7 @@ namespace App1
 
         public async void GetPatientAlarmsPrediction(string currentUserID) //PREDICTION/OBSERVATIONS - NOT ALARM/REALTIME
         {
-            ObservableCollection<Patient_Alarm_Table> patientAlarmTable = await manager.GetPatientAlarmTableItemsAsync(currentUserID);
+            ObservableCollection<Patient_Alarm_Table> patientAlarmTable = await manager.GetPatientAlarmTableItemsAsync();
             ObservableCollection<Alarm_Table> alarmTable = await manager.GetAlarmTableItemsAsync();
             ObservableCollection<Danger_Table> dangerTable = await manager.GetDangerTableItemsAsync();
             ObservableCollection<LUT_Alarm_Danger_Category> lutAlarmDangerCategory = await manager.GetLUT_Alarm_Danger_CategoryTableItemsAsync();

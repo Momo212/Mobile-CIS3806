@@ -134,6 +134,20 @@ namespace App1.DatabaseStuff
                 return new ObservableCollection<Relative_Table>(items);
         }
 
+        public async Task<ObservableCollection<Patient_Table>> GetPatient(string patientID)
+        {
+#if OFFLINE_SYNC_ENABLED
+                if (syncItems)
+                {
+                    await this.SyncAsync();
+                }
+#endif
+            IEnumerable<Patient_Table> items = await patient_Table.Where(pat => pat.Patient_ID == patientID)
+                .ToEnumerableAsync();
+
+            return new ObservableCollection<Patient_Table>(items);
+        }
+
         public async Task<ObservableCollection<Hobby_Table>> GetHobbyItemsAsync(String currentUserId)
         {
 #if OFFLINE_SYNC_ENABLED
@@ -179,7 +193,7 @@ namespace App1.DatabaseStuff
             return new ObservableCollection<Patient_History>(items);
         }
 
-        public async Task<ObservableCollection<Patient_Alarm_Table>> GetPatientAlarmTableItemsAsync(String currentUserId)
+        public async Task<ObservableCollection<Patient_Alarm_Table>> GetPatientAlarmTableItemsAsync()
         {
 #if OFFLINE_SYNC_ENABLED
                 if (syncItems)

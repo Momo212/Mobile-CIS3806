@@ -1,16 +1,17 @@
-﻿using Xamarin.Forms;
+﻿using System.Collections.Generic;
+using Xamarin.Forms;
 
 namespace App1.NotificationList
 {
     public class Utilities
     {
-        public static Grid BuildListElement(Notification n)
+        public static Grid BuildListElement(Notification n, List<string> patientsInvolved)
         {
-            string dangerType = resolveDangerType(n.notifType);
+            string dangerType = resolveDangerType(n.Alarmtypeid);
 
-            Color c = resolveAlarmNotifColor(n.dangerCategoryId);
+            Color c = resolveAlarmNotifColor(n.DangerCategoryID);
 
-            string imageName = resolveImgName(n.dangerCategoryId);
+            string imageName = resolveImgName(n.DangerCategoryID);
             Image i = new Image { Source = ImageSource.FromFile("Assets/NotifIcons/" + imageName), BackgroundColor = c, VerticalOptions = LayoutOptions.Center, HorizontalOptions = LayoutOptions.Center };
 
             Grid grid = new Grid();
@@ -39,16 +40,31 @@ namespace App1.NotificationList
             gridRow1Column2Column1.RowDefinitions.Add(new RowDefinition { Height = new GridLength(1, GridUnitType.Star) });
             gridRow1Column2Column1.RowDefinitions.Add(new RowDefinition { Height = new GridLength(1, GridUnitType.Star) });
             gridRow1Column2Column1.ColumnDefinitions.Add(new ColumnDefinition { Width = new GridLength(1, GridUnitType.Star) });
-            gridRow1Column2Column1.Children.Add(new Label() { Text = n.notifName, FontSize = 28, FontAttributes = FontAttributes.Bold, TextColor = c }, 0, 0);
-            gridRow1Column2Column1.Children.Add(new Label() { Text = n.location, FontSize = 20, TextColor = c }, 0, 1);
-            gridRow1Column2Column1.Children.Add(new Label() { Text = "Basic Clickable Patient Information", FontSize = 20, TextColor = Color.FromHex("#c6c6c6") }, 0, 2);
+            gridRow1Column2Column1.Children.Add(new Label() { Text = n.Name, FontSize = 28, FontAttributes = FontAttributes.Bold, TextColor = c }, 0, 0);
+            gridRow1Column2Column1.Children.Add(new Label() { Text = n.Room, FontSize = 20, TextColor = c }, 0, 1);
+
+            if(patientsInvolved.Count > 0)
+            {
+                if (patientsInvolved.Count == 1)
+                {
+                    gridRow1Column2Column1.Children.Add(new Label() { Text = patientsInvolved[0], FontSize = 20, TextColor = Color.FromHex("#c6c6c6") }, 0, 2);
+                }
+                else
+                {
+                    gridRow1Column2Column1.Children.Add(new Label() { Text = patientsInvolved[0] + " and " + (patientsInvolved.Count - 1) + " more.", FontSize = 20, TextColor = Color.FromHex("#c6c6c6") }, 0, 2);
+                }
+            }
+            else
+            {
+                gridRow1Column2Column1.Children.Add(new Label() { Text = "No information about patients involved.", FontSize = 20, TextColor = Color.FromHex("#c6c6c6") }, 0, 2);
+            }
 
             Grid gridRow1Column2Column2 = new Grid() { RowSpacing = 0, ColumnSpacing = 0 };
             gridRow1Column2Column2.RowDefinitions.Add(new RowDefinition { Height = new GridLength(1, GridUnitType.Star) });
             gridRow1Column2Column2.RowDefinitions.Add(new RowDefinition { Height = new GridLength(1, GridUnitType.Star) });
             gridRow1Column2Column2.RowDefinitions.Add(new RowDefinition { Height = new GridLength(1, GridUnitType.Star) });
             gridRow1Column2Column2.ColumnDefinitions.Add(new ColumnDefinition { Width = new GridLength(1, GridUnitType.Star) });
-            gridRow1Column2Column2.Children.Add(new Label() { Text = n.timestamp, HorizontalTextAlignment = TextAlignment.End, TextColor = Color.White, FontSize = 20 }, 0, 0);
+            gridRow1Column2Column2.Children.Add(new Label() { Text = n.TimeStamp, HorizontalTextAlignment = TextAlignment.End, TextColor = Color.White, FontSize = 20 }, 0, 0);
             gridRow1Column2Column2.Children.Add(new Label() { Text = dangerType, HorizontalTextAlignment = TextAlignment.End, TextColor = Color.White, FontSize = 20 }, 0, 1);
 
             Grid gridRow2Outer = new Grid() { RowSpacing = 3 };
