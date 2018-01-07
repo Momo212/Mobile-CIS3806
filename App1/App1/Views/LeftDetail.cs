@@ -29,4 +29,17 @@ namespace App1.Views
             return this.name + "\t \t " + this.relation ;
         }
     }
+
+    public class MedicalHistoryContent
+    {
+        public string description { get; set; }
+        public string year { get; set; }
+        public string type { get; set; }
+        public string patientid { get; set; }
+
+        public override string ToString()
+        {
+            return this.description + " - " + this.year + " \t \t \t " + this.type;
+        }
+    }
 }

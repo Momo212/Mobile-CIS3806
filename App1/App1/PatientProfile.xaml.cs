@@ -213,5 +213,27 @@ namespace App1
             };
             LeftCarouselMain.ItemsSource = left;
         }
+
+
+        private async void MedHist_Clicked(object sender, EventArgs e)
+        {
+            
+            var history_items = await manager.GetHistoryItemsAsync("301997m");
+            ObservableCollection <MedicalHistoryContent> med = new ObservableCollection<MedicalHistoryContent>();
+            foreach (Patient_History h in history_items)
+            {
+                med.Add(new MedicalHistoryContent
+                {
+                    description = h.Text,
+                    type = h.Type,
+                    year  = h.Year,
+                    patientid = h.PatientID_FK
+                });
+            }
+            MainContentView.Content = new ContentView
+            {
+                Content = new ListView { ItemsSource = med},
+            };
+        }
     }
 }
