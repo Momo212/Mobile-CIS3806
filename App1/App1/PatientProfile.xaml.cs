@@ -350,9 +350,31 @@ namespace App1
             DangersButton.TextColor = Color.Black;
         }
 
-        private void Dangers_Clicked(object sender, EventArgs e)
+        private async void Dangers_Clicked(object sender, EventArgs e)
         {
+            //var danger = await manager.GetDangerTableItemsAsync(); //removed 301997m parameter
+            //ObservableCollection<LUT_Alarm_Danger_Category> med = new ObservableCollection<LUT_Alarm_Danger_Category>();
+            //foreach (Patient_History h in history_items)
+            //{
+            //    med.Add(new MedicalHistoryContent
+            //    {
+            //        description = h.Text,
+            //        type = h.Type,
+            //        year = h.Year,
+            //        patientid = h.PatientID_FK
+            //    });
+            //}
 
+            ObservableCollection<Dangers> dangers = new ObservableCollection<Dangers>();
+            dangers.Add(new Dangers { description = "Tends to get aggressive near people" });
+            dangers.Add(new Dangers { description = "Racist" });
+            dangers.Add(new Dangers { description = "Forgetful due to dimensia" });
+            
+
+            MainContentView.Content = new ContentView
+            {
+                Content = new ListView { ItemsSource = dangers },
+            };
 
             DangersButton.BackgroundColor = Color.FromHex("#0080F0");
             DangersButton.TextColor = Color.White;

@@ -1,0 +1,2 @@
+C:\Users\Owner\Source\Repos\Mobile-CIS380618\App1\App1.UWP\App1.UWP.csproj;x86
+C:\Users\Owner\Source\Repos\Mobile-CIS380618\App1\App1\App1.csproj;neutral

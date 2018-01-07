@@ -53,4 +53,15 @@ namespace App1.Views
             return this.description + "\t \t \t \t" + this.time;
         }
     }
+
+    public class Dangers
+    {
+        public string description { get; set; }
+        public string patientID { get; set; }
+
+        public override string ToString()
+        {
+            return this.description;
+        }
+    }
 }
