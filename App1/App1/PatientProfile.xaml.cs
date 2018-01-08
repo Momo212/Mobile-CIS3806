@@ -27,47 +27,6 @@ namespace App1
 
             loadLeftCarousel(currentUserId);
             loadMainCarousel(currentUserId);
-
-            GetPatientAlarmsRealtime("301997m");
-            GetPatientAlarmsPrediction("301997m");
-        }
-
-        public async void GetPatientAlarmsRealtime(string currentUserID) //ALARM/REALTIME - NOT PREDICTION/OBSERVATIONS
-        {
-            ObservableCollection<Patient_Alarm_Table> patientAlarmTable = await manager.GetPatientAlarmTableItemsAsync();
-            ObservableCollection<Alarm_Table> alarmTable = await manager.GetAlarmTableItemsAsync();
-            ObservableCollection<Danger_Table> dangerTable = await manager.GetDangerTableItemsAsync();
-            ObservableCollection<LUT_Alarm_Danger_Category> lutAlarmDangerCategory = await manager.GetLUT_Alarm_Danger_CategoryTableItemsAsync();
-
-            //for predictions
-            var query = from patientAlarm in patientAlarmTable
-                        join alarm in alarmTable on patientAlarm.Alarm_id equals alarm.Alarm_id
-                        join danger in dangerTable on alarm.DangerID equals danger.Danger_id
-                        join lut_alarm_danger in lutAlarmDangerCategory on danger.AlarmDanger_CategoryID equals lut_alarm_danger.Lut_alarm_Danger_Category_ID
-                        where (danger.Alarmtypeid == 1)
-                        select new { lut_alarm_danger.Name };
-        }
-
-        public async void GetPatientAlarmsPrediction(string currentUserID) //PREDICTION/OBSERVATIONS - NOT ALARM/REALTIME
-        {
-            ObservableCollection<Patient_Alarm_Table> patientAlarmTable = await manager.GetPatientAlarmTableItemsAsync();
-            ObservableCollection<Alarm_Table> alarmTable = await manager.GetAlarmTableItemsAsync();
-            ObservableCollection<Danger_Table> dangerTable = await manager.GetDangerTableItemsAsync();
-            ObservableCollection<LUT_Alarm_Danger_Category> lutAlarmDangerCategory = await manager.GetLUT_Alarm_Danger_CategoryTableItemsAsync();
-
-            //for predictions
-            var query = from patientAlarm in patientAlarmTable
-                        join alarm in alarmTable on patientAlarm.Alarm_id equals alarm.Alarm_id
-                        join danger in dangerTable on alarm.DangerID equals danger.Danger_id
-                        join lut_alarm_danger in lutAlarmDangerCategory on danger.AlarmDanger_CategoryID equals lut_alarm_danger.Lut_alarm_Danger_Category_ID
-                        where (danger.Alarmtypeid == 2)
-                        select new { lut_alarm_danger.Name };
-        }
-
-        public async Task<List<Patient_History>> getHistory()
-        {
-            var history_items = await manager.GetHistoryItemsAsync("301997m");
-            return new List<Patient_History>(history_items);
         }
 
         private async Task loadMainCarousel(string currentUserId)
@@ -276,19 +235,32 @@ namespace App1
             ObservableCollection<LUT_Alarm_Danger_Category> lutAlarmDangerCategory = await manager.GetLUT_Alarm_Danger_CategoryTableItemsAsync();
 
             //for predictions
-            var alarms = from patientAlarm in patientAlarmTable
+            var alarms = (from patientAlarm in patientAlarmTable
                          join alarm in alarmTable on patientAlarm.Alarm_id equals alarm.Alarm_id
                          join danger in dangerTable on alarm.DangerID equals danger.Danger_id
                          join lut_alarm_danger in lutAlarmDangerCategory on danger.AlarmDanger_CategoryID equals lut_alarm_danger.Lut_alarm_Danger_Category_ID
                          where (danger.Alarmtypeid == 1)
-                         select new { lut_alarm_danger.Name };
+                         select new { lut_alarm_danger.Name, alarm.TimeCreated }).ToList().Distinct();
+
+            List<String> alarmsList = new List<string>();
+            List<String> timeList = new List<String>();
+            foreach (var q in alarms)
+            {
+                alarmsList.Add(q.Name);
+            }
+            foreach (var t in alarms)
+            {
+                timeList.Add(t.TimeCreated);
+            }
+
             ObservableCollection<AlarmsContent> alarmslist = new ObservableCollection<AlarmsContent>();
-            foreach (object a in alarms)
+
+            for (int i = 0; i < alarmsList.Count; i++)
             {
                 alarmslist.Add(new AlarmsContent
                 {
-                    description = a.ToString(),
-                    time = "8 hours ago"
+                    description = alarmsList[i].ToString(),
+                    time = timeList[i].ToString()
                 });
             }
             MainContentView.Content = new ContentView
@@ -317,19 +289,29 @@ namespace App1
             ObservableCollection<LUT_Alarm_Danger_Category> lutAlarmDangerCategory = await manager.GetLUT_Alarm_Danger_CategoryTableItemsAsync();
 
             //for predictions
-            var obs = from patientAlarm in patientAlarmTable
-                        join alarm in alarmTable on patientAlarm.Alarm_id equals alarm.Alarm_id
-                        join danger in dangerTable on alarm.DangerID equals danger.Danger_id
-                        join lut_alarm_danger in lutAlarmDangerCategory on danger.AlarmDanger_CategoryID equals lut_alarm_danger.Lut_alarm_Danger_Category_ID
-                        where (danger.Alarmtypeid == 2)
-                        select new { lut_alarm_danger.Name };
+            var obs = (from patientAlarm in patientAlarmTable
+                         join alarm in alarmTable on patientAlarm.Alarm_id equals alarm.Alarm_id
+                         join danger in dangerTable on alarm.DangerID equals danger.Danger_id
+                         join lut_alarm_danger in lutAlarmDangerCategory on danger.AlarmDanger_CategoryID equals lut_alarm_danger.Lut_alarm_Danger_Category_ID
+                         where (danger.Alarmtypeid == 2)
+                         select new { lut_alarm_danger.Name, alarm.TimeCreated }).ToList().Distinct();
+            List<String> obsList = new List<string>();
+            List<String> timeList = new List<String>();
+            foreach (var q in obs)
+            {
+                obsList.Add(q.Name);
+            }
+            foreach (var t in obs)
+            {
+                timeList.Add(t.TimeCreated);
+            }
             ObservableCollection<AlarmsContent> alarmslist = new ObservableCollection<AlarmsContent>();
-            foreach (object a in obs)
+            for (int i = 0; i < obsList.Count; i++)
             {
                 alarmslist.Add(new AlarmsContent
                 {
-                    description = a.ToString(),
-                    time = "8 hours ago"
+                    description = obsList[i].ToString(),
+                    time = timeList[i].ToString()
                 });
             }
             MainContentView.Content = new ContentView

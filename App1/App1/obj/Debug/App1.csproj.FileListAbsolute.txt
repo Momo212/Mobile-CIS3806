@@ -42,3 +42,47 @@ C:\Users\Owner\Source\Repos\Mobile-CIS380618\App1\App1\obj\Debug\App1.Notificati
 C:\Users\Owner\Source\Repos\Mobile-CIS380618\App1\App1\obj\Debug\App1.PatientProfile.xaml.g.cs
 C:\Users\Owner\Source\Repos\Mobile-CIS380618\App1\App1\obj\Debug\App1.dll
 C:\Users\Owner\Source\Repos\Mobile-CIS380618\App1\App1\obj\Debug\App1.pdb
+E:\School\University\Year3Semester1\Mobile\Dashboard [Github]\Version2-5\Mobile-CIS3806\App1\App1\bin\Debug\App1.dll.config
+E:\School\University\Year3Semester1\Mobile\Dashboard [Github]\Version2-5\Mobile-CIS3806\App1\App1\bin\Debug\App1.dll
+E:\School\University\Year3Semester1\Mobile\Dashboard [Github]\Version2-5\Mobile-CIS3806\App1\App1\bin\Debug\App1.pdb
+E:\School\University\Year3Semester1\Mobile\Dashboard [Github]\Version2-5\Mobile-CIS3806\App1\App1\bin\Debug\Microsoft.Azure.Mobile.Client.dll
+E:\School\University\Year3Semester1\Mobile\Dashboard [Github]\Version2-5\Mobile-CIS3806\App1\App1\bin\Debug\Newtonsoft.Json.dll
+E:\School\University\Year3Semester1\Mobile\Dashboard [Github]\Version2-5\Mobile-CIS3806\App1\App1\bin\Debug\PCLCrypto.dll
+E:\School\University\Year3Semester1\Mobile\Dashboard [Github]\Version2-5\Mobile-CIS3806\App1\App1\bin\Debug\PInvoke.BCrypt.dll
+E:\School\University\Year3Semester1\Mobile\Dashboard [Github]\Version2-5\Mobile-CIS3806\App1\App1\bin\Debug\PInvoke.Kernel32.dll
+E:\School\University\Year3Semester1\Mobile\Dashboard [Github]\Version2-5\Mobile-CIS3806\App1\App1\bin\Debug\PInvoke.NCrypt.dll
+E:\School\University\Year3Semester1\Mobile\Dashboard [Github]\Version2-5\Mobile-CIS3806\App1\App1\bin\Debug\PInvoke.Windows.Core.dll
+E:\School\University\Year3Semester1\Mobile\Dashboard [Github]\Version2-5\Mobile-CIS3806\App1\App1\bin\Debug\System.Net.Http.Extensions.dll
+E:\School\University\Year3Semester1\Mobile\Dashboard [Github]\Version2-5\Mobile-CIS3806\App1\App1\bin\Debug\System.Net.Http.Primitives.dll
+E:\School\University\Year3Semester1\Mobile\Dashboard [Github]\Version2-5\Mobile-CIS3806\App1\App1\bin\Debug\Validation.dll
+E:\School\University\Year3Semester1\Mobile\Dashboard [Github]\Version2-5\Mobile-CIS3806\App1\App1\bin\Debug\Xamarin.Forms.CarouselView.dll
+E:\School\University\Year3Semester1\Mobile\Dashboard [Github]\Version2-5\Mobile-CIS3806\App1\App1\bin\Debug\Xamarin.Forms.Core.dll
+E:\School\University\Year3Semester1\Mobile\Dashboard [Github]\Version2-5\Mobile-CIS3806\App1\App1\bin\Debug\Xamarin.Forms.Platform.dll
+E:\School\University\Year3Semester1\Mobile\Dashboard [Github]\Version2-5\Mobile-CIS3806\App1\App1\bin\Debug\Xamarin.Forms.Xaml.dll
+E:\School\University\Year3Semester1\Mobile\Dashboard [Github]\Version2-5\Mobile-CIS3806\App1\App1\bin\Debug\Microsoft.Azure.Mobile.Client.xml
+E:\School\University\Year3Semester1\Mobile\Dashboard [Github]\Version2-5\Mobile-CIS3806\App1\App1\bin\Debug\Newtonsoft.Json.xml
+E:\School\University\Year3Semester1\Mobile\Dashboard [Github]\Version2-5\Mobile-CIS3806\App1\App1\bin\Debug\PCLCrypto.xml
+E:\School\University\Year3Semester1\Mobile\Dashboard [Github]\Version2-5\Mobile-CIS3806\App1\App1\bin\Debug\PInvoke.BCrypt.xml
+E:\School\University\Year3Semester1\Mobile\Dashboard [Github]\Version2-5\Mobile-CIS3806\App1\App1\bin\Debug\PInvoke.Kernel32.xml
+E:\School\University\Year3Semester1\Mobile\Dashboard [Github]\Version2-5\Mobile-CIS3806\App1\App1\bin\Debug\PInvoke.NCrypt.xml
+E:\School\University\Year3Semester1\Mobile\Dashboard [Github]\Version2-5\Mobile-CIS3806\App1\App1\bin\Debug\PInvoke.Windows.Core.xml
+E:\School\University\Year3Semester1\Mobile\Dashboard [Github]\Version2-5\Mobile-CIS3806\App1\App1\bin\Debug\System.Net.Http.Extensions.xml
+E:\School\University\Year3Semester1\Mobile\Dashboard [Github]\Version2-5\Mobile-CIS3806\App1\App1\bin\Debug\System.Net.Http.Primitives.xml
+E:\School\University\Year3Semester1\Mobile\Dashboard [Github]\Version2-5\Mobile-CIS3806\App1\App1\bin\Debug\Validation.xml
+E:\School\University\Year3Semester1\Mobile\Dashboard [Github]\Version2-5\Mobile-CIS3806\App1\App1\bin\Debug\Xamarin.Forms.Core.pdb
+E:\School\University\Year3Semester1\Mobile\Dashboard [Github]\Version2-5\Mobile-CIS3806\App1\App1\bin\Debug\Xamarin.Forms.Core.xml
+E:\School\University\Year3Semester1\Mobile\Dashboard [Github]\Version2-5\Mobile-CIS3806\App1\App1\bin\Debug\Xamarin.Forms.Xaml.pdb
+E:\School\University\Year3Semester1\Mobile\Dashboard [Github]\Version2-5\Mobile-CIS3806\App1\App1\bin\Debug\Xamarin.Forms.Xaml.xml
+E:\School\University\Year3Semester1\Mobile\Dashboard [Github]\Version2-5\Mobile-CIS3806\App1\App1\obj\Debug\App1.csproj.App.config
+E:\School\University\Year3Semester1\Mobile\Dashboard [Github]\Version2-5\Mobile-CIS3806\App1\App1\obj\Debug\App1.csprojResolveAssemblyReference.cache
+E:\School\University\Year3Semester1\Mobile\Dashboard [Github]\Version2-5\Mobile-CIS3806\App1\App1\obj\Debug\App1.csproj.CoreCompileInputs.cache
+E:\School\University\Year3Semester1\Mobile\Dashboard [Github]\Version2-5\Mobile-CIS3806\App1\App1\obj\Debug\App1.Dashboard.xaml.g.cs
+E:\School\University\Year3Semester1\Mobile\Dashboard [Github]\Version2-5\Mobile-CIS3806\App1\App1\obj\Debug\App1.App.xaml.g.cs
+E:\School\University\Year3Semester1\Mobile\Dashboard [Github]\Version2-5\Mobile-CIS3806\App1\App1\obj\Debug\App1.Search.xaml.g.cs
+E:\School\University\Year3Semester1\Mobile\Dashboard [Github]\Version2-5\Mobile-CIS3806\App1\App1\obj\Debug\App1.AddPatient.xaml.g.cs
+E:\School\University\Year3Semester1\Mobile\Dashboard [Github]\Version2-5\Mobile-CIS3806\App1\App1\obj\Debug\App1.NotificationList.NotifParentTabbedView.xaml.g.cs
+E:\School\University\Year3Semester1\Mobile\Dashboard [Github]\Version2-5\Mobile-CIS3806\App1\App1\obj\Debug\App1.NotificationList.NotifChildTabPatient.xaml.g.cs
+E:\School\University\Year3Semester1\Mobile\Dashboard [Github]\Version2-5\Mobile-CIS3806\App1\App1\obj\Debug\App1.NotificationList.NotifChildTabEnvironment.xaml.g.cs
+E:\School\University\Year3Semester1\Mobile\Dashboard [Github]\Version2-5\Mobile-CIS3806\App1\App1\obj\Debug\App1.PatientProfile.xaml.g.cs
+E:\School\University\Year3Semester1\Mobile\Dashboard [Github]\Version2-5\Mobile-CIS3806\App1\App1\obj\Debug\App1.dll
+E:\School\University\Year3Semester1\Mobile\Dashboard [Github]\Version2-5\Mobile-CIS3806\App1\App1\obj\Debug\App1.pdb
