@@ -140,6 +140,7 @@
     <Content Include="Assets\home.png" />
     <Content Include="Assets\male.png" />
     <Content Include="Assets\menu.png" />
+    <Content Include="Assets\notification-flat2.png" />
     <Content Include="Assets\NotifIcons\clock-inverted.png" />
     <Content Include="Assets\NotifIcons\clock.png" />
     <Content Include="Assets\NotifIcons\drop-silhouette-inverted.png" />

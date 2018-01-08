@@ -436,6 +436,9 @@
     <AppxPackagedFile Include="E:\School\University\Year3Semester1\Mobile\Dashboard [Github]\Version2-5\Mobile-CIS3806\App1\App1.UWP\Assets\menu.png">
       <PackagePath>Assets\menu.png</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\School\University\Year3Semester1\Mobile\Dashboard [Github]\Version2-5\Mobile-CIS3806\App1\App1.UWP\Assets\notification-flat2.png">
+      <PackagePath>Assets\notification-flat2.png</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="E:\School\University\Year3Semester1\Mobile\Dashboard [Github]\Version2-5\Mobile-CIS3806\App1\App1.UWP\Assets\NotifIcons\clock-inverted.png">
       <PackagePath>Assets\NotifIcons\clock-inverted.png</PackagePath>
     </AppxPackagedFile>
