@@ -11,7 +11,7 @@
 namespace App1.NotificationList {
     
     
-    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("C:\\Users\\Owner\\Source\\Repos\\Mobile-CIS380618\\App1\\App1\\NotificationList\\NotifPare" +
+    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("C:\\Users\\Owner\\Source\\Repos\\Mobile-CIS380620\\App1\\App1\\NotificationList\\NotifPare" +
         "ntTabbedView.xaml")]
     public partial class NotifParentTabbedView : global::Xamarin.Forms.TabbedPage {
         

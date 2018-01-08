@@ -87,7 +87,7 @@
                 </Grid>
             </Grid>
 
-            <StackLayout Grid.Column="1">
+            <StackLayout Grid.Column="1" Margin="10">
                 <Entry x:Name="NameEntry" HorizontalOptions="FillAndExpand" Placeholder="Enter Name..."/>
                 <Entry x:Name="SurnameEntry" HorizontalOptions="FillAndExpand" Placeholder="Enter Surname..."/>
                 <Entry x:Name="IdNumberEntry" HorizontalOptions="FillAndExpand" Placeholder="Enter ID Number..."/>
