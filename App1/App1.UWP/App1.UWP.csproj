@@ -167,6 +167,7 @@
     <Content Include="Assets\NotifIcons\sleepwalker.png" />
     <Content Include="Assets\profile.png" />
     <Content Include="Assets\searchIcon.png" />
+    <Content Include="plan.png" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-100.png" />
     <Content Include="Assets\LockScreenLogo.scale-125.png" />

@@ -35,5 +35,10 @@ namespace App1
         {
             await Navigation.PushAsync(new PatientProfile());
         }
+
+        private async void LiveMap_OnClicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new Map());
+        }
     }
 }

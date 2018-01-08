@@ -25,6 +25,7 @@ namespace App1.DatabaseStuff
         IMobileServiceTable<Danger_Table> danger_Table;
         IMobileServiceTable<LUT_Alarm_Danger_Category> lut_alarm_danger_table;
         IMobileServiceTable<Alarm_Table> alarm_Table;
+        IMobileServiceTable<Coordinate_Table> coordinate_Table;
 #endif
 
         const string offlineDbPath = @"localstore.db";
@@ -51,6 +52,7 @@ namespace App1.DatabaseStuff
             this.danger_Table = client.GetTable<Danger_Table>();
             this.alarm_Table = client.GetTable<Alarm_Table>();
             this.lut_alarm_danger_table = client.GetTable<LUT_Alarm_Danger_Category>();
+            this.coordinate_Table = client.GetTable<Coordinate_Table>();
 #endif
         }
 
@@ -118,7 +120,19 @@ namespace App1.DatabaseStuff
                 await fear_Table.UpdateAsync(item);
             }
         }
-        
+
+        public async Task SaveTaskAsyncCoordinate(Coordinate_Table item)
+        {
+            if (item.Id == null)
+            {
+                await coordinate_Table.InsertAsync(item);
+            }
+            else
+            {
+                await coordinate_Table.UpdateAsync(item);
+            }
+        }
+
         public async Task<ObservableCollection<Relative_Table>> GetRelativeItemsAsync(String currentUserId)
         {
 #if OFFLINE_SYNC_ENABLED
@@ -142,7 +156,8 @@ namespace App1.DatabaseStuff
                     await this.SyncAsync();
                 }
 #endif
-            IEnumerable<Patient_Table> items = await patient_Table.Where(pat => pat.Patient_ID == patientID)
+            IEnumerable<Patient_Table> items = await patient_Table
+                .Where(pat => pat.Patient_ID == patientID)
                 .ToEnumerableAsync();
 
             return new ObservableCollection<Patient_Table>(items);
@@ -248,5 +263,35 @@ namespace App1.DatabaseStuff
 
             return new ObservableCollection<LUT_Alarm_Danger_Category>(items);
         }
+
+        public async Task<ObservableCollection<Coordinate_Table>> GetCoordinateItemsAsync(String patientId)
+        {
+#if OFFLINE_SYNC_ENABLED
+                if (syncItems)
+                {
+                    await this.SyncAsync();
+                }
+#endif
+            IEnumerable<Coordinate_Table> items = await coordinate_Table
+                .Where(x => x.PatientID == patientId)
+                .ToEnumerableAsync();
+
+            return new ObservableCollection<Coordinate_Table>(items);
+        }
+
+        public async Task<ObservableCollection<Patient_Table>> GetPatientItemsAsync()
+        {
+#if OFFLINE_SYNC_ENABLED
+                if (syncItems)
+                {
+                    await this.SyncAsync();
+                }
+#endif
+            IEnumerable<Patient_Table> items = await patient_Table
+                .ToEnumerableAsync();
+
+            return new ObservableCollection<Patient_Table>(items);
+        }
+
     }
 }

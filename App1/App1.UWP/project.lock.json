@@ -22600,20 +22600,25 @@
     "UAP,Version=v10.0.10586": []
   },
   "packageFolders": {
-    "C:\\Users\\danza\\.nuget\\packages\\": {}
+    "C:\\Users\\Scamel\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\": {}
   },
   "project": {
     "restore": {
-      "projectUniqueName": "E:\\School\\University\\Year3Semester1\\Mobile\\Dashboard [Github]\\Version2-5\\Mobile-CIS3806\\App1\\App1.UWP\\App1.UWP.csproj",
+      "projectUniqueName": "C:\\Users\\Scamel\\Desktop\\Mobile\\App1\\App1.UWP\\App1.UWP.csproj",
       "projectName": "App1.UWP",
-      "projectPath": "E:\\School\\University\\Year3Semester1\\Mobile\\Dashboard [Github]\\Version2-5\\Mobile-CIS3806\\App1\\App1.UWP\\App1.UWP.csproj",
-      "projectJsonPath": "E:\\School\\University\\Year3Semester1\\Mobile\\Dashboard [Github]\\Version2-5\\Mobile-CIS3806\\App1\\App1.UWP\\project.json",
-      "packagesPath": "C:\\Users\\danza\\.nuget\\packages\\",
-      "outputPath": "E:\\School\\University\\Year3Semester1\\Mobile\\Dashboard [Github]\\Version2-5\\Mobile-CIS3806\\App1\\App1.UWP\\obj\\",
+      "projectPath": "C:\\Users\\Scamel\\Desktop\\Mobile\\App1\\App1.UWP\\App1.UWP.csproj",
+      "projectJsonPath": "C:\\Users\\Scamel\\Desktop\\Mobile\\App1\\App1.UWP\\project.json",
+      "packagesPath": "C:\\Users\\Scamel\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Scamel\\Desktop\\Mobile\\App1\\App1.UWP\\obj\\",
       "projectStyle": "ProjectJson",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\"
+      ],
       "configFilePaths": [
-        "C:\\Users\\danza\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\Scamel\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.Fallback.config"
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
@@ -22622,18 +22627,18 @@
       "frameworks": {
         "uap10.0.10586": {
           "projectReferences": {
-            "E:\\School\\University\\Year3Semester1\\Mobile\\Dashboard [Github]\\Version2-5\\Mobile-CIS3806\\App1\\App1\\App1.csproj": {
-              "projectPath": "E:\\School\\University\\Year3Semester1\\Mobile\\Dashboard [Github]\\Version2-5\\Mobile-CIS3806\\App1\\App1\\App1.csproj"
+            "C:\\Users\\Scamel\\Desktop\\Mobile\\App1\\App1\\App1.csproj": {
+              "projectPath": "C:\\Users\\Scamel\\Desktop\\Mobile\\App1\\App1\\App1.csproj"
             }
           }
         }
       }
     },
     "dependencies": {
-      "Microsoft.Azure.Mobile.Client": "4.0.2",
-      "Microsoft.NETCore.UniversalWindowsPlatform": "5.2.2",
-      "Xamarin.Forms": "2.5.0.121934",
-      "Xamarin.Forms.CarouselView": "2.3.0-pre2"
+      "Microsoft.Azure.Mobile.Client": "[4.0.2, )",
+      "Microsoft.NETCore.UniversalWindowsPlatform": "[5.2.2, )",
+      "Xamarin.Forms": "[2.5.0.121934, )",
+      "Xamarin.Forms.CarouselView": "[2.3.0-pre2, )"
     },
     "frameworks": {
       "uap10.0.10586": {}

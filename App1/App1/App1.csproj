@@ -46,6 +46,7 @@
     </Compile>
     <Compile Include="DatabaseStuff\Alarm_Table.cs" />
     <Compile Include="DatabaseStuff\Constants.cs" />
+    <Compile Include="DatabaseStuff\Coordinate_Table.cs" />
     <Compile Include="DatabaseStuff\Danger_Table.cs" />
     <Compile Include="DatabaseStuff\Fear_Table.cs" />
     <Compile Include="DatabaseStuff\Hobby_Table.cs" />
@@ -55,6 +56,9 @@
     <Compile Include="DatabaseStuff\Patient_History.cs" />
     <Compile Include="DatabaseStuff\Patient_Table.cs" />
     <Compile Include="DatabaseStuff\Relative_Table.cs" />
+    <Compile Include="Map.xaml.cs">
+      <DependentUpon>Map.xaml</DependentUpon>
+    </Compile>
     <Compile Include="NotificationList\NotifChildTabEnvironment.xaml.cs">
       <DependentUpon>NotifChildTabEnvironment.xaml</DependentUpon>
     </Compile>
@@ -73,6 +77,7 @@
     <Compile Include="Search.xaml.cs">
       <DependentUpon>Search.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\CustomMap.cs" />
     <Compile Include="Views\LeftDetail.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -177,6 +182,15 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="add button.png" />
+    <Content Include="plan.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Map.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <Import Project="..\..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets" Condition="Exists('..\..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" />
