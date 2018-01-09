@@ -15,7 +15,7 @@ namespace App1
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class PatientProfile : ContentPage
     {
-        public string currentUserId = "1234";
+        public string currentUserId = "1234567890";
         ItemManager manager;
 
         public PatientProfile()
@@ -38,7 +38,7 @@ namespace App1
                 {
                     name = r.Name + " " + r.Surname,
                     patientid = r.PatientID_FK,
-                    relation = r.Rel_id,
+                    relation = r.Rel_type,
                     phoneno = r.Phone_no
                 });
             }
@@ -302,8 +302,9 @@ namespace App1
         {
             if(LeftCarouselMain.Position == 0)
             {
-                DisplayAlert("Contact Number", "Insert Phone number here", "OK");
-                
+                ListView l = (ListView)sender;
+                values v = (values)l.SelectedItem;
+                DisplayAlert("Contact Number", v.phoneno, "OK");
             }
         }
     }

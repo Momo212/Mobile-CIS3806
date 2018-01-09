@@ -348,7 +348,7 @@ namespace App1
                 {
                     name = r.Name + " " + r.Surname,
                     patientid = r.PatientID_FK,
-                    relation = r.Rel_id,
+                    relation = r.Rel_type,
                     phoneno = r.Phone_no
                 });
             }
@@ -492,8 +492,9 @@ namespace App1
         {
             if (LeftCarousel.Position == 0)
             {
-                DisplayAlert("Contact Number", "Insert Phone number here "+sender.ToString(), "OK");
-                
+                ListView l = (ListView)sender;
+                values v = (values)l.SelectedItem;
+                DisplayAlert("Contact Number", v.phoneno, "OK");
             }
         }
     }
