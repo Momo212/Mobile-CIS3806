@@ -1,2 +1,0 @@
-E:\School\University\Year3Semester1\Mobile\Dashboard [Github]\Version2-7\Mobile-CIS3806\App1\App1.UWP\App1.UWP.csproj;x86
-E:\School\University\Year3Semester1\Mobile\Dashboard [Github]\Version2-7\Mobile-CIS3806\App1\App1\App1.csproj;neutral
