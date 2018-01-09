@@ -112,7 +112,7 @@ namespace App1
             isMedical = true;
             isDanger = false;
 
-            var history_items = await manager.GetHistoryItemsAsync("301997m");
+            var history_items = await manager.GetHistoryItemsAsync(currentUserId);
             ObservableCollection<MedicalHistoryContent> med = new ObservableCollection<MedicalHistoryContent>();
             foreach (Patient_History h in history_items)
             {
@@ -203,6 +203,7 @@ namespace App1
                 EditButton2.IsVisible = true;
                 fields.IsVisible = false;
                 MainContentView.IsVisible = true;
+                MedHist_Clicked(sender, e);
             }
             else if (isMedical == false && isDanger == true)
             {
@@ -219,7 +220,9 @@ namespace App1
                 DangerEntry.Text = String.Empty;
                 fields.IsVisible = false;
                 MainContentView.IsVisible = true;
+                Dangers_Clicked(sender, e);
             }
+            
             
         }
 
@@ -380,24 +383,22 @@ namespace App1
             fields.IsVisible = false;
             MainContentView.IsVisible = true;
 
-            //var danger = await manager.GetDangerTableItemsAsync(); //removed 301997m parameter
-            //ObservableCollection<LUT_Alarm_Danger_Category> med = new ObservableCollection<LUT_Alarm_Danger_Category>();
-            //foreach (Patient_History h in history_items)
-            //{
-            //    med.Add(new MedicalHistoryContent
-            //    {
-            //        description = h.Text,
-            //        type = h.Type,
-            //        year = h.Year,
-            //        patientid = h.PatientID_FK
-            //    });
-            //}
-
+            var danger = await manager.GetDangerActualItemsAsync(currentUserId); 
             ObservableCollection<Dangers> dangers = new ObservableCollection<Dangers>();
-            dangers.Add(new Dangers { description = "Tends to get aggressive near people" });
-            dangers.Add(new Dangers { description = "Racist" });
-            dangers.Add(new Dangers { description = "Forgetful due to dimensia" });
-            
+            foreach (DangerActual_Table d in danger)
+            {
+                dangers.Add(new Dangers
+                {
+                    description = d.Text,
+                    patientID = d.PatientID_FK
+                });
+            }
+
+            //ObservableCollection<Dangers> dangers = new ObservableCollection<Dangers>();
+            //dangers.Add(new Dangers { description = "Tends to get aggressive near people" });
+            //dangers.Add(new Dangers { description = "Racist" });
+            //dangers.Add(new Dangers { description = "Forgetful due to dimensia" });
+
 
             MainContentView.Content = new ContentView
             {
