@@ -133,6 +133,18 @@ namespace App1.DatabaseStuff
             }
         }
 
+        public async Task SaveTaskAsyncPatientMedical(Patient_History item)
+        {
+            if (item.Id == null)
+            {
+                await patient_History.InsertAsync(item);
+            }
+            else
+            {
+                await patient_History.UpdateAsync(item);
+            }
+        }
+
         public async Task<ObservableCollection<Relative_Table>> GetRelativeItemsAsync(String currentUserId)
         {
 #if OFFLINE_SYNC_ENABLED

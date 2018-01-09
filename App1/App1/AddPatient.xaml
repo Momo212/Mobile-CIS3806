@@ -82,7 +82,7 @@
                                 </DataTemplate>
                             </cv:CarouselView.ItemTemplate>
                         </cv:CarouselView>
-                        <Button x:Name="EditButton" Text="Edit" FontSize="11" Grid.Row="1" Clicked="createNew_OnClick"/>
+                        <Button x:Name="EditButton" Image="Assets/addButton.png" BackgroundColor="White" FontSize="11" Grid.Row="1" Clicked="createNew_OnClick"/>
                     </Grid>
                 </Grid>
             </Grid>

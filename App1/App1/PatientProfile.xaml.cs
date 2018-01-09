@@ -17,6 +17,8 @@ namespace App1
     {
         public string currentUserId = "1234567890";
         ItemManager manager;
+        string selectedMedical;
+        int historyID = 1000;
 
         public PatientProfile()
         {
@@ -132,6 +134,57 @@ namespace App1
             ObservationsButton.TextColor = Color.Black;
             DangersButton.BackgroundColor = Color.White;
             DangersButton.TextColor = Color.Black;
+
+            EditButton2.IsVisible = true;
+        }
+
+        private void createNewMedical_OnClick(object sender, EventArgs e)
+        {
+            typePicker.SelectedIndex = 1;
+            EditButton2.IsVisible = false;
+            MainContentView.IsVisible = false;
+            fields.IsVisible = true;
+
+            List<string> values = new List<string>() { "Surgical", "Medical", "Allergies" };
+            typePicker.ItemsSource = values;
+        }
+
+        private void medType_IndexChanged(object sender, EventArgs e)
+        {
+            selectedMedical = typePicker.Items[typePicker.SelectedIndex];
+        }
+
+        private void Cancel_OnClick(object sender, EventArgs e)
+        {
+            this.Navigation.PushAsync(new PatientProfile());
+        }
+
+        private async void Submit_OnClick(object sender, EventArgs e)
+        {
+            if (TextEntry.Text == null || YearEntry.Text == null || typePicker.SelectedItem == null)
+            {
+                DisplayAlert("Alert", "All the fields must be filled in.", "OK");
+            }
+            else
+            {
+                var todo = new Patient_History { Type = selectedMedical, Year = YearEntry.Text, Text = TextEntry.Text, PatientID_FK = currentUserId , History_id = historyID.ToString() };
+                await AddMedicalItem(todo);
+            }
+            historyID++;
+
+            //unassign values
+            typePicker.SelectedIndex = 0;
+            TextEntry.Text = String.Empty;
+            YearEntry.Text = String.Empty;
+
+            EditButton2.IsVisible = true;
+            fields.IsVisible = false;
+            MainContentView.IsVisible = true;
+        }
+
+        async Task AddMedicalItem(Patient_History item)
+        {
+            await manager.SaveTaskAsyncPatientMedical(item);
         }
 
         //private void Map_Clicked(object sender, EventArgs e)
@@ -156,6 +209,10 @@ namespace App1
 
         private async void Alarms_Clicked(object sender, EventArgs e)
         {
+            EditButton2.IsVisible = false;
+            fields.IsVisible = false;
+            MainContentView.IsVisible = true;
+
             ObservableCollection<Patient_Alarm_Table> patientAlarmTable = await manager.GetPatientAlarmTableItemsAsync();
             ObservableCollection<Alarm_Table> alarmTable = await manager.GetAlarmTableItemsAsync();
             ObservableCollection<Danger_Table> dangerTable = await manager.GetDangerTableItemsAsync();
@@ -210,6 +267,10 @@ namespace App1
 
         private async void Observations_Clicked(object sender, EventArgs e)
         {
+            EditButton2.IsVisible = false;
+            fields.IsVisible = false;
+            MainContentView.IsVisible = true;
+
             ObservableCollection<Patient_Alarm_Table> patientAlarmTable = await manager.GetPatientAlarmTableItemsAsync();
             ObservableCollection<Alarm_Table> alarmTable = await manager.GetAlarmTableItemsAsync();
             ObservableCollection<Danger_Table> dangerTable = await manager.GetDangerTableItemsAsync();
@@ -261,6 +322,10 @@ namespace App1
 
         private async void Dangers_Clicked(object sender, EventArgs e)
         {
+            EditButton2.IsVisible = false;
+            fields.IsVisible = false;
+            MainContentView.IsVisible = true;
+
             //var danger = await manager.GetDangerTableItemsAsync(); //removed 301997m parameter
             //ObservableCollection<LUT_Alarm_Danger_Category> med = new ObservableCollection<LUT_Alarm_Danger_Category>();
             //foreach (Patient_History h in history_items)
