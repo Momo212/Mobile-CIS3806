@@ -47,6 +47,7 @@
     <Compile Include="DatabaseStuff\Alarm_Table.cs" />
     <Compile Include="DatabaseStuff\Constants.cs" />
     <Compile Include="DatabaseStuff\Coordinate_Table.cs" />
+    <Compile Include="DatabaseStuff\DangerActual_Table.cs" />
     <Compile Include="DatabaseStuff\Danger_Table.cs" />
     <Compile Include="DatabaseStuff\Fear_Table.cs" />
     <Compile Include="DatabaseStuff\Hobby_Table.cs" />

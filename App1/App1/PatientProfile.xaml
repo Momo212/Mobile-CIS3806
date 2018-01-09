@@ -114,6 +114,7 @@
                     
                     <Entry x:Name="TextEntry" HorizontalOptions="FillAndExpand" Placeholder="Enter Description..."/>
                     <Entry x:Name="YearEntry" HorizontalOptions="FillAndExpand" Placeholder="Enter Year of Occurence..." />
+                    <Entry x:Name="DangerEntry" HorizontalOptions="FillAndExpand" Placeholder="Enter Danger..." />
                     <StackLayout Orientation="Horizontal" VerticalOptions="EndAndExpand">
                         <Button Text="Submit"  HorizontalOptions="FillAndExpand" Clicked="Submit_OnClick"/>
                         <Button Text="Cancel"  HorizontalOptions="FillAndExpand" Clicked="Cancel_OnClick"/>

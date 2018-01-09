@@ -19,6 +19,9 @@ namespace App1
         ItemManager manager;
         string selectedMedical;
         int historyID = 1000;
+        
+        bool isMedical = false;
+        bool isDanger = false;
 
         public PatientProfile()
         {
@@ -106,6 +109,9 @@ namespace App1
         private async void MedHist_Clicked(object sender, EventArgs e)
         {
 
+            isMedical = true;
+            isDanger = false;
+
             var history_items = await manager.GetHistoryItemsAsync("301997m");
             ObservableCollection<MedicalHistoryContent> med = new ObservableCollection<MedicalHistoryContent>();
             foreach (Patient_History h in history_items)
@@ -140,13 +146,28 @@ namespace App1
 
         private void createNewMedical_OnClick(object sender, EventArgs e)
         {
-            typePicker.SelectedIndex = 1;
-            EditButton2.IsVisible = false;
-            MainContentView.IsVisible = false;
-            fields.IsVisible = true;
+            if (isMedical == true && isDanger == false)
+            {
+                DangerEntry.IsVisible = false;
+                typePicker.SelectedIndex = 1;
+                EditButton2.IsVisible = false;
+                MainContentView.IsVisible = false;
+                fields.IsVisible = true;
 
-            List<string> values = new List<string>() { "Surgical", "Medical", "Allergies" };
-            typePicker.ItemsSource = values;
+                List<string> values = new List<string>() { "Surgical", "Medical", "Allergies" };
+                typePicker.ItemsSource = values;
+            }
+            else if (isMedical == false && isDanger == true)
+            {
+                EditButton2.IsVisible = false;
+                MainContentView.IsVisible = false;
+                typePicker.IsVisible = false;
+                pickerLabel.IsVisible = false;
+                TextEntry.IsVisible = false;
+                YearEntry.IsVisible = false;
+                fields.IsVisible = true;
+                DangerEntry.IsVisible = true;
+            }
         }
 
         private void medType_IndexChanged(object sender, EventArgs e)
@@ -161,25 +182,45 @@ namespace App1
 
         private async void Submit_OnClick(object sender, EventArgs e)
         {
-            if (TextEntry.Text == null || YearEntry.Text == null || typePicker.SelectedItem == null)
+            if (isMedical == true && isDanger == false)
             {
-                DisplayAlert("Alert", "All the fields must be filled in.", "OK");
+                if (TextEntry.Text == null || YearEntry.Text == null || typePicker.SelectedItem == null)
+                {
+                    DisplayAlert("Alert", "All the fields must be filled in.", "OK");
+                }
+                else
+                {
+                    var todo = new Patient_History { Type = selectedMedical, Year = YearEntry.Text, Text = TextEntry.Text, PatientID_FK = currentUserId, History_id = historyID.ToString() };
+                    await AddMedicalItem(todo);
+                }
+                historyID++;
+
+                //unassign values
+                typePicker.SelectedIndex = 0;
+                TextEntry.Text = String.Empty;
+                YearEntry.Text = String.Empty;
+
+                EditButton2.IsVisible = true;
+                fields.IsVisible = false;
+                MainContentView.IsVisible = true;
             }
-            else
+            else if (isMedical == false && isDanger == true)
             {
-                var todo = new Patient_History { Type = selectedMedical, Year = YearEntry.Text, Text = TextEntry.Text, PatientID_FK = currentUserId , History_id = historyID.ToString() };
-                await AddMedicalItem(todo);
+                if (DangerEntry.Text == null)
+                {
+                    DisplayAlert("Alert", "All the fields must be filled in.", "OK");
+                }
+                else
+                {
+                    var todo = new DangerActual_Table { PatientID_FK = currentUserId, Text = DangerEntry.Text};
+                    await AddActualDangerItem(todo);
+                }
+
+                DangerEntry.Text = String.Empty;
+                fields.IsVisible = false;
+                MainContentView.IsVisible = true;
             }
-            historyID++;
-
-            //unassign values
-            typePicker.SelectedIndex = 0;
-            TextEntry.Text = String.Empty;
-            YearEntry.Text = String.Empty;
-
-            EditButton2.IsVisible = true;
-            fields.IsVisible = false;
-            MainContentView.IsVisible = true;
+            
         }
 
         async Task AddMedicalItem(Patient_History item)
@@ -187,6 +228,10 @@ namespace App1
             await manager.SaveTaskAsyncPatientMedical(item);
         }
 
+        async Task AddActualDangerItem(DangerActual_Table item)
+        {
+            await manager.SaveTaskAsyncDangerActualItem(item);
+        }
         //private void Map_Clicked(object sender, EventArgs e)
         //{
         //    MainContentView.Content = new ContentView
@@ -209,6 +254,9 @@ namespace App1
 
         private async void Alarms_Clicked(object sender, EventArgs e)
         {
+            isMedical = false;
+            isDanger = false;
+
             EditButton2.IsVisible = false;
             fields.IsVisible = false;
             MainContentView.IsVisible = true;
@@ -267,6 +315,9 @@ namespace App1
 
         private async void Observations_Clicked(object sender, EventArgs e)
         {
+            isMedical = false;
+            isDanger = false;
+
             EditButton2.IsVisible = false;
             fields.IsVisible = false;
             MainContentView.IsVisible = true;
@@ -322,7 +373,10 @@ namespace App1
 
         private async void Dangers_Clicked(object sender, EventArgs e)
         {
-            EditButton2.IsVisible = false;
+            isMedical = false;
+            isDanger = true;
+
+            EditButton2.IsVisible = true;
             fields.IsVisible = false;
             MainContentView.IsVisible = true;
 

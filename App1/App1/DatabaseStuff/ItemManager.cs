@@ -26,6 +26,7 @@ namespace App1.DatabaseStuff
         IMobileServiceTable<LUT_Alarm_Danger_Category> lut_alarm_danger_table;
         IMobileServiceTable<Alarm_Table> alarm_Table;
         IMobileServiceTable<Coordinate_Table> coordinate_Table;
+        IMobileServiceTable<DangerActual_Table> dangerActual_Table;
 #endif
 
         const string offlineDbPath = @"localstore.db";
@@ -53,6 +54,7 @@ namespace App1.DatabaseStuff
             this.alarm_Table = client.GetTable<Alarm_Table>();
             this.lut_alarm_danger_table = client.GetTable<LUT_Alarm_Danger_Category>();
             this.coordinate_Table = client.GetTable<Coordinate_Table>();
+            this.dangerActual_Table = client.GetTable<DangerActual_Table>();
 #endif
         }
 
@@ -143,6 +145,33 @@ namespace App1.DatabaseStuff
             {
                 await patient_History.UpdateAsync(item);
             }
+        }
+
+        public async Task SaveTaskAsyncDangerActualItem(DangerActual_Table item)
+        {
+            if (item.Id == null)
+            {
+                await dangerActual_Table.InsertAsync(item);
+            }
+            else
+            {
+                await dangerActual_Table.UpdateAsync(item);
+            }
+        }
+
+        public async Task<ObservableCollection<DangerActual_Table>> GetDangerActualItemsAsync(String currentUserId)
+        {
+#if OFFLINE_SYNC_ENABLED
+                if (syncItems)
+                {
+                    await this.SyncAsync();
+                }
+#endif
+            IEnumerable<DangerActual_Table> items = await dangerActual_Table
+                .Where(dangerItem => dangerItem.PatientID_FK == currentUserId)
+                .ToEnumerableAsync();
+
+            return new ObservableCollection<DangerActual_Table>(items);
         }
 
         public async Task<ObservableCollection<Relative_Table>> GetRelativeItemsAsync(String currentUserId)
