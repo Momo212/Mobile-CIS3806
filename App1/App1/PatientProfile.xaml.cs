@@ -15,7 +15,7 @@ namespace App1
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class PatientProfile : ContentPage
     {
-        public string currentUserId = "12345";
+        public string currentUserId = "1234";
         ItemManager manager;
 
         public PatientProfile()
@@ -298,5 +298,13 @@ namespace App1
             MedHistButton.TextColor = Color.Black;
         }
 
+        private void ShowPhoneNo(object sender, ItemTappedEventArgs e)
+        {
+            if(LeftCarouselMain.Position == 0)
+            {
+                DisplayAlert("Contact Number", "Insert Phone number here", "OK");
+                
+            }
+        }
     }
 }

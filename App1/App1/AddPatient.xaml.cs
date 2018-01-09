@@ -487,5 +487,14 @@ namespace App1
                 }
             };
         }
+
+        private void ShowPhoneNo(object sender, ItemTappedEventArgs e)
+        {
+            if (LeftCarousel.Position == 0)
+            {
+                DisplayAlert("Contact Number", "Insert Phone number here "+sender.ToString(), "OK");
+                
+            }
+        }
     }
 }

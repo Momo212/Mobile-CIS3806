@@ -75,9 +75,9 @@
                                         <Label Grid.Row="0" Grid.Column="2" Text="{Binding RightTitle}" TextColor="DarkGray" FontSize="11" HorizontalOptions="Center"/>
                                         <Image Grid.Row="1" Grid.Column="0" Source="{Binding LeftArrow}" VerticalOptions="Fill" HorizontalOptions="Fill" />
                                         <Image Grid.Row="1" Grid.Column="2" Source="{Binding RightArrow}" VerticalOptions="Fill" HorizontalOptions="Fill" Rotation="180"/>
-                                        <ListView Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="3" ItemsSource="{Binding obscollection}" x:Name="listV" Style="FontSize=10">
-                                            
-                                        </ListView>
+                                        <ListView Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="3" ItemsSource="{Binding obscollection}" x:Name="listV" Style="FontSize=10" ItemTapped="ShowPhoneNo"/>
+
+
                                     </Grid>
                                 </DataTemplate>
                             </cv:CarouselView.ItemTemplate>

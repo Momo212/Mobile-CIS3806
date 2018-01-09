@@ -31,13 +31,13 @@
     <AppXManifest Include="C:\Users\Owner\Source\Repos\Mobile-CIS380620\App1\App1.UWP\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-01-08T21:25:41.475</Modified>
+      <Modified>2018-01-09T11:25:29.321</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\Owner\Source\Repos\Mobile-CIS380620\App1\App1.UWP\bin\x86\Debug\App1.UWP.exe">
       <PackagePath>entrypoint\App1.UWP.exe</PackagePath>
-      <Modified>2018-01-08T21:25:38.173</Modified>
+      <Modified>2018-01-09T11:25:25.254</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Owner\.nuget\packages\microsoft.azure.mobile.client\4.0.2\lib\uap10.0\Microsoft.Azure.Mobile.Client.dll">
       <PackagePath>Microsoft.Azure.Mobile.Client.dll</PackagePath>
@@ -525,7 +525,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Owner\Source\Repos\Mobile-CIS380620\App1\App1\bin\Debug\App1.dll">
       <PackagePath>App1.dll</PackagePath>
-      <Modified>2018-01-08T21:25:26.137</Modified>
+      <Modified>2018-01-09T11:25:11.745</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Owner\Source\Repos\Mobile-CIS380620\App1\App1\bin\Debug\App1.dll.config">
       <PackagePath>App1.dll.config</PackagePath>
@@ -952,7 +952,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Owner\Source\Repos\Mobile-CIS380620\App1\App1.UWP\bin\x86\Debug\Core\App1.UWP.exe">
       <PackagePath>App1.UWP.exe</PackagePath>
-      <Modified>2018-01-08T21:25:41.451</Modified>
+      <Modified>2018-01-09T11:25:29.294</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>
