@@ -46,7 +46,7 @@
                         <Label x:Name="BedNoProfileLabel" TextColor="White" HorizontalOptions="CenterAndExpand" FontSize="11"/>
                     </StackLayout>
                 </Grid>
-                <Grid Grid.Row="1" BackgroundColor="AliceBlue">
+                <Grid Grid.Row="1" BackgroundColor="White">
                     <Grid>
                         <Grid.RowDefinitions>
                             <RowDefinition Height="4*"></RowDefinition>
