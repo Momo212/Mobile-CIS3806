@@ -219,6 +219,20 @@ namespace App1.DatabaseStuff
             return new ObservableCollection<Hobby_Table>(items);
         }
 
+        public async Task<ObservableCollection<Hobby_Table>> GetHobbyItemsCountAsync()
+        {
+#if OFFLINE_SYNC_ENABLED
+                if (syncItems)
+                {
+                    await this.SyncAsync();
+                }
+#endif
+            IEnumerable<Hobby_Table> items = await hobby_Table
+                .ToEnumerableAsync();
+
+            return new ObservableCollection<Hobby_Table>(items);
+        }
+
         public async Task<ObservableCollection<Fear_Table>> GetFearItemsAsync(String currentUserId)
         {
 #if OFFLINE_SYNC_ENABLED
@@ -229,6 +243,20 @@ namespace App1.DatabaseStuff
 #endif
             IEnumerable<Fear_Table> items = await fear_Table
                 .Where(fearItem => fearItem.PatientID_FK == currentUserId)
+                .ToEnumerableAsync();
+
+            return new ObservableCollection<Fear_Table>(items);
+        }
+
+        public async Task<ObservableCollection<Fear_Table>> GetFearItemsCountAsync()
+        {
+#if OFFLINE_SYNC_ENABLED
+                if (syncItems)
+                {
+                    await this.SyncAsync();
+                }
+#endif
+            IEnumerable<Fear_Table> items = await fear_Table
                 .ToEnumerableAsync();
 
             return new ObservableCollection<Fear_Table>(items);

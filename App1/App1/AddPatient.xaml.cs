@@ -16,8 +16,6 @@ namespace App1
     public partial class AddPatient : ContentPage
     {
         public bool ButtonFlag = false;
-        public int countHobbyID;
-        public int countFearID;
         public string currentUserId;
         ItemManager manager;
 
@@ -137,9 +135,10 @@ namespace App1
                 }
                 else
                 {
-                    var todo = new Hobby_Table { Hobby_name = NameEntry.Text, PatientID_FK = currentUserId, Hobby_id = countHobbyID.ToString() };
+                    var totalHobbies = await manager.GetHobbyItemsCountAsync();
+
+                    var todo = new Hobby_Table { Hobby_name = NameEntry.Text, PatientID_FK = currentUserId, Hobby_id = totalHobbies.Count.ToString() };
                     await AddHobbyItem(todo);
-                    countHobbyID++;
                 }
                 ButtonFlag = false;
 
@@ -174,9 +173,10 @@ namespace App1
                 }
                 else
                 {
-                    var todo = new Fear_Table { Fear_name = NameEntry.Text, PatientID_FK = currentUserId, Fear_id = countFearID.ToString() };
+                    var totalFears = await manager.GetFearItemsCountAsync();
+
+                    var todo = new Fear_Table { Fear_name = NameEntry.Text, PatientID_FK = currentUserId, Fear_id = totalFears.Count.ToString() };
                     await AddFearItem(todo);
-                    countFearID++;
                 }
                 ButtonFlag = false;
 
