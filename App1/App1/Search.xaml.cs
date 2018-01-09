@@ -1,23 +1,29 @@
-﻿using System;
+﻿using App1.DatabaseStuff;
+using App1.Views;
+using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using App1.DatabaseStuff;
+
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
 namespace App1
 {
+
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Search : ContentPage
     {
+        List<String> patient = new List<string>();
+        ObservableCollection<MedicalHistoryContent> PIdslist = new ObservableCollection<MedicalHistoryContent>();
+        ItemManager manager;
         public Search()
         {
 
             InitializeComponent();
-
-            MainListView.ItemsSource = _names;
+            manager = ItemManager.DefaultManager;
 
             var dashboard = new ToolbarItem
             {
@@ -38,6 +44,7 @@ namespace App1
             this.ToolbarItems.Add(addPatient);
         }
 
+
         private void ShowDashboard()
         {
             this.Navigation.PushAsync(new MainPage());
@@ -47,30 +54,70 @@ namespace App1
         {
             this.Navigation.PushAsync(new AddPatient());
         }
-        private readonly List<string> _names = new List<string>
+        public ObservableCollection<string> _names = new ObservableCollection<string>
         {
             "Matthew", "Annalise", "Daniel", "Conrad", "Jean", "Jonathan"
         };
-        private void MainSearchBar_SearchButtonPressed(object sender, EventArgs e)
+
+
+        private async void MainSearchBar_SearchButtonPressed(object sender, EventArgs e)
         {
-            //get the keyword
+            ObservableCollection<Patient_Table> patienttable = await manager.GetPatientIDAsync();
+
             string keyword = MainSearchBar.Text;
+            foreach (var p in patienttable)
+            {
+                patient.Add(p.Patient_ID);
+                patient.Add(p.Name);
+                patient.Add(p.Surname);
+            }
 
-
-            //selects the name containing the keyword
-
-            //1 Method
-            /*IEnumerable<string> SearchResult = from name
-                                               in _names
-                                               where name.Contains(keyword)
-                                               select name;*/
+            for (int i = 0; i < patient.Count; i++)
+            {
+                PIdslist.Add(new MedicalHistoryContent
+                {
+                    description = patient[i].ToString()
+                });
+            }
+            MainContentView.Content = new ContentView
+            {
+                Content = new ListView { ItemsSource = PIdslist, RowHeight = 40, Margin = 20 },
+            };
 
             //2 Method
             //search through the list (which will be altered later on to traverse the db
-            IEnumerable<string> SearchResult = _names.Where(name => name.ToLower().Contains(keyword.ToLower()));
-            
-            //get the result
-            MainListView.ItemsSource = SearchResult;
+            if (keyword.Length >= 1)
+            {
+                IEnumerable<string> SearchResult = patient.Where(name => name.ToLower().Contains(keyword.ToLower()));
+
+                //get the result
+                MainListView.ItemsSource = SearchResult;
+
+                MainListView.IsVisible = true;
+            }
+            else
+            {
+                MainListView.IsVisible = false;
+            }
         }
+
+
+
+        private async void MainListView_ItemTapped(object sender, ItemTappedEventArgs e)
+        {
+            await Navigation.PushAsync(new PatientProfile());
+
+            //onclick navigate to patients profile 
+            //PatientProfile.currentUserId = sender.ToString();
+
+        }
+
+
+
+        private void MainSearchBar_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
     }
 }

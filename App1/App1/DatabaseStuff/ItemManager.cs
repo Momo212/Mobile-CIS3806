@@ -173,6 +173,19 @@ namespace App1.DatabaseStuff
 
             return new ObservableCollection<DangerActual_Table>(items);
         }
+        public async Task<ObservableCollection<Patient_Table>> GetPatientIDAsync()
+        {
+#if OFFLINE_SYNC_ENABLED//din zidta biex ngib il patients
+                if (syncItems)
+                {
+                    await this.SyncAsync();
+                }
+#endif
+            IEnumerable<Patient_Table> items = await patient_Table
+                .ToEnumerableAsync();
+
+            return new ObservableCollection<Patient_Table>(items);
+        }
 
         public async Task<ObservableCollection<Relative_Table>> GetRelativeItemsAsync(String currentUserId)
         {
