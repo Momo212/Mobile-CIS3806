@@ -55,7 +55,7 @@
                         <cv:CarouselView ItemsSource="{Binding left}" x:Name="LeftCarousel" Grid.Row="0">
                             <cv:CarouselView.ItemTemplate>
                                 <DataTemplate>
-                                    <Grid BackgroundColor="White">
+                                    <Grid BackgroundColor="White" RowSpacing="3">
                                         <Grid.RowDefinitions>
                                             <RowDefinition Height="10*" />
                                             <RowDefinition Height="5*" />
@@ -69,7 +69,7 @@
                                             <ColumnDefinition Width="2*"/>
                                         </Grid.ColumnDefinitions>
 
-                                        <Label Text="{Binding Title}" FontSize="16" TextColor="DarkGray" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="3"/>
+                                        <Label Text="{Binding Title}" FontSize="16" TextColor="DarkGray" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="3" />
                                         <!--<Label Text="{Binding Text}" FontSize="11" TextColor="DarkGray" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="3"/>-->
                                         <Label Grid.Row="0" Grid.Column="0" Text="{Binding LeftTitle}" TextColor="DarkGray" FontSize="11" HorizontalOptions="Center"/>
                                         <Label Grid.Row="0" Grid.Column="2" Text="{Binding RightTitle}" TextColor="DarkGray" FontSize="11" HorizontalOptions="Center"/>
@@ -82,7 +82,7 @@
                                 </DataTemplate>
                             </cv:CarouselView.ItemTemplate>
                         </cv:CarouselView>
-                        <Button x:Name="EditButton" Image="Assets/addButton.png" BackgroundColor="White" FontSize="11" Grid.Row="1" Clicked="createNew_OnClick"/>
+                        <Button x:Name="EditButton" Image="Assets/addButton.png" BackgroundColor="White" FontSize="11" Grid.Row="1" Clicked="createNew_OnClick" HorizontalOptions="End" />
                     </Grid>
                 </Grid>
             </Grid>

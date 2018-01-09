@@ -39,7 +39,7 @@ namespace App1.Views
 
         public override string ToString()
         {
-            return this.description + " - " + this.year + " \t \t \t " + this.type;
+            return this.type + "\t\t\t" + this.description + " - " + this.year;
         }
     }
 
