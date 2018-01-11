@@ -305,6 +305,8 @@ namespace App1
             else if(index == 1)
             {
                 NameEntry.Placeholder = "Hobby Name...";
+                AdditionalEntry.IsVisible = false;
+                AdditionalEntry2.IsVisible = false;
                 SurnameEntry.IsVisible = false;
                 IdNumberEntry.IsVisible = false;
                 DOB.IsVisible = false;
@@ -322,6 +324,8 @@ namespace App1
             else if(index == 2)
             {
                 NameEntry.Placeholder = "Fear Name...";
+                AdditionalEntry.IsVisible = false;
+                AdditionalEntry2.IsVisible = false;
                 SurnameEntry.IsVisible = false;
                 IdNumberEntry.IsVisible = false;
                 DOB.IsVisible = false;

@@ -182,48 +182,47 @@ namespace App1
 
         private async void Submit_OnClick(object sender, EventArgs e)
         {
-            if (isMedical == true && isDanger == false)
-            {
-                if (TextEntry.Text == null || YearEntry.Text == null || typePicker.SelectedItem == null)
+                if (isMedical == true && isDanger == false)
                 {
-                    DisplayAlert("Alert", "All the fields must be filled in.", "OK");
-                }
-                else
-                {
-                    var todo = new Patient_History { Type = selectedMedical, Year = YearEntry.Text, Text = TextEntry.Text, PatientID_FK = currentUserId, History_id = historyID.ToString() };
-                    await AddMedicalItem(todo);
-                }
-                historyID++;
+                    if (TextEntry.Text == null || YearEntry.Text == null || typePicker.SelectedItem == null)
+                    {
+                        DisplayAlert("Alert", "All the fields must be filled in.", "OK");
+                    }
+                    else
+                    {
+                        var todo = new Patient_History { Type = selectedMedical, Year = YearEntry.Text, Text = TextEntry.Text, PatientID_FK = currentUserId, History_id = historyID.ToString() };
+                        await AddMedicalItem(todo);
+                    }
+                    historyID++;
 
-                //unassign values
-                typePicker.SelectedIndex = 0;
-                TextEntry.Text = String.Empty;
-                YearEntry.Text = String.Empty;
+                    //unassign values
+                    typePicker.SelectedIndex = 0;
+                    TextEntry.Text = String.Empty;
+                    YearEntry.Text = String.Empty;
 
-                EditButton2.IsVisible = true;
-                fields.IsVisible = false;
-                MainContentView.IsVisible = true;
-                MedHist_Clicked(sender, e);
-            }
-            else if (isMedical == false && isDanger == true)
-            {
-                if (DangerEntry.Text == null)
-                {
-                    DisplayAlert("Alert", "All the fields must be filled in.", "OK");
+                    EditButton2.IsVisible = true;
+                    fields.IsVisible = false;
+                    MainContentView.IsVisible = true;
+                    MedHist_Clicked(sender, e);
                 }
-                else
-                {
-                    var todo = new DangerActual_Table { PatientID_FK = currentUserId, Text = DangerEntry.Text};
-                    await AddActualDangerItem(todo);
-                }
-
-                DangerEntry.Text = String.Empty;
-                fields.IsVisible = false;
-                MainContentView.IsVisible = true;
-                Dangers_Clicked(sender, e);
-            }
             
-            
+                 if (isMedical == false && isDanger == true)
+                 {
+                    if (DangerEntry.Text == null)
+                    {
+                        DisplayAlert("Alert", "All the fields must be filled in.", "OK");
+                    }
+                    else
+                    {
+                        var todo = new DangerActual_Table { PatientID_FK = currentUserId, Text = DangerEntry.Text };
+                        await AddActualDangerItem(todo);
+                    }
+
+                    DangerEntry.Text = String.Empty;
+                    fields.IsVisible = false;
+                    MainContentView.IsVisible = true;
+                    Dangers_Clicked(sender, e);
+                 }
         }
 
         async Task AddMedicalItem(Patient_History item)
@@ -426,6 +425,165 @@ namespace App1
                 values v = (values)l.SelectedItem;
                 DisplayAlert("Contact Number", v.phoneno, "OK");
             }
+        }
+
+        private void createNew_OnClick2(object sender, ItemTappedEventArgs e)
+        {
+            var index = LeftCarouselMain.Position;
+            MedHistButton.IsEnabled = false;
+            AlarmsButton.IsEnabled = false;
+            ObservationsButton.IsEnabled = false;
+            DangersButton.IsEnabled = false;
+            MainContentView.IsVisible = false;
+
+            if (index == 0)
+            {
+                typePicker.IsVisible = false;
+                pickerLabel.IsVisible = false;
+                TextEntry.IsVisible = false;
+                YearEntry.IsVisible = false;
+                DangerEntry.IsVisible = false;
+                fields.IsVisible = true;
+                ProfileNameEntry.IsVisible = true;
+                ProfileSurnameEntry.IsVisible = true;
+                ProfileNameEntry.Placeholder = "Relative Name...";
+                ProfileSurnameEntry.Placeholder = "Relative Surname...";
+                ProfileIdNumberEntry.Placeholder = "Relative ID...";
+                ProfileAdditionalEntry.IsVisible = true;
+                ProfileAdditionalEntry.Placeholder = "Relative Phone...";
+                ProfileAdditionalEntry2.IsVisible = true;
+                ProfileAdditionalEntry2.Placeholder = "Relative Type...";
+
+                tabButtons.IsVisible = false;
+                carouselButtons.IsVisible = true;
+            }
+            else if (index == 1)
+            {
+                typePicker.IsVisible = false;
+                pickerLabel.IsVisible = false;
+                TextEntry.IsVisible = false;
+                YearEntry.IsVisible = false;
+                DangerEntry.IsVisible = false;
+                fields.IsVisible = true;
+                ProfileNameEntry.Placeholder = "Hobby Name...";
+                ProfileSurnameEntry.IsVisible = false;
+                ProfileIdNumberEntry.IsVisible = false;
+                ProfileAdditionalEntry.IsVisible = false;
+                ProfileAdditionalEntry2.IsVisible = false;
+
+                tabButtons.IsVisible = false;
+                carouselButtons.IsVisible = true;
+            }
+            else if (index == 2)
+            {
+                typePicker.IsVisible = false;
+                pickerLabel.IsVisible = false;
+                TextEntry.IsVisible = false;
+                YearEntry.IsVisible = false;
+                DangerEntry.IsVisible = false;
+                fields.IsVisible = true;
+                ProfileNameEntry.Placeholder = "Fear Name...";
+                ProfileSurnameEntry.IsVisible = false;
+                ProfileIdNumberEntry.IsVisible = false;
+                ProfileAdditionalEntry.IsVisible = false;
+                ProfileAdditionalEntry2.IsVisible = false;
+
+                tabButtons.IsVisible = false;
+                carouselButtons.IsVisible = true;
+            }
+        }
+
+        private async void Submit_OnClick2(object sender, EventArgs e)
+        {
+            MedHistButton.IsEnabled = true;
+            AlarmsButton.IsEnabled = true;
+            ObservationsButton.IsEnabled = true;
+            DangersButton.IsEnabled = true;
+            fields.IsVisible = false;
+            tabButtons.IsVisible = true;
+            carouselButtons.IsVisible = false;
+
+            if (LeftCarouselMain.Position == 0)
+            {
+                if (ProfileNameEntry.Text == null || ProfileSurnameEntry.Text == null || ProfileIdNumberEntry.Text == null || ProfileAdditionalEntry.Text == null)
+                {
+                    DisplayAlert("Alert", "All the fields must be filled in.", "OK");
+                }
+                else
+                {
+                    var todo = new Relative_Table { Rel_id = ProfileIdNumberEntry.Text, Name = ProfileIdNumberEntry.Text, Surname = ProfileSurnameEntry.Text, Phone_no = ProfileAdditionalEntry.Text, Rel_type = ProfileAdditionalEntry2.Text, PatientID_FK = currentUserId };
+                    await AddRelativeItem(todo);
+                }
+
+                ProfileNameEntry.Text = null;
+                ProfileSurnameEntry.Text = null;
+                ProfileIdNumberEntry.Text = null;
+                ProfileAdditionalEntry.Text = null;
+                ProfileAdditionalEntry2.Text = null;
+                loadLeftCarousel(currentUserId);
+            }
+            else if (LeftCarouselMain.Position == 1)
+            {
+                if (ProfileNameEntry.Text == null)
+                {
+                    DisplayAlert("Alert", "All the fields must be filled in.", "OK");
+                }
+                else
+                {
+                    var totalHobbies = await manager.GetHobbyItemsCountAsync();
+
+                    var todo = new Hobby_Table { Hobby_name = ProfileNameEntry.Text, PatientID_FK = currentUserId, Hobby_id = totalHobbies.Count.ToString() };
+                    await AddHobbyItem(todo);
+                }
+
+                ProfileNameEntry.Text = null;
+                ProfileSurnameEntry.Text = null;
+                ProfileIdNumberEntry.Text = null;
+                ProfileAdditionalEntry.Text = null;
+                ProfileAdditionalEntry2.Text = null;
+                loadLeftCarousel(currentUserId);
+            }
+            else if (LeftCarouselMain.Position == 2)
+            {
+                if (ProfileNameEntry.Text == null)
+                {
+                    DisplayAlert("Alert", "All the fields must be filled in.", "OK");
+                }
+                else
+                {
+                    var totalFears = await manager.GetFearItemsCountAsync();
+
+                    var todo = new Fear_Table { Fear_name = ProfileNameEntry.Text, PatientID_FK = currentUserId, Fear_id = totalFears.Count.ToString() };
+                    await AddFearItem(todo);
+                }
+
+                ProfileNameEntry.Text = null;
+                ProfileSurnameEntry.Text = null;
+                ProfileIdNumberEntry.Text = null;
+                ProfileAdditionalEntry.Text = null;
+                ProfileAdditionalEntry2.Text = null;
+                loadLeftCarousel(currentUserId);
+            }
+        }
+
+        private void Cancel_OnClick2(object sender, EventArgs e)
+        {
+            this.Navigation.PushAsync(new PatientProfile());
+        }
+
+        async Task AddRelativeItem(Relative_Table item)
+        {
+            await manager.SaveTaskAsyncRelative(item);
+        }
+
+        async Task AddHobbyItem(Hobby_Table item)
+        {
+            await manager.SaveTaskAsyncHobby(item);
+        }
+
+        async Task AddFearItem(Fear_Table item)
+        {
+            await manager.SaveTaskAsyncFear(item);
         }
     }
 }

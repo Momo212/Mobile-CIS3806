@@ -11,8 +11,8 @@
 namespace App1.NotificationList {
     
     
-    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("C:\\Users\\Matthew\\Documents\\GitHub\\Mobile-CIS3806\\App1\\App1\\NotificationList\\Notif" +
-        "ChildTabPatient.xaml")]
+    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("E:\\School\\University\\Year3Semester1\\Mobile\\Dashboard [Github]\\Final\\Mobile-CIS380" +
+        "6\\App1\\App1\\NotificationList\\NotifChildTabPatient.xaml")]
     public partial class NotifChildTabPatient : global::Xamarin.Forms.ContentPage {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
