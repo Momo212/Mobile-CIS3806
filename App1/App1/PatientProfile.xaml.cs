@@ -430,10 +430,11 @@ namespace App1
         private void createNew_OnClick2(object sender, ItemTappedEventArgs e)
         {
             var index = LeftCarouselMain.Position;
-            MedHistButton.IsEnabled = false;
-            AlarmsButton.IsEnabled = false;
-            ObservationsButton.IsEnabled = false;
-            DangersButton.IsEnabled = false;
+            //MedHistButton.IsEnabled = false;
+            MedHistButton.IsVisible = false;
+            AlarmsButton.IsVisible = false;
+            ObservationsButton.IsVisible = false;
+            DangersButton.IsVisible = false;
             MainContentView.IsVisible = false;
 
             if (index == 0)
@@ -495,10 +496,10 @@ namespace App1
 
         private async void Submit_OnClick2(object sender, EventArgs e)
         {
-            MedHistButton.IsEnabled = true;
-            AlarmsButton.IsEnabled = true;
-            ObservationsButton.IsEnabled = true;
-            DangersButton.IsEnabled = true;
+            MedHistButton.IsVisible = true;
+            AlarmsButton.IsVisible = true;
+            ObservationsButton.IsVisible = true;
+            DangersButton.IsVisible = true;
             fields.IsVisible = false;
             tabButtons.IsVisible = true;
             carouselButtons.IsVisible = false;
@@ -511,7 +512,7 @@ namespace App1
                 }
                 else
                 {
-                    var todo = new Relative_Table { Rel_id = ProfileIdNumberEntry.Text, Name = ProfileIdNumberEntry.Text, Surname = ProfileSurnameEntry.Text, Phone_no = ProfileAdditionalEntry.Text, Rel_type = ProfileAdditionalEntry2.Text, PatientID_FK = currentUserId };
+                    var todo = new Relative_Table { Rel_id = ProfileIdNumberEntry.Text, Name = ProfileNameEntry.Text, Surname = ProfileSurnameEntry.Text, Phone_no = ProfileAdditionalEntry.Text, Rel_type = ProfileAdditionalEntry2.Text, PatientID_FK = currentUserId };
                     await AddRelativeItem(todo);
                 }
 
