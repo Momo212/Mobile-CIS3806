@@ -79,10 +79,10 @@ namespace App1
                     description = patient[i].ToString()
                 });
             }
-            MainContentView.Content = new ContentView
-            {
-                Content = new ListView { ItemsSource = PIdslist, RowHeight = 40, Margin = 20 },
-            };
+            //MainContentView.Content = new ContentView
+            //{
+            //    Content = new ListView { ItemsSource = PIdslist, RowHeight = 40, Margin = 20 },
+            //};
 
             //2 Method
             //search through the list (which will be altered later on to traverse the db
@@ -105,10 +105,10 @@ namespace App1
 
         private async void MainListView_ItemTapped(object sender, ItemTappedEventArgs e)
         {
-            await Navigation.PushAsync(new PatientProfile());
+            string check = e.Item.ToString();
+            PatientProfile patient = new PatientProfile(check);
+            await Navigation.PushAsync(patient);
 
-            //onclick navigate to patients profile 
-            //PatientProfile.currentUserId = sender.ToString();
 
         }
 

@@ -15,24 +15,56 @@ namespace App1
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class PatientProfile : ContentPage
     {
-        public string currentUserId = "1234567890";
+        public string currentUserId;
         ItemManager manager;
         string selectedMedical;
         int historyID = 1000;
-        
+
         bool isMedical = false;
         bool isDanger = false;
 
-        public PatientProfile()
+        public PatientProfile(string currentuserid)
         {
+            this.currentUserId = currentuserid;
             InitializeComponent();
             manager = ItemManager.DefaultManager;
             imgProfile.Source = ImageSource.FromFile("Assets/profile.png");
             imgEditProfile.Source = ImageSource.FromFile("Assets/editImage.png");
 
-            loadLeftCarousel(currentUserId);
+            Load();
         }
-        
+        private async void Load()
+        {
+            await loadLeftCarousel(currentUserId);
+            await loadLeftPatient(currentUserId);
+        }
+        private async Task loadLeftPatient(string currentUserId)
+        {
+            ObservableCollection<Patient_Table> rels = await manager.GetPatient(currentUserId);
+            foreach (var r in rels)
+            {
+                NameSurnameProfileLabel.Text = r.Name.ToString() + " " + r.Surname.ToString();
+                GenderProfileLabel.Text = r.Gender.ToString();
+                AgeProfileLabel.Text = r.Dob.ToString() + " | ";
+                WardNoProfileLabel.Text = "Ward No: " + r.Ward_No + " | ";
+                WardColProfileLabel.Text = r.Ward_Col.ToString() + " | ";
+                RoomNoProfileLabel.Text = "Room No: " + r.Room_No.ToString() + " | ";
+                BedNoProfileLabel.Text = "Bed No: " + r.Bed_No.ToString();
+            }
+
+            string gender = GenderProfileLabel.Text;
+
+            if (gender.Equals("Male"))
+            {
+                imgProfile.Source = ImageSource.FromFile("Assets/male.png");
+            }
+            else if (gender.Equals("Female"))
+            {
+                imgProfile.Source = ImageSource.FromFile("Assets/female.png");
+            }
+            EditButton.IsEnabled = true;
+        }
+
         private async Task loadLeftCarousel(string currentUserId)
         {
             var relative_items = await manager.GetRelativeItemsAsync(currentUserId);
@@ -129,7 +161,7 @@ namespace App1
                 Content = new ListView { ItemsSource = med, RowHeight = 40, Margin = 20 },
             };
 
-            MedHistButton.BackgroundColor =Color.FromHex("#0080F0");
+            MedHistButton.BackgroundColor = Color.FromHex("#0080F0");
             MedHistButton.TextColor = Color.White;
 
             //MapButton.BackgroundColor = Color.White;
@@ -177,52 +209,52 @@ namespace App1
 
         private void Cancel_OnClick(object sender, EventArgs e)
         {
-            this.Navigation.PushAsync(new PatientProfile());
+            this.Navigation.PushAsync(new PatientProfile(currentUserId));
         }
 
         private async void Submit_OnClick(object sender, EventArgs e)
         {
-                if (isMedical == true && isDanger == false)
+            if (isMedical == true && isDanger == false)
+            {
+                if (TextEntry.Text == null || YearEntry.Text == null || typePicker.SelectedItem == null)
                 {
-                    if (TextEntry.Text == null || YearEntry.Text == null || typePicker.SelectedItem == null)
-                    {
-                        DisplayAlert("Alert", "All the fields must be filled in.", "OK");
-                    }
-                    else
-                    {
-                        var todo = new Patient_History { Type = selectedMedical, Year = YearEntry.Text, Text = TextEntry.Text, PatientID_FK = currentUserId, History_id = historyID.ToString() };
-                        await AddMedicalItem(todo);
-                    }
-                    historyID++;
-
-                    //unassign values
-                    typePicker.SelectedIndex = 0;
-                    TextEntry.Text = String.Empty;
-                    YearEntry.Text = String.Empty;
-
-                    EditButton2.IsVisible = true;
-                    fields.IsVisible = false;
-                    MainContentView.IsVisible = true;
-                    MedHist_Clicked(sender, e);
+                    await DisplayAlert("Alert", "All the fields must be filled in.", "OK");
                 }
-            
-                 if (isMedical == false && isDanger == true)
-                 {
-                    if (DangerEntry.Text == null)
-                    {
-                        DisplayAlert("Alert", "All the fields must be filled in.", "OK");
-                    }
-                    else
-                    {
-                        var todo = new DangerActual_Table { PatientID_FK = currentUserId, Text = DangerEntry.Text };
-                        await AddActualDangerItem(todo);
-                    }
+                else
+                {
+                    var todo = new Patient_History { Type = selectedMedical, Year = YearEntry.Text, Text = TextEntry.Text, PatientID_FK = currentUserId, History_id = historyID.ToString() };
+                    await AddMedicalItem(todo);
+                }
+                historyID++;
 
-                    DangerEntry.Text = String.Empty;
-                    fields.IsVisible = false;
-                    MainContentView.IsVisible = true;
-                    Dangers_Clicked(sender, e);
-                 }
+                //unassign values
+                typePicker.SelectedIndex = 0;
+                TextEntry.Text = String.Empty;
+                YearEntry.Text = String.Empty;
+
+                EditButton2.IsVisible = true;
+                fields.IsVisible = false;
+                MainContentView.IsVisible = true;
+                MedHist_Clicked(sender, e);
+            }
+
+            if (isMedical == false && isDanger == true)
+            {
+                if (DangerEntry.Text == null)
+                {
+                    await DisplayAlert("Alert", "All the fields must be filled in.", "OK");
+                }
+                else
+                {
+                    var todo = new DangerActual_Table { PatientID_FK = currentUserId, Text = DangerEntry.Text };
+                    await AddActualDangerItem(todo);
+                }
+
+                DangerEntry.Text = String.Empty;
+                fields.IsVisible = false;
+                MainContentView.IsVisible = true;
+                Dangers_Clicked(sender, e);
+            }
         }
 
         async Task AddMedicalItem(Patient_History item)
@@ -270,11 +302,11 @@ namespace App1
 
             //for predictions
             var alarms = (from patientAlarm in patientAlarmTable
-                         join alarm in alarmTable on patientAlarm.Alarm_id equals alarm.Alarm_id
-                         join danger in dangerTable on alarm.DangerID equals danger.Danger_id
-                         join lut_alarm_danger in lutAlarmDangerCategory on danger.AlarmDanger_CategoryID equals lut_alarm_danger.Lut_alarm_Danger_Category_ID
-                         where (danger.Alarmtypeid == 1)
-                         select new { lut_alarm_danger.Name, alarm.TimeCreated }).ToList().Distinct();
+                          join alarm in alarmTable on patientAlarm.Alarm_id equals alarm.Alarm_id
+                          join danger in dangerTable on alarm.DangerID equals danger.Danger_id
+                          join lut_alarm_danger in lutAlarmDangerCategory on danger.AlarmDanger_CategoryID equals lut_alarm_danger.Lut_alarm_Danger_Category_ID
+                          where (danger.Alarmtypeid == 1)
+                          select new { lut_alarm_danger.Name, alarm.TimeCreated }).ToList().Distinct();
 
             List<String> alarmsList = new List<string>();
             List<String> timeList = new List<String>();
@@ -306,7 +338,7 @@ namespace App1
             AlarmsButton.TextColor = Color.White;
 
             //MapButton.BackgroundColor = Color.White;
-           // MapButton.TextColor = Color.Black;
+            // MapButton.TextColor = Color.Black;
             MedHistButton.BackgroundColor = Color.White;
             MedHistButton.TextColor = Color.Black;
             ObservationsButton.BackgroundColor = Color.White;
@@ -331,11 +363,11 @@ namespace App1
 
             //for predictions
             var obs = (from patientAlarm in patientAlarmTable
-                         join alarm in alarmTable on patientAlarm.Alarm_id equals alarm.Alarm_id
-                         join danger in dangerTable on alarm.DangerID equals danger.Danger_id
-                         join lut_alarm_danger in lutAlarmDangerCategory on danger.AlarmDanger_CategoryID equals lut_alarm_danger.Lut_alarm_Danger_Category_ID
-                         where (danger.Alarmtypeid == 2)
-                         select new { lut_alarm_danger.Name, alarm.TimeCreated }).ToList().Distinct();
+                       join alarm in alarmTable on patientAlarm.Alarm_id equals alarm.Alarm_id
+                       join danger in dangerTable on alarm.DangerID equals danger.Danger_id
+                       join lut_alarm_danger in lutAlarmDangerCategory on danger.AlarmDanger_CategoryID equals lut_alarm_danger.Lut_alarm_Danger_Category_ID
+                       where (danger.Alarmtypeid == 2)
+                       select new { lut_alarm_danger.Name, alarm.TimeCreated }).ToList().Distinct();
             List<String> obsList = new List<string>();
             List<String> timeList = new List<String>();
             foreach (var q in obs)
@@ -382,7 +414,7 @@ namespace App1
             fields.IsVisible = false;
             MainContentView.IsVisible = true;
 
-            var danger = await manager.GetDangerActualItemsAsync(currentUserId); 
+            var danger = await manager.GetDangerActualItemsAsync(currentUserId);
             ObservableCollection<Dangers> dangers = new ObservableCollection<Dangers>();
             foreach (DangerActual_Table d in danger)
             {
@@ -401,7 +433,7 @@ namespace App1
 
             MainContentView.Content = new ContentView
             {
-                Content = new ListView { ItemsSource = dangers , RowHeight = 40, Margin = 20 },
+                Content = new ListView { ItemsSource = dangers, RowHeight = 40, Margin = 20 },
             };
 
             DangersButton.BackgroundColor = Color.FromHex("#0080F0");
@@ -419,7 +451,7 @@ namespace App1
 
         private void ShowPhoneNo(object sender, ItemTappedEventArgs e)
         {
-            if(LeftCarouselMain.Position == 0)
+            if (LeftCarouselMain.Position == 0)
             {
                 ListView l = (ListView)sender;
                 values v = (values)l.SelectedItem;
@@ -508,7 +540,7 @@ namespace App1
             {
                 if (ProfileNameEntry.Text == null || ProfileSurnameEntry.Text == null || ProfileIdNumberEntry.Text == null || ProfileAdditionalEntry.Text == null)
                 {
-                    DisplayAlert("Alert", "All the fields must be filled in.", "OK");
+                    await DisplayAlert("Alert", "All the fields must be filled in.", "OK");
                 }
                 else
                 {
@@ -521,13 +553,13 @@ namespace App1
                 ProfileIdNumberEntry.Text = null;
                 ProfileAdditionalEntry.Text = null;
                 ProfileAdditionalEntry2.Text = null;
-                loadLeftCarousel(currentUserId);
+                await loadLeftCarousel(currentUserId);
             }
             else if (LeftCarouselMain.Position == 1)
             {
                 if (ProfileNameEntry.Text == null)
                 {
-                    DisplayAlert("Alert", "All the fields must be filled in.", "OK");
+                    await DisplayAlert("Alert", "All the fields must be filled in.", "OK");
                 }
                 else
                 {
@@ -542,13 +574,13 @@ namespace App1
                 ProfileIdNumberEntry.Text = null;
                 ProfileAdditionalEntry.Text = null;
                 ProfileAdditionalEntry2.Text = null;
-                loadLeftCarousel(currentUserId);
+                await loadLeftCarousel(currentUserId);
             }
             else if (LeftCarouselMain.Position == 2)
             {
                 if (ProfileNameEntry.Text == null)
                 {
-                    DisplayAlert("Alert", "All the fields must be filled in.", "OK");
+                    await DisplayAlert("Alert", "All the fields must be filled in.", "OK");
                 }
                 else
                 {
@@ -563,13 +595,13 @@ namespace App1
                 ProfileIdNumberEntry.Text = null;
                 ProfileAdditionalEntry.Text = null;
                 ProfileAdditionalEntry2.Text = null;
-                loadLeftCarousel(currentUserId);
+                await loadLeftCarousel(currentUserId);
             }
         }
 
         private void Cancel_OnClick2(object sender, EventArgs e)
         {
-            this.Navigation.PushAsync(new PatientProfile());
+            this.Navigation.PushAsync(new PatientProfile(currentUserId));
         }
 
         async Task AddRelativeItem(Relative_Table item)
