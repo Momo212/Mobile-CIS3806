@@ -4,18 +4,28 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Net.Http;
+using Microsoft.WindowsAzure.MobileServices;
+using Newtonsoft.Json.Linq;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using Xamarin.Forms.PlatformConfiguration;
+using App1.NotificationList;
 
 namespace App1
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Map : ContentPage
     {
-
+        
         ItemManager itemManager;
         Image mapImage;
+
+        public static bool red = true;
+        bool blue;
+
+        public static string name;
 
         public Map()
         {
@@ -43,6 +53,7 @@ namespace App1
 
         public async void GetPatients()
         {
+            
             Label label1 = new Label();
             label1.Text = "Patient List: \n";
             label1.FontSize = Device.GetNamedSize(NamedSize.Medium, typeof(Label));
@@ -56,10 +67,13 @@ namespace App1
                 TapGestureRecognizer tap = new TapGestureRecognizer();
                 tap.Tapped += (sender, e) =>
                 {
+                    red = false;
                     PlaceMarkers(patient.Patient_ID);
 
                     mapArea.Children.Clear();
                     mapArea.Children.Add(mapImage);
+                    name = patient.Patient_ID + " " + patient.Name + " " + patient.Surname;
+                    
                 };
 
                 label.GestureRecognizers.Add(tap);
@@ -74,8 +88,6 @@ namespace App1
 
             foreach (Coordinate_Table coordinate in coordinates)
             {
-
-
                 Frame frame = new Frame
                 {
                     CornerRadius = 5,
@@ -87,11 +99,20 @@ namespace App1
                     Padding = 0,
                     TranslationX = 1000 * coordinate.Coord_x,
                     TranslationY = 470 * coordinate.Coord_y
+
                 };
 
                 if (coordinate.Coord_x < 0.13 || coordinate.Coord_x > 0.79 || coordinate.Coord_y < 0.35 || coordinate.Coord_y > 0.9)
                 {
                     frame.BackgroundColor = Color.Red;
+                    //red = true;
+                    blue = false;
+                    
+                }
+                else
+                {
+                    blue = true;
+                    //red = false;
                 }
 
                 /*TapGestureRecognizer tap = new TapGestureRecognizer();
@@ -103,10 +124,40 @@ namespace App1
                 frame.GestureRecognizers.Add(tap);*/
 
                 await Task.Delay(1000);
+                
+                //Notifications Code
+                if (frame.BackgroundColor == Color.Red)
+                {
+                    red = true;
+                    if (red)
+                    {
+                        Label label2 = new Label();
+                        label2.Text = "TRESPASSING";
+                        label2.FontSize = Device.GetNamedSize(NamedSize.Medium, typeof(Label));
+                        mapArea.Children.Add(label2);
+                        //Program.SendNotificationAsync();
 
+                        TapGestureRecognizer tap = new TapGestureRecognizer();
+                        tap.Tapped += (sender, e) =>
+                        {
+                            NotifsPageButton_OnClicked(sender, e);
+                            
+
+                        };
+
+                        label2.GestureRecognizers.Add(tap);
+                        red = false;
+
+                    }
+                    
+                }
                 mapArea.Children.Add(frame);
-
             }
+        }
+
+        private async void NotifsPageButton_OnClicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new NotifParentTabbedView());
         }
 
         /*public async void GetCoordinates()

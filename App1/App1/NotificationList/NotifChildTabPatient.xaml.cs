@@ -14,7 +14,6 @@ namespace App1.NotificationList
         ItemManager manager;
         private static int catID = 1;
 
-
         public NotifChildTabPatient()
         {
             InitializeComponent();
@@ -75,12 +74,23 @@ namespace App1.NotificationList
         {
             List<Notification> ln = await GetAlarms();
             List<string> patientsInvolved = null;
-
+            
+            string name;
+            
             foreach (Notification notif in ln)
             { // foreach notification from list,
                 patientsInvolved = await GetPatients(notif.AlarmId);
+                //patientsInvolved1 = await GetPatients(patient.Name);
                 ListViewPatient.Children.Add(Utilities.BuildListElement(notif,patientsInvolved)); //build list element gridview and append as child element of <StackLayout x:Name="ListView">
+                
+                if (Map.red != true)
+                {
+                    ListViewPatient.Children.Add(Utilities.Trespassing(notif, Map.name));
+                    Map.red = true;
+                }
             }
+
+            
         }
     }
 }

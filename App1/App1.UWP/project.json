@@ -2,6 +2,7 @@
   "dependencies": {
     "Microsoft.Azure.Mobile.Client": "4.0.2",
     "Microsoft.NETCore.UniversalWindowsPlatform": "5.2.2",
+    "WindowsAzure.Messaging.Managed": "0.1.7.9",
     "Xamarin.Forms": "2.5.0.121934",
     "Xamarin.Forms.CarouselView": "2.3.0-pre2"
   },
