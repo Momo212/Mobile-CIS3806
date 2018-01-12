@@ -1,2 +1,2 @@
-C:\Users\DylanLuke\Documents\GitHub\Mobile-CIS3806\App1\App1.UWP\App1.UWP.csproj;x86
-C:\Users\DylanLuke\Documents\GitHub\Mobile-CIS3806\App1\App1\App1.csproj;neutral
+C:\Users\Owner\Source\Repos\Mobile-CIS38063\App1\App1.UWP\App1.UWP.csproj;x86
+C:\Users\Owner\Source\Repos\Mobile-CIS38063\App1\App1\App1.csproj;neutral
