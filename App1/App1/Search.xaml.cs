@@ -106,8 +106,20 @@ namespace App1
         private async void MainListView_ItemTapped(object sender, ItemTappedEventArgs e)
         {
             string check = e.Item.ToString();
-            PatientProfile patient = new PatientProfile(check);
-            await Navigation.PushAsync(patient);
+            var type = e.Item.GetType();
+            ObservableCollection<Patient_Table> patienttable = await manager.GetPatientIDAsync();
+            
+            foreach (var p in patienttable)
+            {
+                if(p.Patient_ID == check || p.Name == check || p.Surname == check)
+                {
+                    PatientProfile patient = new PatientProfile(p.Patient_ID);
+                    await Navigation.PushAsync(patient);
+                    break;
+                }
+            }
+
+            
 
 
         }
