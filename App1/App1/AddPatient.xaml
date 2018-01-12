@@ -142,8 +142,8 @@
                     </Picker>
                 </StackLayout>
                 <StackLayout Orientation="Horizontal" VerticalOptions="EndAndExpand">
-                    <Button Text="Submit"  HorizontalOptions="FillAndExpand" Clicked="onAddPatient_OnClick"/>
-                    <Button Text="Cancel"  HorizontalOptions="FillAndExpand" Clicked="onCancel_OnClick"/>
+                    <Button Text="Submit"  HorizontalOptions="FillAndExpand" Clicked="onAddPatient_OnClick" x:Name="SubmitButton"/>
+                    <Button Text="Cancel"  HorizontalOptions="FillAndExpand" Clicked="onCancel_OnClick" x:Name="CancelButton"/>
                 </StackLayout>
 
             </StackLayout>
