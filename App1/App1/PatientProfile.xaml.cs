@@ -15,24 +15,63 @@ namespace App1
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class PatientProfile : ContentPage
     {
-        public string currentUserId = "1234567890";
+        public string currentUserId;
         ItemManager manager;
         string selectedMedical;
         int historyID = 1000;
-        
+
         bool isMedical = false;
         bool isDanger = false;
 
-        public PatientProfile()
+        public PatientProfile(string currentuserid)
         {
+            this.currentUserId = currentuserid;
             InitializeComponent();
             manager = ItemManager.DefaultManager;
             imgProfile.Source = ImageSource.FromFile("Assets/profile.png");
             imgEditProfile.Source = ImageSource.FromFile("Assets/editImage.png");
 
-            loadLeftCarousel(currentUserId);
+            Load();
         }
-        
+        private async void Load()
+        {
+            await loadLeftCarousel(currentUserId);
+            await loadLeftPatient(currentUserId);
+        }
+        private async Task loadLeftPatient(string currentUserId)
+        {
+            ObservableCollection<Patient_Table> rels = await manager.GetPatient(currentUserId);
+            foreach (var r in rels)
+            {
+                NameSurnameProfileLabel.Text = r.Name.ToString() + " " + r.Surname.ToString();
+                GenderProfileLabel.Text = r.Gender.ToString();
+                String dateTime = r.Dob.ToString();
+                String year = "";
+                for (int i = 6; i <= 9; i++)
+                {
+                    year += dateTime[i];
+                }
+                int ageDiff = 2018 - Convert.ToInt32(year);
+                AgeProfileLabel.Text = ageDiff.ToString() + " Years";
+                WardNoProfileLabel.Text = "Ward No: " + r.Ward_No + " | ";
+                WardColProfileLabel.Text = r.Ward_Col.ToString() + " | ";
+                RoomNoProfileLabel.Text = "Room No: " + r.Room_No.ToString() + " | ";
+                BedNoProfileLabel.Text = "Bed No: " + r.Bed_No.ToString();
+            }
+
+            string gender = GenderProfileLabel.Text;
+
+            if (gender.Equals("Male"))
+            {
+                imgProfile.Source = ImageSource.FromFile("Assets/male.png");
+            }
+            else if (gender.Equals("Female"))
+            {
+                imgProfile.Source = ImageSource.FromFile("Assets/female.png");
+            }
+            EditButton.IsEnabled = true;
+        }
+
         private async Task loadLeftCarousel(string currentUserId)
         {
             var relative_items = await manager.GetRelativeItemsAsync(currentUserId);
@@ -129,7 +168,7 @@ namespace App1
                 Content = new ListView { ItemsSource = med, RowHeight = 40, Margin = 20 },
             };
 
-            MedHistButton.BackgroundColor =Color.FromHex("#0080F0");
+            MedHistButton.BackgroundColor = Color.FromHex("#0080F0");
             MedHistButton.TextColor = Color.White;
 
             //MapButton.BackgroundColor = Color.White;
@@ -177,7 +216,7 @@ namespace App1
 
         private void Cancel_OnClick(object sender, EventArgs e)
         {
-            this.Navigation.PushAsync(new PatientProfile());
+            this.Navigation.PushAsync(new PatientProfile(currentUserId));
         }
 
         private async void Submit_OnClick(object sender, EventArgs e)
@@ -186,7 +225,7 @@ namespace App1
             {
                 if (TextEntry.Text == null || YearEntry.Text == null || typePicker.SelectedItem == null)
                 {
-                    DisplayAlert("Alert", "All the fields must be filled in.", "OK");
+                    await DisplayAlert("Alert", "All the fields must be filled in.", "OK");
                 }
                 else
                 {
@@ -205,15 +244,16 @@ namespace App1
                 MainContentView.IsVisible = true;
                 MedHist_Clicked(sender, e);
             }
-            else if (isMedical == false && isDanger == true)
+
+            if (isMedical == false && isDanger == true)
             {
                 if (DangerEntry.Text == null)
                 {
-                    DisplayAlert("Alert", "All the fields must be filled in.", "OK");
+                    await DisplayAlert("Alert", "All the fields must be filled in.", "OK");
                 }
                 else
                 {
-                    var todo = new DangerActual_Table { PatientID_FK = currentUserId, Text = DangerEntry.Text};
+                    var todo = new DangerActual_Table { PatientID_FK = currentUserId, Text = DangerEntry.Text };
                     await AddActualDangerItem(todo);
                 }
 
@@ -222,8 +262,6 @@ namespace App1
                 MainContentView.IsVisible = true;
                 Dangers_Clicked(sender, e);
             }
-            
-            
         }
 
         async Task AddMedicalItem(Patient_History item)
@@ -271,11 +309,11 @@ namespace App1
 
             //for predictions
             var alarms = (from patientAlarm in patientAlarmTable
-                         join alarm in alarmTable on patientAlarm.Alarm_id equals alarm.Alarm_id
-                         join danger in dangerTable on alarm.DangerID equals danger.Danger_id
-                         join lut_alarm_danger in lutAlarmDangerCategory on danger.AlarmDanger_CategoryID equals lut_alarm_danger.Lut_alarm_Danger_Category_ID
-                         where (danger.Alarmtypeid == 1)
-                         select new { lut_alarm_danger.Name, alarm.TimeCreated }).ToList().Distinct();
+                          join alarm in alarmTable on patientAlarm.Alarm_id equals alarm.Alarm_id
+                          join danger in dangerTable on alarm.DangerID equals danger.Danger_id
+                          join lut_alarm_danger in lutAlarmDangerCategory on danger.AlarmDanger_CategoryID equals lut_alarm_danger.Lut_alarm_Danger_Category_ID
+                          where (danger.Alarmtypeid == 1)
+                          select new { lut_alarm_danger.Name, alarm.TimeCreated }).ToList().Distinct();
 
             List<String> alarmsList = new List<string>();
             List<String> timeList = new List<String>();
@@ -307,7 +345,7 @@ namespace App1
             AlarmsButton.TextColor = Color.White;
 
             //MapButton.BackgroundColor = Color.White;
-           // MapButton.TextColor = Color.Black;
+            // MapButton.TextColor = Color.Black;
             MedHistButton.BackgroundColor = Color.White;
             MedHistButton.TextColor = Color.Black;
             ObservationsButton.BackgroundColor = Color.White;
@@ -332,11 +370,11 @@ namespace App1
 
             //for predictions
             var obs = (from patientAlarm in patientAlarmTable
-                         join alarm in alarmTable on patientAlarm.Alarm_id equals alarm.Alarm_id
-                         join danger in dangerTable on alarm.DangerID equals danger.Danger_id
-                         join lut_alarm_danger in lutAlarmDangerCategory on danger.AlarmDanger_CategoryID equals lut_alarm_danger.Lut_alarm_Danger_Category_ID
-                         where (danger.Alarmtypeid == 2)
-                         select new { lut_alarm_danger.Name, alarm.TimeCreated }).ToList().Distinct();
+                       join alarm in alarmTable on patientAlarm.Alarm_id equals alarm.Alarm_id
+                       join danger in dangerTable on alarm.DangerID equals danger.Danger_id
+                       join lut_alarm_danger in lutAlarmDangerCategory on danger.AlarmDanger_CategoryID equals lut_alarm_danger.Lut_alarm_Danger_Category_ID
+                       where (danger.Alarmtypeid == 2)
+                       select new { lut_alarm_danger.Name, alarm.TimeCreated }).ToList().Distinct();
             List<String> obsList = new List<string>();
             List<String> timeList = new List<String>();
             foreach (var q in obs)
@@ -383,7 +421,7 @@ namespace App1
             fields.IsVisible = false;
             MainContentView.IsVisible = true;
 
-            var danger = await manager.GetDangerActualItemsAsync(currentUserId); 
+            var danger = await manager.GetDangerActualItemsAsync(currentUserId);
             ObservableCollection<Dangers> dangers = new ObservableCollection<Dangers>();
             foreach (DangerActual_Table d in danger)
             {
@@ -402,7 +440,7 @@ namespace App1
 
             MainContentView.Content = new ContentView
             {
-                Content = new ListView { ItemsSource = dangers , RowHeight = 40, Margin = 20 },
+                Content = new ListView { ItemsSource = dangers, RowHeight = 40, Margin = 20 },
             };
 
             DangersButton.BackgroundColor = Color.FromHex("#0080F0");
@@ -420,12 +458,172 @@ namespace App1
 
         private void ShowPhoneNo(object sender, ItemTappedEventArgs e)
         {
-            if(LeftCarouselMain.Position == 0)
+            if (LeftCarouselMain.Position == 0)
             {
                 ListView l = (ListView)sender;
                 values v = (values)l.SelectedItem;
                 DisplayAlert("Contact Number", v.phoneno, "OK");
             }
+        }
+
+        private void createNew_OnClick2(object sender, ItemTappedEventArgs e)
+        {
+            var index = LeftCarouselMain.Position;
+            //MedHistButton.IsEnabled = false;
+            MedHistButton.IsVisible = false;
+            AlarmsButton.IsVisible = false;
+            ObservationsButton.IsVisible = false;
+            DangersButton.IsVisible = false;
+            MainContentView.IsVisible = false;
+
+            if (index == 0)
+            {
+                typePicker.IsVisible = false;
+                pickerLabel.IsVisible = false;
+                TextEntry.IsVisible = false;
+                YearEntry.IsVisible = false;
+                DangerEntry.IsVisible = false;
+                fields.IsVisible = true;
+                ProfileNameEntry.IsVisible = true;
+                ProfileSurnameEntry.IsVisible = true;
+                ProfileNameEntry.Placeholder = "Relative Name...";
+                ProfileSurnameEntry.Placeholder = "Relative Surname...";
+                ProfileIdNumberEntry.Placeholder = "Relative ID...";
+                ProfileAdditionalEntry.IsVisible = true;
+                ProfileAdditionalEntry.Placeholder = "Relative Phone...";
+                ProfileAdditionalEntry2.IsVisible = true;
+                ProfileAdditionalEntry2.Placeholder = "Relative Type...";
+
+                tabButtons.IsVisible = false;
+                carouselButtons.IsVisible = true;
+            }
+            else if (index == 1)
+            {
+                typePicker.IsVisible = false;
+                pickerLabel.IsVisible = false;
+                TextEntry.IsVisible = false;
+                YearEntry.IsVisible = false;
+                DangerEntry.IsVisible = false;
+                fields.IsVisible = true;
+                ProfileNameEntry.Placeholder = "Hobby Name...";
+                ProfileSurnameEntry.IsVisible = false;
+                ProfileIdNumberEntry.IsVisible = false;
+                ProfileAdditionalEntry.IsVisible = false;
+                ProfileAdditionalEntry2.IsVisible = false;
+
+                tabButtons.IsVisible = false;
+                carouselButtons.IsVisible = true;
+            }
+            else if (index == 2)
+            {
+                typePicker.IsVisible = false;
+                pickerLabel.IsVisible = false;
+                TextEntry.IsVisible = false;
+                YearEntry.IsVisible = false;
+                DangerEntry.IsVisible = false;
+                fields.IsVisible = true;
+                ProfileNameEntry.Placeholder = "Fear Name...";
+                ProfileSurnameEntry.IsVisible = false;
+                ProfileIdNumberEntry.IsVisible = false;
+                ProfileAdditionalEntry.IsVisible = false;
+                ProfileAdditionalEntry2.IsVisible = false;
+
+                tabButtons.IsVisible = false;
+                carouselButtons.IsVisible = true;
+            }
+        }
+
+        private async void Submit_OnClick2(object sender, EventArgs e)
+        {
+            MedHistButton.IsVisible = true;
+            AlarmsButton.IsVisible = true;
+            ObservationsButton.IsVisible = true;
+            DangersButton.IsVisible = true;
+            fields.IsVisible = false;
+            tabButtons.IsVisible = true;
+            carouselButtons.IsVisible = false;
+
+            if (LeftCarouselMain.Position == 0)
+            {
+                if (ProfileNameEntry.Text == null || ProfileSurnameEntry.Text == null || ProfileIdNumberEntry.Text == null || ProfileAdditionalEntry.Text == null)
+                {
+                    await DisplayAlert("Alert", "All the fields must be filled in.", "OK");
+                }
+                else
+                {
+                    var todo = new Relative_Table { Rel_id = ProfileIdNumberEntry.Text, Name = ProfileNameEntry.Text, Surname = ProfileSurnameEntry.Text, Phone_no = ProfileAdditionalEntry.Text, Rel_type = ProfileAdditionalEntry2.Text, PatientID_FK = currentUserId };
+                    await AddRelativeItem(todo);
+                }
+
+                ProfileNameEntry.Text = null;
+                ProfileSurnameEntry.Text = null;
+                ProfileIdNumberEntry.Text = null;
+                ProfileAdditionalEntry.Text = null;
+                ProfileAdditionalEntry2.Text = null;
+                await loadLeftCarousel(currentUserId);
+            }
+            else if (LeftCarouselMain.Position == 1)
+            {
+                if (ProfileNameEntry.Text == null)
+                {
+                    await DisplayAlert("Alert", "All the fields must be filled in.", "OK");
+                }
+                else
+                {
+                    var totalHobbies = await manager.GetHobbyItemsCountAsync();
+
+                    var todo = new Hobby_Table { Hobby_name = ProfileNameEntry.Text, PatientID_FK = currentUserId, Hobby_id = totalHobbies.Count.ToString() };
+                    await AddHobbyItem(todo);
+                }
+
+                ProfileNameEntry.Text = null;
+                ProfileSurnameEntry.Text = null;
+                ProfileIdNumberEntry.Text = null;
+                ProfileAdditionalEntry.Text = null;
+                ProfileAdditionalEntry2.Text = null;
+                await loadLeftCarousel(currentUserId);
+            }
+            else if (LeftCarouselMain.Position == 2)
+            {
+                if (ProfileNameEntry.Text == null)
+                {
+                    await DisplayAlert("Alert", "All the fields must be filled in.", "OK");
+                }
+                else
+                {
+                    var totalFears = await manager.GetFearItemsCountAsync();
+
+                    var todo = new Fear_Table { Fear_name = ProfileNameEntry.Text, PatientID_FK = currentUserId, Fear_id = totalFears.Count.ToString() };
+                    await AddFearItem(todo);
+                }
+
+                ProfileNameEntry.Text = null;
+                ProfileSurnameEntry.Text = null;
+                ProfileIdNumberEntry.Text = null;
+                ProfileAdditionalEntry.Text = null;
+                ProfileAdditionalEntry2.Text = null;
+                await loadLeftCarousel(currentUserId);
+            }
+        }
+
+        private void Cancel_OnClick2(object sender, EventArgs e)
+        {
+            this.Navigation.PushAsync(new PatientProfile(currentUserId));
+        }
+
+        async Task AddRelativeItem(Relative_Table item)
+        {
+            await manager.SaveTaskAsyncRelative(item);
+        }
+
+        async Task AddHobbyItem(Hobby_Table item)
+        {
+            await manager.SaveTaskAsyncHobby(item);
+        }
+
+        async Task AddFearItem(Fear_Table item)
+        {
+            await manager.SaveTaskAsyncFear(item);
         }
     }
 }

@@ -33,7 +33,8 @@ namespace App1
 
         private async void PatientProfile_OnClicked(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new PatientProfile());
+            string empty = "";
+            await Navigation.PushAsync(new PatientProfile(empty));
         }
 
         private async void LiveMap_OnClicked(object sender, EventArgs e)

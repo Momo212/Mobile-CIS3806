@@ -79,6 +79,7 @@
                                 </DataTemplate>
                             </cv:CarouselView.ItemTemplate>
                         </cv:CarouselView>
+                        <Button x:Name="EditButton" Image="Assets/addButton.png" BackgroundColor="White" FontSize="11" Grid.Row="1" Clicked="createNew_OnClick2" HorizontalOptions="End" />
                     </Grid>
                 </Grid>
             </Grid>
@@ -115,9 +116,20 @@
                     <Entry x:Name="TextEntry" HorizontalOptions="FillAndExpand" Placeholder="Enter Description..."/>
                     <Entry x:Name="YearEntry" HorizontalOptions="FillAndExpand" Placeholder="Enter Year of Occurence..." />
                     <Entry x:Name="DangerEntry" HorizontalOptions="FillAndExpand" Placeholder="Enter Danger..." />
-                    <StackLayout Orientation="Horizontal" VerticalOptions="EndAndExpand">
+
+                    <Entry x:Name="ProfileNameEntry" HorizontalOptions="FillAndExpand" Placeholder="Enter Name..."/>
+                    <Entry x:Name="ProfileSurnameEntry" HorizontalOptions="FillAndExpand" Placeholder="Enter Surname..."/>
+                    <Entry x:Name="ProfileIdNumberEntry" HorizontalOptions="FillAndExpand" Placeholder="Enter ID Number..."/>
+                    <Entry x:Name="ProfileAdditionalEntry" HorizontalOptions="FillAndExpand" Placeholder="Relative Phone No..." IsVisible="False"/>
+                    <Entry x:Name="ProfileAdditionalEntry2" HorizontalOptions="FillAndExpand" Placeholder="Relation Type..." IsVisible="False"/>
+                    
+                    <StackLayout Orientation="Horizontal" VerticalOptions="EndAndExpand" x:Name="tabButtons">
                         <Button Text="Submit"  HorizontalOptions="FillAndExpand" Clicked="Submit_OnClick"/>
                         <Button Text="Cancel"  HorizontalOptions="FillAndExpand" Clicked="Cancel_OnClick"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal" VerticalOptions="EndAndExpand" x:Name="carouselButtons">
+                        <Button Text="Submit"  HorizontalOptions="FillAndExpand" Clicked="Submit_OnClick2"/>
+                        <Button Text="Cancel"  HorizontalOptions="FillAndExpand" Clicked="Cancel_OnClick2"/>
                     </StackLayout>
                 </StackLayout>
             </Grid>

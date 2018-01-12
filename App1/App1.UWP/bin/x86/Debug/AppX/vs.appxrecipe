@@ -31,13 +31,13 @@
     <AppXManifest Include="C:\Users\DylanLuke\Documents\GitHub\Mobile-CIS3806\App1\App1.UWP\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-01-12T11:00:46.223</Modified>
+      <Modified>2018-01-12T12:47:58.092</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\DylanLuke\Documents\GitHub\Mobile-CIS3806\App1\App1.UWP\bin\x86\Debug\App1.UWP.exe">
       <PackagePath>entrypoint\App1.UWP.exe</PackagePath>
-      <Modified>2018-01-12T11:00:43.201</Modified>
+      <Modified>2018-01-12T12:47:49.770</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\DylanLuke\.nuget\packages\microsoft.azure.mobile.client\4.0.2\lib\uap10.0\Microsoft.Azure.Mobile.Client.dll">
       <PackagePath>Microsoft.Azure.Mobile.Client.dll</PackagePath>
@@ -529,11 +529,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\DylanLuke\Documents\GitHub\Mobile-CIS3806\App1\App1\bin\Debug\App1.dll">
       <PackagePath>App1.dll</PackagePath>
-      <Modified>2018-01-12T10:35:54.540</Modified>
+      <Modified>2018-01-12T12:36:06.843</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\DylanLuke\Documents\GitHub\Mobile-CIS3806\App1\App1\bin\Debug\App1.dll.config">
       <PackagePath>App1.dll.config</PackagePath>
-      <Modified>2018-01-11T15:12:30.685</Modified>
+      <Modified>2018-01-12T12:36:03.132</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\DylanLuke\Documents\GitHub\Mobile-CIS3806\App1\App1.UWP\Assets\addbutton.png">
       <PackagePath>Assets\addbutton.png</PackagePath>
@@ -939,7 +939,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\DylanLuke\Documents\GitHub\Mobile-CIS3806\App1\App1.UWP\bin\x86\Debug\App1.UWP.xr.xml">
       <PackagePath>App1.UWP.xr.xml</PackagePath>
-      <Modified>2018-01-11T10:50:27.747</Modified>
+      <Modified>2018-01-12T12:47:49.410</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.16299.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -952,11 +952,11 @@
     <AppxPackagedFile Include="C:\Users\DylanLuke\Documents\GitHub\Mobile-CIS3806\App1\App1.UWP\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-01-12T11:00:45.203</Modified>
+      <Modified>2018-01-12T12:47:55.881</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\DylanLuke\Documents\GitHub\Mobile-CIS3806\App1\App1.UWP\bin\x86\Debug\Core\App1.UWP.exe">
       <PackagePath>App1.UWP.exe</PackagePath>
-      <Modified>2018-01-12T11:00:46.208</Modified>
+      <Modified>2018-01-12T12:47:58.078</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

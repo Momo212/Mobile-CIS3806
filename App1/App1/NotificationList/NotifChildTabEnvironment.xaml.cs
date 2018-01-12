@@ -18,7 +18,7 @@ namespace App1.NotificationList
         {
             InitializeComponent();
             manager = ItemManager.DefaultManager;
-            DisplayList(); //to discuss if we should make addiional calls on tab change
+            DisplayList();
         }
 
         public async Task<List<Notification>> GetAlarms()

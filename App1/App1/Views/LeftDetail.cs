@@ -30,6 +30,19 @@ namespace App1.Views
         }
     }
 
+    public class values1
+    {
+        public string name { get; set; }
+        public string id { get; set; }
+        public string surname { get; set; }
+        
+
+        public override string ToString()
+        {
+            return this.name +" "+ this.surname;
+        }
+    }
+
     public class MedicalHistoryContent
     {
         public string description { get; set; }

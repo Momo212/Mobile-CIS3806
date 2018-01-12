@@ -18,15 +18,7 @@ namespace App1.NotificationList
         {
             InitializeComponent();
             manager = ItemManager.DefaultManager;
-            DisplayList(); //to discuss if we should make addiional calls on tab change
-        }
-
-        public List<Notification> fetchPatientNotifs()
-        {
-            //DUMMY DATA FOR NOW - FROM DATABASE LATER
-            List<Notification> ln = new List<Notification>();
-
-            return ln;
+            DisplayList(); 
         }
 
         public async Task<List<Notification>> GetAlarms()

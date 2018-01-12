@@ -93,6 +93,7 @@ namespace App1
         }
         public async void onAddPatient_OnClick(object sender, EventArgs e)
         {
+            SubmitButton.IsEnabled = true;
             if (ButtonFlag == true && LeftCarousel.Position == 0)
             {
                 if (NameEntry.Text == null || SurnameEntry.Text == null || IdNumberEntry.Text == null || AdditionalEntry.Text == null)
@@ -103,6 +104,7 @@ namespace App1
                 {
                     var todo = new Relative_Table { Rel_id = IdNumberEntry.Text, Name = NameEntry.Text, Surname = SurnameEntry.Text, Phone_no = AdditionalEntry.Text,Rel_type = AdditionalEntry2.Text , PatientID_FK = currentUserId };
                     await AddRelativeItem(todo);
+                    SubmitButton.IsEnabled = false;
                 }
                 ButtonFlag = false;
 
@@ -124,6 +126,7 @@ namespace App1
                 WardNo.IsVisible = true;
                 WardCol.IsVisible = true;
                 wardColourPicker.IsVisible = true;
+                SubmitButton.IsEnabled = true;
 
                 var relative_items = await manager.GetRelativeItemsAsync(currentUserId);
             }
@@ -139,6 +142,7 @@ namespace App1
 
                     var todo = new Hobby_Table { Hobby_name = NameEntry.Text, PatientID_FK = currentUserId, Hobby_id = totalHobbies.Count.ToString() };
                     await AddHobbyItem(todo);
+                    SubmitButton.IsEnabled = false;
                 }
                 ButtonFlag = false;
 
@@ -162,6 +166,7 @@ namespace App1
                 WardNo.IsVisible = true;
                 WardCol.IsVisible = true;
                 wardColourPicker.IsVisible = true;
+                SubmitButton.IsEnabled = true;
 
                 var hobby_items = await manager.GetHobbyItemsAsync(currentUserId);
             }
@@ -177,6 +182,7 @@ namespace App1
 
                     var todo = new Fear_Table { Fear_name = NameEntry.Text, PatientID_FK = currentUserId, Fear_id = totalFears.Count.ToString() };
                     await AddFearItem(todo);
+                    SubmitButton.IsEnabled = false;
                 }
                 ButtonFlag = false;
 
@@ -200,6 +206,7 @@ namespace App1
                 WardNo.IsVisible = true;
                 WardCol.IsVisible = true;
                 wardColourPicker.IsVisible = true;
+                SubmitButton.IsEnabled = true;
 
                 var fear_items = await manager.GetFearItemsAsync(currentUserId);
             }
@@ -213,7 +220,7 @@ namespace App1
                 {
                     var todo = new Patient_Table { Patient_ID = IdNumberEntry.Text, Name = NameEntry.Text, Surname = SurnameEntry.Text, Dob = GetDateTime(), Gender = selectedGender, Ward_No = Int32.Parse(WardNo.Text), Room_No = Int32.Parse(RoomNo.Text), Bed_No = Int32.Parse(BedNo.Text), Ward_Col = selectedColor };
                     await AddPatientItem(todo);
-
+                    SubmitButton.IsEnabled = false; 
                     currentUserId = IdNumberEntry.Text;
                     
                     //Set Image and Respective Entries
@@ -299,12 +306,15 @@ namespace App1
                 WardNo.IsVisible = false;
                 wardColourPicker.IsVisible = false;
                 WardCol.IsVisible = false;
+                SubmitButton.IsEnabled = true;
 
                 ButtonFlag = true;
             }
             else if(index == 1)
             {
                 NameEntry.Placeholder = "Hobby Name...";
+                AdditionalEntry.IsVisible = false;
+                AdditionalEntry2.IsVisible = false;
                 SurnameEntry.IsVisible = false;
                 IdNumberEntry.IsVisible = false;
                 DOB.IsVisible = false;
@@ -316,12 +326,15 @@ namespace App1
                 WardNo.IsVisible = false;
                 wardColourPicker.IsVisible = false;
                 WardCol.IsVisible = false;
+                SubmitButton.IsEnabled = true;
 
                 ButtonFlag = true;
             }
             else if(index == 2)
             {
                 NameEntry.Placeholder = "Fear Name...";
+                AdditionalEntry.IsVisible = false;
+                AdditionalEntry2.IsVisible = false;
                 SurnameEntry.IsVisible = false;
                 IdNumberEntry.IsVisible = false;
                 DOB.IsVisible = false;
@@ -333,6 +346,7 @@ namespace App1
                 WardNo.IsVisible = false;
                 wardColourPicker.IsVisible = false;
                 WardCol.IsVisible = false;
+                SubmitButton.IsEnabled = true;
 
                 ButtonFlag = true;
             }
