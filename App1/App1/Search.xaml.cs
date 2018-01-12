@@ -89,9 +89,27 @@ namespace App1
             if (keyword.Length >= 1)
             {
                 IEnumerable<string> SearchResult = patient.Where(name => name.ToLower().Contains(keyword.ToLower()));
+                ObservableCollection<values1> searchR = new ObservableCollection<values1>();
+                foreach (Patient_Table p in patienttable)
+                {
+                    if (p.Name.ToLower().Contains(keyword.ToLower()))
+                    {
+                        searchR.Add(
+                            new values1
+                            {
+                                name = p.Name,
+                                surname = p.Surname,
+                                id = p.Patient_ID
+                            }
+                            );
+                    }
+                }
+
+
 
                 //get the result
-                MainListView.ItemsSource = SearchResult;
+                //MainListView.ItemsSource = SearchResult;
+                MainListView.ItemsSource = searchR;
 
                 MainListView.IsVisible = true;
             }
@@ -106,12 +124,16 @@ namespace App1
         private async void MainListView_ItemTapped(object sender, ItemTappedEventArgs e)
         {
             string check = e.Item.ToString();
+               ListView l = (ListView)sender;
+                values1 v = (values1)l.SelectedItem;
+                
             var type = e.Item.GetType();
             ObservableCollection<Patient_Table> patienttable = await manager.GetPatientIDAsync();
             
             foreach (var p in patienttable)
             {
-                if(p.Patient_ID == check || p.Name == check || p.Surname == check)
+                //if(p.Patient_ID == check || p.Name == check || p.Surname == check)
+                if(p.Patient_ID == v.id || p.Name == v.name || p.Surname == v.surname)
                 {
                     PatientProfile patient = new PatientProfile(p.Patient_ID);
                     await Navigation.PushAsync(patient);

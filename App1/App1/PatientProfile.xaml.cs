@@ -45,7 +45,14 @@ namespace App1
             {
                 NameSurnameProfileLabel.Text = r.Name.ToString() + " " + r.Surname.ToString();
                 GenderProfileLabel.Text = r.Gender.ToString();
-                AgeProfileLabel.Text = r.Dob.ToString() + " | ";
+                String dateTime = r.Dob.ToString();
+                String year = "";
+                for (int i = 6; i <= 9; i++)
+                {
+                    year += dateTime[i];
+                }
+                int ageDiff = 2018 - Convert.ToInt32(year);
+                AgeProfileLabel.Text = ageDiff.ToString() + " Years";
                 WardNoProfileLabel.Text = "Ward No: " + r.Ward_No + " | ";
                 WardColProfileLabel.Text = r.Ward_Col.ToString() + " | ";
                 RoomNoProfileLabel.Text = "Room No: " + r.Room_No.ToString() + " | ";
